@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\PULSE Electronics\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\PULSE Electronics\\.nuget\\packages"
+    ]
+  }
+}
