@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Play.Products\\src\\Products.Service\\Products.Service.csproj": {}
+    "C:\\Projects\\Lab2\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Play.Products\\src\\Products.Service\\Products.Service.csproj": {
+    "C:\\Projects\\Lab2\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Play.Products\\src\\Products.Service\\Products.Service.csproj",
+        "projectUniqueName": "C:\\Projects\\Lab2\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj",
         "projectName": "Products.Service",
-        "projectPath": "C:\\Projects\\Play.Products\\src\\Products.Service\\Products.Service.csproj",
+        "projectPath": "C:\\Projects\\Lab2\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj",
         "packagesPath": "C:\\Users\\PULSE Electronics\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Play.Products\\src\\Products.Service\\obj\\",
+        "outputPath": "C:\\Projects\\Lab2\\Lab2\\Play.Products\\src\\Products.service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PULSE Electronics\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
