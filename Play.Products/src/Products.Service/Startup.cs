@@ -11,11 +11,16 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
+using Play.Products.Service;
+using Play.Products.Service.Repository;
 
 namespace Products.Service
 {
     public class Startup
     {
+        private ServiceSettings serviceSettings;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,7 +32,23 @@ namespace Products.Service
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
+
+            services.AddSingleton(ServiceProvider =>
+            {
+
+                var mongoDbSettings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+                var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
+                return mongoClient.GetDatabase(serviceSettings.ServiceName);
+            });
+
+            services.AddSingleton<IItemsRepository, ItemsRepository>();
+
+            services.AddControllers(options =>
+            {
+                options.SuppressAsyncSuffixInActionNames = false;
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Products.Service", Version = "v1" });

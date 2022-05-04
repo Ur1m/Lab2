@@ -6,22 +6,21 @@ using Play.Products.Service.Enteties;
 
 namespace Play.Products.Service.Repository
 {
-    public class ItemsRepository
+
+    public class ItemsRepository : IItemsRepository
     {
         private const string collectionName = "items";
         private readonly IMongoCollection<Items> DbCollection;
         private readonly FilterDefinitionBuilder<Items> filterBuilder = Builders<Items>.Filter;
-        
-        public ItemsRepository()
+
+        public ItemsRepository(IMongoDatabase database)
         {
-            var mongoClient = new MongoClient("mongodb://localhost:27017");
-            var database = mongoClient.GetDatabase("Products");
-            DbCollection = database.GetCollection<Items>(collectionName); 
+            DbCollection = database.GetCollection<Items>(collectionName);
         }
 
         public async Task<IReadOnlyCollection<Items>> GetAllAsync()
         {
-            return await DbCollection.Find(filterBuilder.Empty).ToListAsync(); 
+            return await DbCollection.Find(filterBuilder.Empty).ToListAsync();
         }
 
         public async Task<Items> GetAsync(Guid id)
@@ -32,7 +31,7 @@ namespace Play.Products.Service.Repository
 
         public async Task CreateAsync(Items entity)
         {
-            if(entity == null)
+            if (entity == null)
             {
                 throw new ArgumentNullException(nameof(entity));
             }
@@ -42,7 +41,7 @@ namespace Play.Products.Service.Repository
 
         public async Task UpdateAsync(Items entity)
         {
-            if(entity == null)
+            if (entity == null)
             {
                 throw new ArgumentNullException(nameof(entity));
             }
@@ -53,10 +52,6 @@ namespace Play.Products.Service.Repository
 
         public async Task RemoveAsyc(Guid id)
         {
-             if(id == null)
-            {
-                throw new ArgumentNullException(nameof(id));
-            }
 
             FilterDefinition<Items> filter = filterBuilder.Eq(entity => entity.Id, id);
             await DbCollection.DeleteOneAsync(filter);
