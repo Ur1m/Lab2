@@ -11,8 +11,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using Play.Products.Service;
+using Play.Products.Service.Enteties;
 using Play.Products.Service.Repository;
 
 namespace Products.Service
@@ -31,7 +35,9 @@ namespace Products.Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+            BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
+            
             serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
 
             services.AddSingleton(ServiceProvider =>
@@ -42,7 +48,11 @@ namespace Products.Service
                 return mongoClient.GetDatabase(serviceSettings.ServiceName);
             });
 
-            services.AddSingleton<IItemsRepository, ItemsRepository>();
+            services.AddSingleton<IRepository<Items>>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new MongoRepository<Items>(database, "items");
+            });
 
             services.AddControllers(options =>
             {

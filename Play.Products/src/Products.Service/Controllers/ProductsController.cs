@@ -17,8 +17,8 @@ namespace Products.Service.Controllers
     public class ProductsController : ControllerBase
     {
 
-        private readonly IItemsRepository itemsRepository;
-        public ProductsController(IItemsRepository itemsRepository)
+        private readonly IRepository<Items> itemsRepository;
+        public ProductsController(IRepository<Items> itemsRepository)
         {
 
             this.itemsRepository = itemsRepository;

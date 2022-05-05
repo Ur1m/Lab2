@@ -7,29 +7,28 @@ using Play.Products.Service.Enteties;
 namespace Play.Products.Service.Repository
 {
 
-    public class ItemsRepository : IItemsRepository
+    public class MongoRepository<T> : IRepository<T> where T : IEntity
     {
-        private const string collectionName = "items";
-        private readonly IMongoCollection<Items> DbCollection;
-        private readonly FilterDefinitionBuilder<Items> filterBuilder = Builders<Items>.Filter;
+        private readonly IMongoCollection<T> DbCollection;
+        private readonly FilterDefinitionBuilder<T> filterBuilder = Builders<T>.Filter;
 
-        public ItemsRepository(IMongoDatabase database)
+        public MongoRepository(IMongoDatabase database, string collectionName)
         {
-            DbCollection = database.GetCollection<Items>(collectionName);
+            DbCollection = database.GetCollection<T>(collectionName);
         }
 
-        public async Task<IReadOnlyCollection<Items>> GetAllAsync()
+        public async Task<IReadOnlyCollection<T>> GetAllAsync()
         {
             return await DbCollection.Find(filterBuilder.Empty).ToListAsync();
         }
 
-        public async Task<Items> GetAsync(Guid id)
+        public async Task<T> GetAsync(Guid id)
         {
-            FilterDefinition<Items> filter = filterBuilder.Eq(entity => entity.Id, id);
+            FilterDefinition<T> filter = filterBuilder.Eq(entity => entity.Id, id);
             return await DbCollection.Find(filter).FirstOrDefaultAsync();
         }
 
-        public async Task CreateAsync(Items entity)
+        public async Task CreateAsync(T entity)
         {
             if (entity == null)
             {
@@ -39,31 +38,26 @@ namespace Play.Products.Service.Repository
             await DbCollection.InsertOneAsync(entity);
         }
 
-        public async Task UpdateAsync(Items entity)
+        public async Task UpdateAsync(T entity)
         {
             if (entity == null)
             {
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            FilterDefinition<Items> filter = filterBuilder.Eq(existingEntity => existingEntity.Id, entity.Id);
+            FilterDefinition<T> filter = filterBuilder.Eq(existingEntity => existingEntity.Id, entity.Id);
             await DbCollection.ReplaceOneAsync(filter, entity);
         }
 
         public async Task RemoveAsyc(Guid id)
         {
 
-            FilterDefinition<Items> filter = filterBuilder.Eq(entity => entity.Id, id);
+            FilterDefinition<T> filter = filterBuilder.Eq(entity => entity.Id, id);
             await DbCollection.DeleteOneAsync(filter);
             {
 
             }
         }
-
-
-
-
-
 
 
     }
