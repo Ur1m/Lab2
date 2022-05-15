@@ -160,3 +160,6 @@ D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\L
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.pdb
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.genruntimeconfig.cache
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\ref\Products.Service.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\ref\Products.Service.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.pdb
