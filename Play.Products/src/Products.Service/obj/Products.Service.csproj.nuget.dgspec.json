@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj": {}
+    "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj": {}
   },
   "projects": {
-    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj": {
+    "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj",
         "projectName": "Products.Service",
-        "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.service\\Products.Service.csproj",
-        "packagesPath": "C:\\Users\\rinor\\.nuget\\packages\\",
-        "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.service\\obj\\",
+        "projectPath": "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj",
+        "packagesPath": "C:\\Users\\Rinor Hyseni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\Play.Products\\src\\Products.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rinor Hyseni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,12 +59,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.15, 5.0.15]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -73,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
