@@ -27,6 +27,12 @@ namespace IdentityAuthService
         {
             var mongoDbSettings = Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
 
+            services.AddSingleton(ServiceProvider =>
+            {
+                var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
+                return mongoClient.GetDatabase(mongoDbSettings.Name);
+            });
+
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
                 (

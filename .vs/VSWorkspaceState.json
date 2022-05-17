@@ -1,14 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IdentityAuthService",
-    "\\IdentityAuthService\\Controllers",
-    "\\IdentityAuthService\\Models",
-    "\\IdentityAuthService\\Settings",
-    "\\IdentityAuthService\\Views",
-    "\\IdentityAuthService\\Views\\Operations",
-    "\\IdentityAuthService\\Views\\Shared",
-    "\\Play.Products"
+    "\\IdentityAuthService"
   ],
+  "SelectedNode": "\\IdentityAuthService\\IdentityAuthService.csproj",
   "PreviewInSolutionExplorer": false
 }

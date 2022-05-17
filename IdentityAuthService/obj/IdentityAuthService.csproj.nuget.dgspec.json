@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj": {}
+    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj": {
+    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj",
+        "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj",
         "projectName": "IdentityAuthService",
-        "projectPath": "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj",
-        "packagesPath": "C:\\Users\\Rinor Hyseni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rinor Hyseni\\Desktop\\rh\\Lab2\\IdentityAuthService\\obj\\",
+        "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthService\\IdentityAuthService.csproj",
+        "packagesPath": "C:\\Users\\rinor\\.nuget\\packages\\",
+        "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rinor Hyseni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
