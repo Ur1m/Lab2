@@ -10,10 +10,31 @@ namespace IdentityAuthService.Controllers
     public class OperationsController : Controller
     {
         private UserManager<ApplicationUser> userManager;
+        private RoleManager<ApplicationRole> roleManager;
 
-        public OperationsController(UserManager<ApplicationUser> userManager)
+        public OperationsController(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
         {
             this.userManager = userManager;
+            this.roleManager = roleManager;
+        }
+
+        public IActionResult CreateRole() => View();
+
+        [HttpPost]
+        public async Task<IActionResult> CreateRole([Required] string name)
+        {
+            if (ModelState.IsValid)
+            {
+                IdentityResult result = await roleManager.CreateAsync(new ApplicationRole() { Name = name });
+                if (result.Succeeded)
+                    ViewBag.Message = "Role Created Successfully";
+                else
+                {
+                    foreach (IdentityError error in result.Errors)
+                        ModelState.AddModelError("", error.Description);
+                }
+            }
+            return View();
         }
 
         public ViewResult Create() => View();

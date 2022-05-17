@@ -107,3 +107,4 @@ D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\L
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthService\obj\Debug\net5.0\refint\IdentityAuthService.dll
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthService\obj\Debug\net5.0\IdentityAuthService.genruntimeconfig.cache
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthService\obj\Debug\net5.0\ref\IdentityAuthService.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthService\obj\Debug\net5.0\Razor\Views\Operations\CreateRole.cshtml.g.cs
