@@ -51,6 +51,10 @@ namespace IdentityAuthService.Controllers
                 };
 
                 IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
+
+                //Adding User to Admin Role
+                await userManager.AddToRoleAsync(appUser, "Admin");
+
                 if (result.Succeeded)
                     ViewBag.Message = "User Created Successfully";
                 else
