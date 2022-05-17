@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Identity"
+    "\\Identity.Service",
+    "\\Identity.Service\\Views",
+    "\\Identity.Service\\wwwroot"
   ],
-  "SelectedNode": "\\Play.Products",
+  "SelectedNode": "\\Identity.Service\\wwwroot",
   "PreviewInSolutionExplorer": false
 }

@@ -1,23 +1,23 @@
-using Identity.Service.Models;
+﻿using Identity.Service.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System;
- 
+
 namespace Identity.Service.Controllers
 {
     public class OperationsController : Controller
     {
         private UserManager<ApplicationUser> userManager;
- 
+
         public OperationsController(UserManager<ApplicationUser> userManager)
         {
             this.userManager = userManager;
         }
- 
+
         public ViewResult Create() => View();
- 
+
         [HttpPost]
         public async Task<IActionResult> Create(User user)
         {
@@ -28,7 +28,7 @@ namespace Identity.Service.Controllers
                     UserName = user.Name,
                     Email = user.Email
                 };
- 
+
                 IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
                 if (result.Succeeded)
                     ViewBag.Message = "User Created Successfully";

@@ -3,6 +3,7 @@ C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity.Service.AssemblyInfoInputs.cache
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity.Service.AssemblyInfo.cs
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity.Service.csproj.CoreCompileInputs.cache
+C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity.Service.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity.Service.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity.Service.RazorAssemblyInfo.cache
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Identity.Service\obj\Debug\net5.0\Identity.Service.RazorAssemblyInfo.cs
