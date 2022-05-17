@@ -6,7 +6,7 @@ namespace Play.Products.Service
         public int Port { get; init; }
 
 
-        public string ConnectionString => $"mongodb+srv://LearnowDB:LearnowPW@learnowcluster.e9fxt.mongodb.net/Learnow";
+        public string ConnectionString => $"mongodb://{Host}:{Port}";
 
 
     }
