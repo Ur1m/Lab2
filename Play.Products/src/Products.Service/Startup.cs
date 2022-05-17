@@ -53,6 +53,21 @@ namespace Products.Service
                 var database = serviceProvider.GetService<IMongoDatabase>();
                 return new MongoRepository<Items>(database, "items");
             });
+             services.AddSingleton<ICategoryRepository>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new CategoryRepository(database, "Categories");
+            });
+            services.AddSingleton<IAttributeRepository>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new AttributeRepository(database, "Attributes");
+            });
+             services.AddSingleton<ICourseRepository>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new CourseRepository(database, "Courses");
+            });
 
             services.AddControllers(options =>
             {
