@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IdentityAuthService"
+    "\\Play.Products",
+    "\\Play.Products\\src",
+    "\\Play.Products\\src\\Products.Service",
+    "\\Play.Products\\src\\Products.Service\\Controllers",
+    "\\Play.Products\\src\\Products.Service\\DTOs",
+    "\\Play.Products\\src\\Products.Service\\Enteties",
+    "\\Play.Products\\src\\Products.Service\\Properties",
+    "\\Play.Products\\src\\Products.Service\\Repository",
+    "\\Play.Products\\src\\Products.Service\\Settings"
   ],
-  "SelectedNode": "\\IdentityAuthService\\IdentityAuthService.csproj",
+  "SelectedNode": "\\Play.Products\\src\\Products.Service\\Products.Service.csproj",
   "PreviewInSolutionExplorer": false
 }
