@@ -14,6 +14,7 @@ namespace Products.Service.Dtos
     public record CourseDTO(int CourseId,string Name,string Description,string Image,int Difficulty,string CourseContent,DateTime CreatedOn,bool IsDeleted,int CategoryId,Category Category);
     public record AttributeDTO(int AttributeId,string Name); 
     public record AttributeValueDTO(int AttributeValueId,string Value,int AttributeId,Play.Products.Service.Enteties.Attribute Attribute);
+    public record ReviewsDTO(int Id,string UserId,int CourseId,int NumberOfStarts,bool Like,bool Dislike,string Comment);
 
 
 }

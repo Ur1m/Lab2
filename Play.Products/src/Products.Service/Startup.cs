@@ -74,6 +74,11 @@ namespace Products.Service
                 var database = serviceProvider.GetService<IMongoDatabase>();
                 return new AttributeValueRepository(database, "AttributeValues");
             });
+             services.AddSingleton<IReviewsRepository>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new ReviewsRepository(database, "Reviews");
+            });
 
             services.AddControllers(options =>
             {

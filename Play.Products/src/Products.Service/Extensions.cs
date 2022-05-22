@@ -26,5 +26,9 @@ namespace Play.Products.Service
         {
             return new AttributeValueDTO(attrvalue.AttributeValueId,attrvalue.Value,attrvalue.AttributeId,attrvalue.Attribute);
         }
+          public static ReviewsDTO AsReviewsDTO(this Reviews rev)
+        {
+            return new ReviewsDTO(rev.Id,rev.UserId,rev.CourseId,rev.NumberOfStarts,rev.Like,rev.Dislike,rev.Comment);
+        }
     }
 }
