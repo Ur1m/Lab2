@@ -21,5 +21,10 @@ namespace Play.Products.Service
         {
             return new AttributeDTO(attr.AttributeId,attr.Name);
         }
+
+         public static AttributeValueDTO AsAttributeValueDTO(this AttributeValue attrvalue)
+        {
+            return new AttributeValueDTO(attrvalue.AttributeValueId,attrvalue.Value,attrvalue.AttributeId,attrvalue.Attribute);
+        }
     }
 }

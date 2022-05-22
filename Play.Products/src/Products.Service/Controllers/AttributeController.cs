@@ -18,11 +18,13 @@ namespace Products.Service.Controllers
     {
 
         private readonly IAttributeRepository _attrRepository;
+        private readonly IAttributeValueRepository _attrvalueRepository;
        
-        public AttributeController(IAttributeRepository attrRepository)
+        public AttributeController(IAttributeRepository attrRepository,IAttributeValueRepository AttributeValueRepository)
         {
 
            _attrRepository=attrRepository;
+           _attrvalueRepository=AttributeValueRepository;
           
         }
 
@@ -87,6 +89,74 @@ namespace Products.Service.Controllers
            
 
             await _attrRepository.RemoveAsync(id);
+
+            return NoContent();
+        }
+        [HttpGet("/attributevalue")]
+        
+        public async Task<IEnumerable<AttributeValueDTO>> GetAllAtributeValue()
+        {
+            var items = (await _attrvalueRepository.GetAllAsync())
+                        .Select(items => items.AsAttributeValueDTO());
+            return items;
+        }
+
+         [HttpGet("/attributevalue/{id}")]
+        public async Task<ActionResult<AttributeValueDTO>> GetAttributeValueByIdAsync(int id)
+        {
+            var item = await _attrvalueRepository.GetAsync(id);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return item.AsAttributeValueDTO();
+        }
+
+        [HttpPost("attributevalue")]
+        public async Task<IActionResult> PostAttrValueAsync(AttributeValueDTO attr)
+        {
+
+            var item = new AttributeValue
+            {
+               Value=attr.Value,
+               AttributeId=attr.AttributeId,
+             //  Attribute=_attrRepository.GetAsync(attr.AttributeId)
+               
+            };
+
+            await _attrvalueRepository.CreateAsync(item);
+
+            return NoContent();
+
+        }
+
+        [HttpPut("/attributevalue/{id}")]
+        public async Task<IActionResult> PutAttrValueAsync(int id, AttributeValueDTO attr)
+        {
+            var existingItem = await _attrvalueRepository.GetAsync(id);
+
+            if (existingItem == null)
+            {
+                return NotFound();
+            }
+            existingItem.Value=attr.Value;
+            existingItem.AttributeId=attr.AttributeId;
+           // existingItem.Attribute=_attrRepository.GetAsync(attr.AttributeId);
+               
+
+            await _attrvalueRepository.UpdateAsync(existingItem);
+
+            return NoContent();
+        }
+
+        [HttpDelete("attributevalue/{id}")]
+        public async Task<IActionResult> DeletAttributeValueAsync(int id)
+        {
+           
+
+            await _attrvalueRepository.RemoveAsync(id);
 
             return NoContent();
         }

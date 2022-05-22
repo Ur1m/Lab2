@@ -208,3 +208,44 @@ C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Play.Products\src\Products.Service\obj\Deb
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\ref\Products.Service.dll
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.pdb
 C:\Users\Rinor Hyseni\Desktop\rh\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.genruntimeconfig.cache
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.AssemblyInfo.cs
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\appsettings.json
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Products.Service.exe
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Products.Service.deps.json
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Products.Service.runtimeconfig.json
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Products.Service.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Products.Service.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\ref\Products.Service.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Products.Service.pdb
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\DnsClient.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\MongoDB.Bson.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\MongoDB.Driver.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\SharpCompress.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\linux\native\libsnappy64.so
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\linux\native\libzstd.so
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\osx\native\libsnappy64.dylib
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\osx\native\libzstd.dylib
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\win\native\libzstd.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\win\native\snappy32.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\win\native\snappy64.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\staticwebassets\Products.Service.StaticWebAssets.Manifest.cache
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\staticwebassets\Products.Service.StaticWebAssets.xml
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\scopedcss\bundle\Products.Service.styles.css
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.RazorTargetAssemblyInfo.cache
+C:\Users\hp\Desktop\Udemy\Lab2\Play.Products\src\Products.Service\obj\Debug\net5.0\Products.Service.genruntimeconfig.cache

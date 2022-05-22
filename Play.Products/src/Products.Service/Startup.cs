@@ -68,6 +68,12 @@ namespace Products.Service
                 var database = serviceProvider.GetService<IMongoDatabase>();
                 return new CourseRepository(database, "Courses");
             });
+            
+             services.AddSingleton<IAttributeValueRepository>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new AttributeValueRepository(database, "AttributeValues");
+            });
 
             services.AddControllers(options =>
             {
