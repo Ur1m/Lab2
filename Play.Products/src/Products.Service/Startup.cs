@@ -37,7 +37,7 @@ namespace Products.Service
         {
             BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
             BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
-            
+
             serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
 
             services.AddSingleton(ServiceProvider =>
@@ -53,32 +53,12 @@ namespace Products.Service
                 var database = serviceProvider.GetService<IMongoDatabase>();
                 return new MongoRepository<Items>(database, "items");
             });
-             services.AddSingleton<ICategoryRepository>(serviceProvider =>
+            services.AddSingleton<IRepository<Category>>(serviceProvider =>
             {
                 var database = serviceProvider.GetService<IMongoDatabase>();
-                return new CategoryRepository(database, "Categories");
+                return new MongoRepository<Category>(database, "category");
             });
-            services.AddSingleton<IAttributeRepository>(serviceProvider =>
-            {
-                var database = serviceProvider.GetService<IMongoDatabase>();
-                return new AttributeRepository(database, "Attributes");
-            });
-             services.AddSingleton<ICourseRepository>(serviceProvider =>
-            {
-                var database = serviceProvider.GetService<IMongoDatabase>();
-                return new CourseRepository(database, "Courses");
-            });
-            
-             services.AddSingleton<IAttributeValueRepository>(serviceProvider =>
-            {
-                var database = serviceProvider.GetService<IMongoDatabase>();
-                return new AttributeValueRepository(database, "AttributeValues");
-            });
-             services.AddSingleton<IReviewsRepository>(serviceProvider =>
-            {
-                var database = serviceProvider.GetService<IMongoDatabase>();
-                return new ReviewsRepository(database, "Reviews");
-            });
+
 
             services.AddControllers(options =>
             {

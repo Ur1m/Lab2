@@ -7,28 +7,12 @@ namespace Play.Products.Service
     {
         public static ItemDto AsDto(this Items item)
         {
-            return new ItemDto(item.Id, item.Name, item.Desctription, item.Price, item.CreateDate);
+            return new ItemDto(item.Id, item.Name, item.Desctription, item.Price, item.CreateDate,item.CategoryId);
         }
-        public static CategoryDTO AsCategoryDTO(this Category category)
+        public static CategoryDto AsCategoryDto(this Category item)
         {
-            return new CategoryDTO(category.CategoryId,category.Name,category.Description,category.Image,category.DisplayOrder,category.IsDeleted);
-        }
-         public static CourseDTO AsCourseDTO(this Course course)
-        {
-            return new CourseDTO(course.CourseId,course.Name,course.Description,course.Image,course.Difficulty,course.CourseContent,course.CreatedOn,course.IsDeleted,course.CategoryId,course.Category);
-        }
-         public static AttributeDTO AsAttributeDTO(this Attribute attr)
-        {
-            return new AttributeDTO(attr.AttributeId,attr.Name);
+            return new CategoryDto(item.Id, item.Name, item.Desctription);
         }
 
-         public static AttributeValueDTO AsAttributeValueDTO(this AttributeValue attrvalue)
-        {
-            return new AttributeValueDTO(attrvalue.AttributeValueId,attrvalue.Value,attrvalue.AttributeId,attrvalue.Attribute);
-        }
-          public static ReviewsDTO AsReviewsDTO(this Reviews rev)
-        {
-            return new ReviewsDTO(rev.Id,rev.UserId,rev.CourseId,rev.NumberOfStarts,rev.Like,rev.Dislike,rev.Comment);
-        }
     }
 }

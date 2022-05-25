@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,80 +17,74 @@ namespace Products.Service.Controllers
     public class CategoryController : ControllerBase
     {
 
-        private readonly ICategoryRepository _categoryRepository;
-        public CategoryController(ICategoryRepository categoryRepository)
+        private readonly IRepository<Category> categoryRepository;
+        public CategoryController(IRepository<Category> categoryRepository)
         {
 
-           _categoryRepository=categoryRepository;
+            this.categoryRepository = categoryRepository;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<CategoryDTO>> GetAsync()
+        public async Task<IEnumerable<CategoryDto>> GetAsync()
         {
-            var items = (await _categoryRepository.GetAllAsync())
-                        .Select(items => items.AsCategoryDTO());
+            var items = (await categoryRepository.GetAllAsync())
+                        .Select(items => items.AsCategoryDto());
             return items;
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CategoryDTO>> GetByIdAsync(int id)
+        public async Task<ActionResult<CategoryDto>> GetByIdAsync(Guid id)
         {
-            var item = await _categoryRepository.GetAsync(id);
+            var item = await categoryRepository.GetAsync(id);
 
             if (item == null)
             {
                 return NotFound();
             }
 
-            return item.AsCategoryDTO();
+            return item.AsCategoryDto();
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync(CategoryDTO categoryDto)
+        public async Task<ActionResult<CategoryDto>> PostAsync(CreateItemDto createItemDto)
         {
 
             var item = new Category
             {
-                CategoryId=categoryDto.CategoryId,
-                Name=categoryDto.Name,
-                Description=categoryDto.Description,
-                Image=categoryDto.Image,
-                IsDeleted=categoryDto.IsDeleted
+                Name = createItemDto.Name,
+                Desctription = createItemDto.Description
             };
 
-            await _categoryRepository.CreateAsync(item);
+            await categoryRepository.CreateAsync(item);
 
-            return NoContent();
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id }, item);
 
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(int id, CategoryDTO categoryDto)
+        public async Task<IActionResult> PutAsync(Guid id, UpdateCategoryDto updateCategoryDto)
         {
-            var existingItem = await _categoryRepository.GetAsync(id);
+            var existingItem = await categoryRepository.GetAsync(id);
 
             if (existingItem == null)
             {
                 return NotFound();
             }
 
-             existingItem.CategoryId = categoryDto.CategoryId;
-              existingItem.Name = categoryDto.Name;
-               existingItem.Description = categoryDto.Description;
-            existingItem.Image = categoryDto.Image;
-               existingItem.IsDeleted = categoryDto.IsDeleted;
+            existingItem.Name = updateCategoryDto.Name;
+            existingItem.Desctription = updateCategoryDto.Description;
 
-            await _categoryRepository.UpdateAsync(existingItem);
+            await categoryRepository.UpdateAsync(existingItem);
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletAsync(int id)
+        public async Task<IActionResult> DeletAsync(Guid id)
         {
-           
+            var existingItem = await categoryRepository.GetAsync(id);
 
-            await _categoryRepository.RemoveAsyc(id);
+            await categoryRepository.RemoveAsyc(existingItem.Id);
 
             return NoContent();
         }
