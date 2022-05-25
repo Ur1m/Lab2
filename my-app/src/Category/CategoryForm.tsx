@@ -1,11 +1,13 @@
 
 import React ,{  FormEvent, useState}from 'react'
 import * as yup from 'yup';
-import Formik from 'formik';
+import {Formik} from 'formik';
 import { observer } from 'mobx-react-lite';
 import { on } from 'stream';
 import { useStore } from '../store/Store';
 import { ICategory } from './ICategory';
+import {Form,Button, Segment} from 'semantic-ui-react';
+import { FormControl, Input } from '@mui/material';
 
 
 export default  observer( function CategoryForm ()  {
@@ -52,51 +54,55 @@ export default  observer( function CategoryForm ()  {
         name:yup.string().required("required").matches(/^[a-zA-Z0-9]{3,}$/,'Emri duhet te ket mbi 3 shkronja'),
         description:yup.string().required("required").matches(/^[a-zA-Z0-9]{3,}$/,'Mbimeri duhet te ket mbi 3 shkronja'),
         displayOrder:yup.string().required("required").nullable(),
-        //isDeleted:yup.string().required(''),
+        isDeleted:yup.string().required(''),
        
         
 
 
     })
-    
+   
     return (
-       
         <Segment clearing>
           
-              <Formik validationSchema={validationSchema}
-            enableReinitialize initialValues={Doktori!} onSubmit={values => handleFormsubmit(values)}>
-            {({handleSubmit,isSubmitting,dirty,isValid})=>(
-                <Form className='ui form' onSubmit={handleSubmit}>
-                  <MyTextInput placeholder='Emri' name="emri"/>
-                  <MyTextInput placeholder="Mbimeri" name="mbimeri"/>
-                  <MyDateInput  placeholderText='ditlindja' name="ditlindja"
-                  maxDate={new Date('01/01/1998')}
-                  minDate={new Date('01/01/1960')}/>
-                  <MySelectInput options={specializimet} placeholder='Specializimi' name='specializimi'/>
-                  <MySelectInput options={departmentDropDown} placeholder='Zgjedhni departamentin...' name='depName'></MySelectInput>
-                <Button 
-                disabled={isSubmitting || !dirty || !isValid}
-                floated="right" positive type='subimit' content='submit'/>
-                <Button onClick={closeForm}floated="right"  type='subimit' content='cancel'/>
-               
-               
-               
-            </Form>
-            
-
-
-             )
-
-             }
-            </Formik>
+        <Formik validationSchema={validationSchema}
+      enableReinitialize initialValues={Category!} onSubmit={values => handleFormsubmit(values)}>
+      {({handleSubmit,isSubmitting,dirty,isValid})=>(
+          <Form className='ui form' onSubmit={handleSubmit}>
+            <Input placeholder='Emri' name="name"/>
+            <Input placeholder="Mbimeri" name="description"/>
            
-           
-            
-        </Segment>
-        
+            <Input placeholder='Specializimi' name='image'/>
+            <Input  placeholder='Zgjedhni departamentin...' name=''/>
+          <Button 
+          disabled={isSubmitting || !dirty || !isValid}
+          floated="right"  type='submit' content='submit'/>
+          <Button onClick={closeForm}floated="right"  type='submit' content='cancel'/>
+         
+         
+         
+      </Form>
+      
+
+
+       )
+
+       }
+      </Formik>
+     
+     
+      
+  </Segment>
+  
+
+       
+
+       
+     
+             
+               
     )
-            }
-);
+               
+});
           
             
 

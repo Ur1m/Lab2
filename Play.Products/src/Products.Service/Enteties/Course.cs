@@ -7,7 +7,7 @@ namespace Play.Products.Service.Enteties
 {
     public class Course
     {
-        [Key]
+        
         public int CourseId{get;set;}
         public string Name{get;set;}
         public string Description{get;set;}

@@ -56,7 +56,7 @@ namespace Products.Service
              services.AddSingleton<ICategoryRepository>(serviceProvider =>
             {
                 var database = serviceProvider.GetService<IMongoDatabase>();
-                return new CategoryRepository(database, "Categories");
+                return new CategoryRepository(database, "C");
             });
             services.AddSingleton<IAttributeRepository>(serviceProvider =>
             {
