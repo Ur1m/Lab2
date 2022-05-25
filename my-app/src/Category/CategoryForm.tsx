@@ -8,9 +8,11 @@ import { useStore } from '../store/Store';
 import { ICategory } from './ICategory';
 import {Form,Button, Segment} from 'semantic-ui-react';
 import { FormControl, Input } from '@mui/material';
+import MyTextInput from '../FormInputs/form/MyTextInput';
+import MyTextArea from '../FormInputs/form/MyTextArea';
 
 
-export default  observer( function CategoryForm ()  {
+export default  observer(function CategoryForm ()  {
     const {CategoryStore}=useStore();
     const{closeForm,selectedCategory,updateCategory,createCategory,categories
     }=CategoryStore;
@@ -68,14 +70,14 @@ export default  observer( function CategoryForm ()  {
       enableReinitialize initialValues={Category!} onSubmit={values => handleFormsubmit(values)}>
       {({handleSubmit,isSubmitting,dirty,isValid})=>(
           <Form className='ui form' onSubmit={handleSubmit}>
-            <Input placeholder='Emri' name="name"/>
-            <Input placeholder="Mbimeri" name="description"/>
-           
-            <Input placeholder='Specializimi' name='image'/>
-            <Input  placeholder='Zgjedhni departamentin...' name=''/>
+            <MyTextInput placeholder='name' name="name"/>
+            <MyTextArea rows={3} placeholder="Mbimeri" name="description"/>
+           <MyTextInput placeholder='isDeleted' name="isDeleted"/>
+            <MyTextInput placeholder='image' name="image"/>
+            <MyTextInput  placeholder='display' name="displayOrder"/>
           <Button 
           disabled={isSubmitting || !dirty || !isValid}
-          floated="right"  type='submit' content='submit'/>
+          floated="right" positive  type='submit' content='submit'/>
           <Button onClick={closeForm}floated="right"  type='submit' content='cancel'/>
          
          
