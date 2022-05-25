@@ -1,21 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace Play.Products.Service.Enteties
 {
-	public class Category
-	{
-		
-		public int CategoryId { get; set; }
-		
-		public string Name { get; set; }
-		
-		public string Description { get; set; }
-	
-		public string Image { get; set; }
-		
-		public int DisplayOrder { get; set; }
-	
-		public bool IsDeleted { get; set; }
-	}
+
+    public class Category : IEntity
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Desctription { get; set; }
+
+    }
 }

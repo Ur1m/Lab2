@@ -4,17 +4,18 @@ using Play.Products.Service.Enteties;
 
 namespace Products.Service.Dtos
 {
-    public record ItemDto(Guid Id, string Name, string Description, decimal Price, DateTimeOffset CreatedDate);
+    public record ItemDto(Guid Id, string Name, string Description, decimal Price, DateTimeOffset CreatedDate,Category CategoryId);
 
-    public record CreateItemDto([Required] string Name, string Description, [Range(0, 10000)] decimal Price);
+    public record CreateItemDto([Required] string Name, string Description, [Range(0, 10000)] decimal Price,Category CategoryId);
 
-    public record UpdateItemDto([Required] string Name, string Description, [Range(0, 10000)] decimal Price);
-    public record CategoryDTO( int CategoryId, string Name,string Description,string Image, int DisplayOrder, bool IsDeleted
-	);
-    public record CourseDTO(int CourseId,string Name,string Description,string Image,int Difficulty,string CourseContent,DateTime CreatedOn,bool IsDeleted,int CategoryId,Category Category);
-    public record AttributeDTO(int AttributeId,string Name); 
-    public record AttributeValueDTO(int AttributeValueId,string Value,int AttributeId,Play.Products.Service.Enteties.Attribute Attribute);
-    public record ReviewsDTO(int Id,string UserId,int CourseId,int NumberOfStarts,bool Like,bool Dislike,string Comment);
+    public record UpdateItemDto([Required] string Name, string Description, [Range(0, 10000)] decimal Price,Category CategoryId);
+    
+    public record CategoryDto(Guid Id, string Name, string Description);
+
+    public record CreateCategoryDto([Required] string Name, string Description);
+
+    public record UpdateCategoryDto([Required] string Name, string Description);
+  
 
 
 }
