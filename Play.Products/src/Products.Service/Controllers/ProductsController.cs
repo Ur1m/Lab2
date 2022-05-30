@@ -55,7 +55,7 @@ namespace Products.Service.Controllers
                 Desctription = createItemDto.Description,
                 Price = createItemDto.Price,
                 CreateDate = DateTimeOffset.UtcNow,
-                CategoryId =createItemDto.CategoryId
+                CategoryId = createItemDto.CategoryId
             };
 
             await itemsRepository.CreateAsync(item);

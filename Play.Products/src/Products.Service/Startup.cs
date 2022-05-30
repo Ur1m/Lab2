@@ -58,6 +58,11 @@ namespace Products.Service
                 var database = serviceProvider.GetService<IMongoDatabase>();
                 return new MongoRepository<Category>(database, "category");
             });
+            services.AddSingleton<IRepository<Reviews>>(serviceProvider =>
+          {
+              var database = serviceProvider.GetService<IMongoDatabase>();
+              return new MongoRepository<Reviews>(database, "reviews");
+          });
 
 
             services.AddControllers(options =>

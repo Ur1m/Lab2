@@ -10,7 +10,7 @@ namespace Play.Products.Service.Enteties
         public string Desctription { get; set; }
         public decimal Price { get; set; }
         public DateTimeOffset CreateDate { get; set; }
-        public Category Category{get;set;}
-        public Category CategoryId {get;set;}
+        public Category Category { get; set; }
+        public Category CategoryId { get; set; }
     }
 }
