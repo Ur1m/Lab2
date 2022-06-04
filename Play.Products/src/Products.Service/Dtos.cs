@@ -5,11 +5,11 @@ using Play.Products.Service.Enteties;
 namespace Products.Service.Dtos
 {
     //----------------------- Items ------------------------------------------
-    public record ItemDto(Guid Id, string Name, string Description, decimal Price, DateTimeOffset CreatedDate, Category CategoryId);
+    public record ItemDto(Guid Id, string Name,string Image, string Description, decimal Price, DateTimeOffset CreatedDate, Category CategoryId);
 
-    public record CreateItemDto([Required] string Name, string Description, [Range(0, 10000)] decimal Price, Category CategoryId);
+    public record CreateItemDto([Required] string Name, string Image,string Description, [Range(0, 10000)] decimal Price, Category CategoryId);
 
-    public record UpdateItemDto([Required] string Name, string Description, [Range(0, 10000)] decimal Price, Category CategoryId);
+    public record UpdateItemDto([Required] string Name,String Image ,string Description, [Range(0, 10000)] decimal Price, Category CategoryId);
     //----------------------- Category ------------------------------------------
     public record CategoryDto(Guid Id, string Name, string Description);
 
@@ -22,6 +22,13 @@ namespace Products.Service.Dtos
     public record CreateReviewsDto(string Comment, Items ItemsId);
 
     public record UpdateReviewsDto(string Comment, Items ItemsId);
+
+    //----------------------Attributes--------------------------------------------
+    public record AttributeDTO(Guid AttributeId,string Name);
+    public record AttributeValueDTO(Guid AttributeValueId,Guid AttributeId,string Value, Play.Products.Service.Enteties.Attribute Attributee);
+    public record ProductAttributeDTO(Guid AttributeValueId,Guid ProductId);
+
+    //---------------------------------------------------------------------------------
 
 
 }
