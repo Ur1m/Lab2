@@ -18,12 +18,10 @@ namespace Products.Service.Controllers
     {
 
         private readonly IRepository<Items> itemsRepository;
-        private readonly IProductAttributeRepository _Productattrs;
-        public ProductsController(IRepository<Items> itemsRepository,IProductAttributeRepository pa)
+        public ProductsController(IRepository<Items> itemsRepository)
         {
 
             this.itemsRepository = itemsRepository;
-            _Productattrs=pa;
         }
 
         [HttpGet]
@@ -54,7 +52,6 @@ namespace Products.Service.Controllers
             var item = new Items
             {
                 Name = createItemDto.Name,
-                Image =createItemDto.Image,
                 Desctription = createItemDto.Description,
                 Price = createItemDto.Price,
                 CreateDate = DateTimeOffset.UtcNow,
@@ -81,7 +78,6 @@ namespace Products.Service.Controllers
             existingItem.Desctription = updateItemDto.Description;
             existingItem.Price = updateItemDto.Price;
             existingItem.CategoryId = updateItemDto.CategoryId;
-            existingItem.Image=updateItemDto.Image;
 
             await itemsRepository.UpdateAsync(existingItem);
 
@@ -97,33 +93,5 @@ namespace Products.Service.Controllers
 
             return NoContent();
         }
-        [HttpPost("addAttrValue")]
-       public async Task<IActionResult> AddAttrValue(ProductAttribute pa)
-   {
-       await _Productattrs.CreateAsync(pa);
-        return NoContent();
-
-   }
-     [HttpGet("/attrvaluesforproduct")]
-        public async Task<IEnumerable<ProductAttributeDTO>> getAttrValue()
-    {
-       var atrs= (await _Productattrs.GetAllAsyncByProductId())
-          .Select(x=> x.AsProductAttributeDto());
-
-            return (IEnumerable<ProductAttributeDTO>)atrs;
-        
-   }
-    
-    [HttpDelete]
-        public async Task<IActionResult> DeleteAttrValue(ProductAttributeDTO prod)
-    {
-        await _Productattrs.RemoveAsyc(prod.ProductId,prod.AttributeValueId);
-         
-                       return NoContent();
-
-   }
     }
-    }
-
-
-    
+}
