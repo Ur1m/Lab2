@@ -19,6 +19,41 @@ namespace UdemyClone.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("UdemyClone.Models.Attribute", b =>
+                {
+                    b.Property<int>("AttributeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AttributeId");
+
+                    b.ToTable("atribues");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.AttributeValue", b =>
+                {
+                    b.Property<int>("AttributeValueId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("AttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AttributeValueId");
+
+                    b.HasIndex("AttributeId");
+
+                    b.ToTable("atrvalues");
+                });
+
             modelBuilder.Entity("UdemyClone.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -26,20 +61,8 @@ namespace UdemyClone.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("CreatedOnDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
+                    b.Property<string>("Desctription")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -47,6 +70,137 @@ namespace UdemyClone.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("categories");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Desctription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("products");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.ProductAttribute", b =>
+                {
+                    b.Property<int>("ProductAttributeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("AttributeValueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("productId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductAttributeId");
+
+                    b.HasIndex("AttributeValueId");
+
+                    b.HasIndex("productId");
+
+                    b.ToTable("productattributes");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.Review", b =>
+                {
+                    b.Property<int>("ReviewId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("productId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ReviewId");
+
+                    b.HasIndex("productId");
+
+                    b.ToTable("reviews");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.AttributeValue", b =>
+                {
+                    b.HasOne("UdemyClone.Models.Attribute", "attribute")
+                        .WithMany()
+                        .HasForeignKey("AttributeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("attribute");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.Product", b =>
+                {
+                    b.HasOne("UdemyClone.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.ProductAttribute", b =>
+                {
+                    b.HasOne("UdemyClone.Models.AttributeValue", "attributevalue")
+                        .WithMany()
+                        .HasForeignKey("AttributeValueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UdemyClone.Models.Product", "product")
+                        .WithMany()
+                        .HasForeignKey("productId");
+
+                    b.Navigation("attributevalue");
+
+                    b.Navigation("product");
+                });
+
+            modelBuilder.Entity("UdemyClone.Models.Review", b =>
+                {
+                    b.HasOne("UdemyClone.Models.Product", "product")
+                        .WithMany()
+                        .HasForeignKey("productId");
+
+                    b.Navigation("product");
                 });
 #pragma warning restore 612, 618
         }

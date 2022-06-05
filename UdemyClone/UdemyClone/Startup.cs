@@ -14,6 +14,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UdemyClone.Database;
+using UdemyClone.Services.Interfaces;
+using UdemyClone.Services.Repositories;
 
 namespace UdemyClone
 {
@@ -33,6 +35,10 @@ namespace UdemyClone
             services.AddControllers();
             services.AddDbContext<ProductDB>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IReview, ReviewService>();
+            services.AddTransient<IAttributeRepository, AttributeRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UdemyClone", Version = "v1" });

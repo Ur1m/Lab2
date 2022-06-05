@@ -9,7 +9,7 @@ using UdemyClone.Services.Interfaces;
 
 namespace UdemyClone.Controllers
 {
-    [Route("/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : ControllerBase
     {
@@ -29,7 +29,7 @@ namespace UdemyClone.Controllers
             }
             return Ok(categ);
         }
-        [HttpGet("{/id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<CategoryDTO>> GetCategory(int id)
         {
             var categ = _categoryService.GetCategoryById(id);

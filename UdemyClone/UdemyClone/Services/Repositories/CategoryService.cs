@@ -36,11 +36,14 @@ namespace UdemyClone.Services.Repositories
         {
             try
             {
-                var categories = _context.categories.ToList();
-                var categoriesDto = new List<CategoryDTO>();
-               categoriesDto =_mapper.Map<List<CategoryDTO>>( categories);
+                var categories = _context.categories.Select(x=> new CategoryDTO
+                { 
+                CategoryId=x.CategoryId,
+                Name=x.Name,
+                Desctription=x.Desctription}).ToList();
+               
 
-                return categoriesDto;
+                return categories;
                 
             }
             catch(Exception ex)
@@ -53,9 +56,15 @@ namespace UdemyClone.Services.Repositories
         {
             try
             {
-                var categ = _context.categories.Where(x => x.CategoryId == id).FirstOrDefault();
-                var categDto = _mapper.Map<CategoryDTO>(categ);
-                return categDto;
+                var categ = _context.categories.Where(x => x.CategoryId == id).Select(x=> new CategoryDTO
+                {
+                    CategoryId=x.CategoryId,
+                    Name=x.Name,
+                   Desctription=x.Desctription
+                }
+                ).FirstOrDefault();
+                
+                return categ;
             }
            catch(Exception ex)
             {
@@ -65,7 +74,10 @@ namespace UdemyClone.Services.Repositories
 
         public void UpdateCategory(CategoryDTO categoryDTO)
         {
-            var categ = _mapper.Map<Category>(categoryDTO);
+            var categ = new Category();
+            categ.CategoryId=categoryDTO.CategoryId;
+            categ.Name = categoryDTO.Name;
+            categ.Desctription = categoryDTO.Desctription;
 
             _context.categories.Update(categ);
             _context.SaveChanges();

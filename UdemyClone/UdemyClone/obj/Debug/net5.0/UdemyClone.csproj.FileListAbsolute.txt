@@ -130,3 +130,5 @@ C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\UdemyClone
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\ref\UdemyClone.dll
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\UdemyClone.pdb
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\UdemyClone.genruntimeconfig.cache
+C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
