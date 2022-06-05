@@ -63,21 +63,8 @@ namespace Products.Service
               var database = serviceProvider.GetService<IMongoDatabase>();
               return new MongoRepository<Reviews>(database, "reviews");
           });
-          services.AddSingleton<IAttributeRepository>(serviceProvider =>
-          {
-              var database = serviceProvider.GetService<IMongoDatabase>();
-              return new AttributeRepository(database, "attributes");
-          });
-           services.AddSingleton<IAttributeValueRepository>(serviceProvider =>
-          {
-              var database = serviceProvider.GetService<IMongoDatabase>();
-              return new AttributeValueRepository(database, "attributevalue");
-          });
-        services.AddSingleton<IProductAttributeRepository>(serviceProvider =>
-          {
-              var database = serviceProvider.GetService<IMongoDatabase>();
-              return new ProductAttributeRepository(database, "productattributes");
-          });
+
+
             services.AddControllers(options =>
             {
                 options.SuppressAsyncSuffixInActionNames = false;
