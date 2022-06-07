@@ -1,56 +1,99 @@
-﻿using IdentityAuthService.Models;
+﻿using System.Security.Claims;
+using System.Threading.Tasks;
+using IdentityAuthService.DTOs;
+using IdentityAuthService.Servicees;
+using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
-namespace IdentityAuthService.Controllers
+namespace API.Controllers
 {
-    public class AccountController : Controller
+    [AllowAnonymous]
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AccountController : BaseApiController
     {
-        private UserManager<ApplicationUser> userManager;
-        private SignInManager<ApplicationUser> signInManager;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
+        private readonly TokenService _tokenService;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager, TokenService tokenService)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _tokenService = tokenService;
         }
 
-        // login and logout actions 
+        [HttpPost("login")]
 
-        [Authorize]
-        public async Task<IActionResult> Logout()
+        public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-            await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
-        public IActionResult Login()
-        {
-            return View();
-        }
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
 
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login([Required][EmailAddress] string email, [Required] string password, string returnurl)
-        {
-            if (ModelState.IsValid)
+            if (user == null) return Unauthorized();
+
+            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+            if (result.Succeeded)
             {
-                ApplicationUser appUser = await userManager.FindByEmailAsync(email);
-                if (appUser != null)
-                {
-                    Microsoft.AspNetCore.Identity.SignInResult result = await signInManager.PasswordSignInAsync(appUser, password, false, false);
-                    if (result.Succeeded)
-                    {
-                        return Redirect(returnurl ?? "/");
-                    }
-                }
-                ModelState.AddModelError(nameof(email), "Login Failed: Invalid Email or Password");
+                return CreateUserObject(user);
             }
 
-            return View();
+            return Unauthorized();
+        }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
+        {
+            if (await _userManager.Users.AnyAsync(x => x.Email == registerDto.Email))
+            {
+                ModelState.AddModelError("email", "Email taken");
+                return ValidationProblem();
+            }
+            if (await _userManager.Users.AnyAsync(x => x.UserName == registerDto.Username))
+            {
+                ModelState.AddModelError("username", "Username taken");
+                return ValidationProblem();
+            }
+
+            var user = new AppUser
+            {
+                DisplayName = registerDto.DisplayName,
+                Email = registerDto.Email,
+                UserName = registerDto.Username
+            };
+
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+
+            if (result.Succeeded)
+            {
+                return CreateUserObject(user);
+            }
+
+            return BadRequest("Problem registering user");
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<ActionResult<UserDto>> GetCurrentUser()
+        {
+            var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
+
+            return CreateUserObject(user);
+        }
+
+        private UserDto CreateUserObject(AppUser user)
+        {
+            return new UserDto
+            {
+                DisplayName = user.DisplayName,
+                Image = null,
+                Token = _tokenService.CreateToken(user),
+                Username = user.UserName
+            };
         }
     }
 }

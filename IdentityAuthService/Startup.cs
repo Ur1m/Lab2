@@ -10,6 +10,17 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using IdentityAuthService.Settings;
 using IdentityAuthService.Models;
+using Microsoft.EntityFrameworkCore;		
+using Presistence;	
+using MediatR;	
+using Application.Departmentet;	
+using Application.Core;	
+using AutoMapper;	
+using FluentValidation.AspNetCore;	
+using IdentityAuthService.Middleware;	
+using IdentityAuthService.Extensions;	
+using Microsoft.AspNetCore.Authorization;	
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace IdentityAuthService
 {
@@ -25,47 +36,44 @@ namespace IdentityAuthService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var mongoDbSettings = Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
-
+             var mongoDbSettings = Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
             services.AddSingleton(ServiceProvider =>
             {
                 var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
                 return mongoClient.GetDatabase(mongoDbSettings.Name);
             });
-
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
                 (
                     mongoDbSettings.ConnectionString, mongoDbSettings.Name
                 );
-
             services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseMiddleware<ExceptionMiddleware>();
+
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-            app.UseStaticFiles();
+
+            //  app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
 
+            app.UseAuthorization();
+
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
         }
     }
