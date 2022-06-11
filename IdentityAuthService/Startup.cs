@@ -10,18 +10,6 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using IdentityAuthService.Settings;
 using IdentityAuthService.Models;
-using Microsoft.EntityFrameworkCore;		
-using Presistence;	
-using MediatR;	
-using Application.Departmentet;	
-using Application.Core;	
-using AutoMapper;	
-using FluentValidation.AspNetCore;	
-using IdentityAuthService.Middleware;	
-using IdentityAuthService.Extensions;	
-using Microsoft.AspNetCore.Authorization;	
-using Microsoft.AspNetCore.Mvc.Authorization;
-
 namespace IdentityAuthService
 {
     public class Startup
@@ -53,7 +41,7 @@ namespace IdentityAuthService
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseMiddleware<ExceptionMiddleware>();
+          
 
             if (env.IsDevelopment())
             {
