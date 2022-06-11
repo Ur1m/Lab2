@@ -13,8 +13,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UserCourseInteraction.Database;
-using UserCourseInteraction.Models;
-using UserCourseInteraction.Repositories;
 
 namespace UserCourseInteraction
 {
@@ -38,10 +36,6 @@ namespace UserCourseInteraction
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UserCourseInteraction", Version = "v1" });
             });
-            services.AddTransient<IRepository<ShoppingCart>, Repository<ShoppingCart>>();
-            services.AddTransient<IRepository<WishList>, Repository<WishList>>();
-            services.AddTransient<IOrderRepository, OrderRepository>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
