@@ -12,6 +12,6 @@ namespace UserCourseInteraction.ViewModels
         public string userId { get; set; }
         public double totalPrice { get; set; }
         public DateTime CreatedOn { get; set; }
-        List<Product> products { get; set; }
+        public  List<Product> products { get; set; }
     }
 }

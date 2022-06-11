@@ -38,9 +38,9 @@ namespace UserCourseInteraction.Controllers
 
         }
         [HttpGet("{id}")]
-        public ActionResult<List<ShoppingCartViewModel>> getbyId(int id)
+        public ActionResult<List<ShoppingCartViewModel>> getbyId(string id)
         {
-            var all = _reposiory.GetAll().Where(x => x.Id == id);
+            var all = _reposiory.GetAll().Where(x => x.userId == id);
             if (all == null)
             {
                 return NotFound();
