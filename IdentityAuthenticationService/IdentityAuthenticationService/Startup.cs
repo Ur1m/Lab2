@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using IdentityAuthenticationService.Settings;
 using IdentityAuthenticationService.Models;
 using Microsoft.OpenApi.Models;
+using IdentityAuthenticationService.Services;
 
 namespace IdentityAuthenticationService
 {
@@ -38,6 +39,9 @@ namespace IdentityAuthenticationService
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "IdentityAuth.Service", Version = "v1" });
             });
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddTransient<IMailService, Services.MailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthenticationService.Controllers
 {
-
+    [RequireHttps]
     public class AccountController : Controller
     {
         private UserManager<ApplicationUser> userManager;

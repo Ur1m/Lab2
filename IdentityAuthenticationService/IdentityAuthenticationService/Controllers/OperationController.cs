@@ -7,7 +7,7 @@ using System;
 
 namespace IdentityAuthenticationService.Controllers
 {
-
+    [RequireHttps]
     public class OperationsController : Controller
     {
         private UserManager<ApplicationUser> userManager;

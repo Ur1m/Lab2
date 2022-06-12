@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthenticationService.Controllers
 {
-
+    [RequireHttps]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

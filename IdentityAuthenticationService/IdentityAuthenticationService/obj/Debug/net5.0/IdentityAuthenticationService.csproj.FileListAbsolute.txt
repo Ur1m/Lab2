@@ -56,3 +56,8 @@ D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\L
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.pdb
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.genruntimeconfig.cache
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\ref\IdentityAuthenticationService.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\IdentityAuthenticationService.StaticWebAssets.xml
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\MailKit.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\MimeKit.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\staticwebassets\IdentityAuthenticationService.StaticWebAssets.xml
