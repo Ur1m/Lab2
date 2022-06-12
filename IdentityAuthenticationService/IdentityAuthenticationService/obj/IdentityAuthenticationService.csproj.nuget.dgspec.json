@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj": {}
+    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {}
   },
   "projects": {
-    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj": {
+    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj",
-        "projectName": "Products.Service",
-        "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.Service\\Products.Service.csproj",
+        "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
+        "projectName": "IdentityAuthenticationService",
+        "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
         "packagesPath": "C:\\Users\\rinor\\.nuget\\packages\\",
-        "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Play.Products\\src\\Products.Service\\obj\\",
+        "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,13 +40,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "MongoDB.Driver": {
+            "AspNetCore.Identity.MongoDbCore": {
               "target": "Package",
-              "version": "[2.15.0, )"
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.14.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.3.1, )"
             }
           },
           "imports": [
