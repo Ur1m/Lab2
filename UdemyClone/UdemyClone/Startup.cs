@@ -43,6 +43,14 @@ namespace UdemyClone
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UdemyClone", Version = "v1" });
             });
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +64,7 @@ namespace UdemyClone
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("CorsPolicy");
 
             app.UseRouting();
 

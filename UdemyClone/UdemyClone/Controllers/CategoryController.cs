@@ -62,7 +62,7 @@ namespace UdemyClone.Controllers
             }
             return BadRequest();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> deleteCategory(int id)
         {
             if(id==0)
