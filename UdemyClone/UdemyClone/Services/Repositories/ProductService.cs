@@ -26,7 +26,10 @@ namespace UdemyClone.Services.Repositories
             {
                
                 var product = new Product();
+                
                 product = _mapper.Map<Product>(prodDTO);
+
+                product.CreateDate = DateTime.Now;
                 _db.products.Add(product);
                 _db.SaveChanges();
                 

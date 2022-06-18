@@ -1,6 +1,7 @@
 import CategoryList from "./Category/CategoryList";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { ProductsTable } from "./Components/Products/ProductsTable";
+import ProductList from "./Products/ProductList";
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Navbar/>
-      <CategoryList/>
+      <ProductList/>
       </header>
     </div>
   );
