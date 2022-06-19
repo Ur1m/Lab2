@@ -18,6 +18,7 @@ namespace UdemyClone.Services.Interfaces
         public void DeleteAttributeValue(int id);
         public void DeleteAttribute(int id);
         public void DeleteAttributeValueForProduct(int prodId, int attrid);
+        public List<AttributeValueDTO> getAllAtrvalues();
 
     }
 }

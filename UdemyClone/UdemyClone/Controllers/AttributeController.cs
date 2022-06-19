@@ -18,6 +18,7 @@ namespace UdemyClone.Controllers
         {
             _attrbuteRepository = attributeRepository;
         }
+
         [HttpGet]
         public async Task<ActionResult<List<AttributeDTO>>> getAtrDto()
         {
@@ -28,6 +29,17 @@ namespace UdemyClone.Controllers
             }
             return Ok(atrs);
         }
+        [HttpGet("attributevalues")]
+        public async Task<ActionResult<List<AttributeDTO>>> getAllAtributeVAlues()
+         {
+            var atrvalues = _attrbuteRepository.getAllAtrvalues();
+            if(atrvalues==null)
+            {
+                return NotFound();
+            }
+            return Ok(atrvalues);
+         }
+
         [HttpGet("atributevalues/{id}")]
        
         public async Task<ActionResult<List<AttributeValueDTO>>> getvalues(int id)

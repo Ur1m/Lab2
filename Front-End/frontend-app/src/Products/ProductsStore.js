@@ -85,7 +85,7 @@ export default class ProductStore{
     deleteProduct=async(id)=>{
         try{
            
-           await axios.delete("https://localhost:44388/api/product");
+           await axios.delete(`https://localhost:44388/api/product/${id}`);
            runInAction(()=>{
             //this.pacientat=[...this.pacientat.filter(a => a.pacient_Id !== id)]
             this.productsRegistry.delete(id);

@@ -70,6 +70,12 @@ namespace UdemyClone.Services.Repositories
             return attrs;
         }
 
+        public List<AttributeValueDTO> getAllAtrvalues()
+        {
+            var attrs = _db.atrvalues.Select(x => _mapper.Map<AttributeValueDTO>(x)).ToList();
+            return attrs;
+        }
+
         public List<AttributeValueDTO> getAttributeVAluesByAttributeId(int id)
         {
             var attrs = _db.atrvalues.Where(x=> x.AttributeId==id).Select(x => _mapper.Map<AttributeValueDTO>(x)).ToList();
