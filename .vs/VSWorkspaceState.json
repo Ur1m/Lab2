@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IdentityAuthService\\bin"
+    "\\Play.Products\\src",
+    "\\Play.Products\\src\\Products.Service\\Hubs",
+    "\\UdemyClone"
   ],
-  "SelectedNode": "\\IdentityAuthService",
+  "SelectedNode": "\\UdemyClone\\UdemyClone.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UdemyClone.Database;
+using UdemyClone.Hubs;
 using UdemyClone.Services.Interfaces;
 using UdemyClone.Services.Repositories;
 
@@ -38,6 +39,7 @@ namespace UdemyClone
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IReview, ReviewService>();
+            services.AddSignalR();
             services.AddTransient<IAttributeRepository, AttributeRepository>();
             services.AddSwaggerGen(c =>
             {
@@ -69,10 +71,10 @@ namespace UdemyClone
             app.UseRouting();
 
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<ChatHub>("/chathub");
             });
         }
     }
