@@ -3,6 +3,7 @@ using Google.Apis.Auth;
 using IdentityAuthenticationService.Models;
 using IdentityAuthenticationService.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -34,7 +35,8 @@ namespace IdentityAuthenticationService.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([Required][EmailAddress] string email, [Required] string password)
+        [EnableCors("AllowOrigin")]
+        public async Task<IActionResult> Login( string email, string password)
         {
             ApplicationUser appUser = await userManager.FindByEmailAsync(email);
             if (appUser != null)

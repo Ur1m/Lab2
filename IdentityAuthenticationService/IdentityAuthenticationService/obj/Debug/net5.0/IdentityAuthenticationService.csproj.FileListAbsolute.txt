@@ -130,3 +130,13 @@ D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\L
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.pdb
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.genruntimeconfig.cache
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\ref\IdentityAuthenticationService.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\AutoMapper.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Google.Apis.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Google.Apis.Auth.PlatformServices.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Google.Apis.Auth.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Google.Apis.Core.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

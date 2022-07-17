@@ -1,3 +1,4 @@
+import LoginComponent from "./Account/Login/LoginComponent";
 import AttributeList from "./Atributes/AttributeList";
 import CategoryList from "./Category/CategoryList";
 import { Navbar } from "./Components/Navbar/Navbar";
@@ -8,10 +9,10 @@ import ProductList from "./Products/ProductList";
 function App() {
   return (
     <div className="App">
-     { /* <header className="App-header">
+     <header className="App-header">
      
-      <AttributeList/>
-  </header> */ }
+      <LoginComponent/>
+      </header>
     </div>
   );
 }
