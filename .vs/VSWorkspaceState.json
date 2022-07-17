@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\UserCourseInteraction",
-    "\\UserCourseInteraction\\UserCourseInteraction"
+    "\\Play.Products\\src",
+    "\\Play.Products\\src\\Products.Service\\Hubs",
+    "\\UdemyClone"
   ],
-  "SelectedNode": "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.sln",
+  "SelectedNode": "\\UdemyClone\\UdemyClone.sln",
   "PreviewInSolutionExplorer": false
 }
