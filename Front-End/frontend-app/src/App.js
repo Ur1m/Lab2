@@ -10,17 +10,11 @@ import ProductList from "./Products/ProductList";
 function App() {
   return (
     <div className="App">
-<<<<<<< Updated upstream
-     { /* <header className="App-header">
-     
-      <AttributeList/>
-  </header> */ }
-=======
+
       <header className="App-header">
       <Navbar/>
       <Home/>
       </header>
->>>>>>> Stashed changes
     </div>
   );
 }
