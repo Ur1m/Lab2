@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.react-shadow-pyxm16{
+  display: none !important;
+}
