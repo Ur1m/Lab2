@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Google.Apis.Auth;
 using IdentityAuthenticationService.Models;
 using IdentityAuthenticationService.Repositories.Interfaces;
 using IdentityAuthenticationService.Services.Interfaces;
@@ -146,6 +147,11 @@ namespace IdentityAuthenticationService.Services
         {
             await Task.Delay(1);
             return await FindUserOrAdd(payload);
+        }
+
+        Task<ApplicationUser> IAccountService.FindUserOrAdd(GoogleJsonWebSignature.Payload payload)
+        {
+            throw new NotImplementedException();
         }
     }
 }
