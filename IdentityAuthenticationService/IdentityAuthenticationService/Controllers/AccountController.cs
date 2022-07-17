@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace IdentityAuthenticationService.Controllers
 {
-    [RequireHttps]
-    public class AccountController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AccountController : ControllerBase
     {
         private UserManager<ApplicationUser> userManager;
         private SignInManager<ApplicationUser> signInManager;
@@ -19,39 +20,26 @@ namespace IdentityAuthenticationService.Controllers
             this.signInManager = signInManager;
         }
 
-        // login and logout actions 
-        public IActionResult Login()
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([Required][EmailAddress] string email, [Required] string password)
         {
-            return View();
-        }
-
-        [HttpPost("Account/Login")]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login([Required][EmailAddress] string email, [Required] string password, string returnurl)
-        {
-            if (ModelState.IsValid)
+            ApplicationUser appUser = await userManager.FindByEmailAsync(email);
+            if (appUser != null)
             {
-                ApplicationUser appUser = await userManager.FindByEmailAsync(email);
-                if (appUser != null)
+                var result = await signInManager.PasswordSignInAsync(appUser, password, false, false);
+                if (result.Succeeded)
                 {
-                    Microsoft.AspNetCore.Identity.SignInResult result = await signInManager.PasswordSignInAsync(appUser, password, false, false);
-                    if (result.Succeeded)
-                    {
-                        return Redirect(returnurl ?? "/");
-                    }
+                    return Ok(result);
                 }
-                ModelState.AddModelError(nameof(email), "Login Failed: Invalid Email or Password");
-            }
-
-            return View();
+            } 
+            return BadRequest();
         }
 
-        [Authorize]
+        [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
-            await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            var result = signInManager.SignOutAsync().IsCompleted.ToString();
+            return Ok(result);
         }
     }
 }
