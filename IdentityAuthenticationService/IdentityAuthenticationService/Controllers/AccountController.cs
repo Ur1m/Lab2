@@ -44,7 +44,7 @@ namespace IdentityAuthenticationService.Controllers
                 {
                     return Ok(result);
                 }
-            } 
+            }
             return BadRequest();
         }
 
@@ -104,4 +104,5 @@ namespace IdentityAuthenticationService.Controllers
             }
             return BadRequest();
         }
+    }
 }
