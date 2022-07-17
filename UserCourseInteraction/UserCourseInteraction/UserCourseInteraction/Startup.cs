@@ -41,7 +41,13 @@ namespace UserCourseInteraction
             services.AddTransient<IRepository<ShoppingCart>, Repository<ShoppingCart>>();
             services.AddTransient<IRepository<WishList>, Repository<WishList>>();
             services.AddTransient<IOrderRepository, OrderRepository>();
-
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,8 +61,10 @@ namespace UserCourseInteraction
             }
 
             app.UseHttpsRedirection();
-
+            app.UseSwagger();
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
