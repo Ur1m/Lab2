@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using IdentityAuthenticationService.Models;
+using IdentityAuthenticationService.Repositories.Interfaces;
 using IdentityAuthenticationService.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -20,13 +21,15 @@ namespace IdentityAuthenticationService.Services
         private UserManager<ApplicationUser> userManager;
         private SignInManager<ApplicationUser> signInManager;
         private IMapper mapper;
+        private IAccountRepository accountRepository;
 
 
-        public AccountService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IMapper mapper)
+        public AccountService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IMapper mapper, IAccountRepository accountRepository)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.mapper = mapper;
+            this.accountRepository = accountRepository;
         }
 
         public async Task<string> GenerateJWToken(UserViewModel user)
@@ -86,7 +89,7 @@ namespace IdentityAuthenticationService.Services
             return tokenString;
         }
 
-        public Task<UserViewModel> SocialLogin(SocialUserViewModel socialUserViewModel)
+        public async Task<UserViewModel> SocialLogin(SocialUserViewModel socialUserViewModel)
         { 
             string[] fullName = socialUserViewModel.Name.Split(' ');
             string firstName = "";
@@ -109,11 +112,40 @@ namespace IdentityAuthenticationService.Services
             };
 
 
-            var result = await _authRepository.SocialLogin(applicationUser);
+            var result = await accountRepository.SocialLogin(applicationUser);
 
             var userViewModel = mapper.Map<UserViewModel>(result);
 
             return userViewModel;
+        }
+
+        private async Task<ApplicationUser> FindUserOrAdd(Google.Apis.Auth.GoogleJsonWebSignature.Payload payload)
+        {
+            var user = userManager.FindByEmailAsync(payload.Email).Result;
+            if (user == null)
+            {
+                var newUser = new ApplicationUser()
+                {
+                    Id = Guid.NewGuid(),
+                    FirstName = payload.Name,
+                    UserName = payload.Email,
+                    OAuthSubject = payload.Subject,
+                    OAuthIssuer = payload.Issuer
+                };
+
+                var result = await userManager.CreateAsync(newUser);
+                if (result.Succeeded)
+                {
+                    return newUser;
+                }
+            }
+            return user;
+        }
+
+        public async Task<ApplicationUser> Authenticate(Google.Apis.Auth.GoogleJsonWebSignature.Payload payload)
+        {
+            await Task.Delay(1);
+            return await FindUserOrAdd(payload);
         }
     }
 }

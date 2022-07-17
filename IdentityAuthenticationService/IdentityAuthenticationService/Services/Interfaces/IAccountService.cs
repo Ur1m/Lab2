@@ -9,5 +9,8 @@ namespace IdentityAuthenticationService.Services.Interfaces
 
         Task<string> GenerateJWToken(UserViewModel user);
 
+        Task<ApplicationUser> Authenticate(Google.Apis.Auth.GoogleJsonWebSignature.Payload payload);
+
+        Task<ApplicationUser> FindUserOrAdd(Google.Apis.Auth.GoogleJsonWebSignature.Payload payload);
     }
 }

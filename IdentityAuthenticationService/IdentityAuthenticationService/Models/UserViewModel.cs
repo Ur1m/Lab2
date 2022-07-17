@@ -9,6 +9,5 @@
         public string Avatar { get; set; }
         public string Provider { get; set; }
         public string TokenString { get; set; }
-        public bool EmailConfirmed { get; set; } = false;
     }
 }

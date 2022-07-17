@@ -1,9 +1,19 @@
-﻿using IdentityAuthenticationService.Models;
+﻿using crypto;
+using Google.Apis.Auth;
+using IdentityAuthenticationService.Models;
 using IdentityAuthenticationService.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.IdentityModel.Tokens.Jwt;
+using System.IO;
+using System.Reflection;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace IdentityAuthenticationService.Controllers
@@ -62,5 +72,36 @@ namespace IdentityAuthenticationService.Controllers
 
             return Unauthorized();
         }
-    }
+
+
+        [AllowAnonymous]
+        [HttpPost("google")]
+        public async Task<IActionResult> Google([FromBody] UserViewModel userView)
+        {
+            try
+            {
+                //SimpleLogger.Log("userView = " + userView.tokenId);
+                var payload = GoogleJsonWebSignature.ValidateAsync(userView.TokenString, new GoogleJsonWebSignature.ValidationSettings()).Result;
+                var user = await accountService.Authenticate(payload);
+                IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location))
+         .AddJsonFile(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "/appsettings.json").Build();
+
+                var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration.GetSection("AppSettings:Token").Value));
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+                var token = new JwtSecurityToken(String.Empty,
+                  String.Empty,
+                  expires: DateTime.Now.AddSeconds(55 * 60),
+                  signingCredentials: creds);
+                return Ok(new
+                {
+                    token = new JwtSecurityTokenHandler().WriteToken(token)
+                });
+            }
+            catch (Exception ex)
+            {
+                BadRequest(ex.Message);
+            }
+            return BadRequest();
+        }
 }

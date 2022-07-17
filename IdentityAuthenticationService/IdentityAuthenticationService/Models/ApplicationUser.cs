@@ -11,6 +11,10 @@ namespace IdentityAuthenticationService.Models
 
         public string LastName { get; set; }
 
-        public DateTime? CreatedAt { get; set; } 
+        public DateTime? CreatedAt { get; set; }
+
+        public string OAuthSubject { get; set; }
+
+        public string OAuthIssuer { get; set; }
     }
 }
