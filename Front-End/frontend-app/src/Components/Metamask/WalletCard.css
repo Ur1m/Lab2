@@ -1,0 +1,14 @@
+.walletCard {
+    text-align: center;
+	margin: 1rem;
+	border: 4px solid rgba(226, 221, 221, 0.644);
+	border-radius: 5px;
+    padding: 30px;
+}
+p{
+    margin-top: 50px;
+    padding: 10px;
+}
+h4{
+    padding: 20px;
+}
