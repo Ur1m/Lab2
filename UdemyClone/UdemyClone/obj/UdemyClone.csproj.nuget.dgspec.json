@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\urimb\\OneDrive\\Documents\\GitHub\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
   },
   "projects": {
-    "C:\\Users\\urimb\\OneDrive\\Documents\\GitHub\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {
+    "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\urimb\\OneDrive\\Documents\\GitHub\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
         "projectName": "UdemyClone",
-        "projectPath": "C:\\Users\\urimb\\OneDrive\\Documents\\GitHub\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
-        "packagesPath": "C:\\Users\\urimb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\urimb\\OneDrive\\Documents\\GitHub\\Lab2\\UdemyClone\\UdemyClone\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\urimb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.AspNet.SignalR": {
               "target": "Package",
               "version": "[2.4.3, )"
@@ -71,6 +75,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.15.1, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

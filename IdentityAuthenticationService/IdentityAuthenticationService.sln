@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityAuthenticationService", "IdentityAuthenticationService\IdentityAuthenticationService.csproj", "{4FCB0DC8-4B88-4302-8AA2-DFC7AD876619}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityAuthenticationService", "IdentityAuthenticationService\IdentityAuthenticationService.csproj", "{4FCB0DC8-4B88-4302-8AA2-DFC7AD876619}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CDAAF300-C030-43A6-AB08-765B5053CC1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4FCB0DC8-4B88-4302-8AA2-DFC7AD876619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FCB0DC8-4B88-4302-8AA2-DFC7AD876619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FCB0DC8-4B88-4302-8AA2-DFC7AD876619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDAAF300-C030-43A6-AB08-765B5053CC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAAF300-C030-43A6-AB08-765B5053CC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAAF300-C030-43A6-AB08-765B5053CC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAAF300-C030-43A6-AB08-765B5053CC1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

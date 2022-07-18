@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  usercourseinteraction:
+    image: ${DOCKER_REGISTRY-}usercourseinteraction
+    build:
+      context: .
+      dockerfile: UserCourseInteraction/Dockerfile
