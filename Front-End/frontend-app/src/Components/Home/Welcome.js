@@ -4,7 +4,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import "../Home/home.css";
+import WalletCard from '../Metamask/WalletCard';
 import "./../../Css/bootstrap.css";
+
 
 
 
@@ -56,7 +58,14 @@ export const Welcome = () => {
       </div>
       <div className="d-flex justify-content-center Metamask">
       </div>
-        <p className="paragraf1">MetaMask is a software cryptocurrency wallet used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app</p>
+      <WalletCard/>
+        <p className="paragraf1"> MetaMask allows users to store and manage account keys, broadcast transactions, 
+                                    send and receive Ethereum-based cryptocurrencies and tokens, and securely connect to decentralized applications through a 
+                                    compatible web browser or the mobile app's built-in browser. <br/>Developers achieve a connection between Metamask and their decentralized applications 
+                                    by using a JavaScript plugin such as Web3js or Ethers to define interactions between Metamask and Smart Contracts.
+                                    The Metamask application includes an integrated service for exchanging Ethereum tokens by aggregating several decentralized exchanges to find
+                                      the best exchange rate. This feature, branded as MetaMask Swaps, charges a service fee of 0.875% of the transaction amount.
+            </p>
       </div>
   );
 };

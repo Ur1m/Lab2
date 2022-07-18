@@ -1,5 +1,5 @@
 import './../../Css/bootstrap.css';
-
+import '../Home/home.css'
 export const Navbar = () =>{
     return <>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,10 +25,12 @@ export const Navbar = () =>{
           <li className="nav-item">
             <a className="nav-link" href="#">About</a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/login">Login</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Courses</a>
           </li>
         </ul>
+        <button type="button" class="btn btn-secondary  float-right">Log in</button>
+                <button type="button" class="btn btn-primary float-right">Sign up</button>
       </div>
     </div>
   </nav>

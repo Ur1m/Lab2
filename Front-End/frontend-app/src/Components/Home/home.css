@@ -32,7 +32,7 @@
   }
   .Metamask {
     margin-left: 600px;
-    margin-top: 100px;
+    margin-top: 332px;
     background-image: url("../../../public/img/metamaskk.png");
     background-repeat: no-repeat;
     width: 300px;
@@ -42,7 +42,10 @@
     font-weight:10px;
     color: black;
     text-align: center;
-    width: 500px;
-    margin-left: 380px;
   }
-  
+  .back{
+    margin-top: 167px;
+  }
+.btn{
+  margin-left: 10px;
+}
