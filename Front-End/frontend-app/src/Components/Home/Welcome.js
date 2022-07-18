@@ -11,18 +11,18 @@ import "./../../Css/bootstrap.css";
 export const Welcome = () => {
   return (
     <div className="back">
-      <div class="row back">
-        <div class="col-5 text-center">
+      <div className="row back">
+        <div className="col-5 text-center">
           <h1>LEARNOW THE NR.1 ONLINE TEACHING PLATFORM </h1>
-          <div class="row m-5">
-            <p class="p-4">
+          <div className="row m-5">
+            <p className="p-4">
               “THE MAN ON TOP OF THE MOUNTAIN DIDN’T FALL THERE, START MAKING
               YOUR WAY UP”
             </p>
           </div>
         </div>
 
-        <div class="col-md-7">
+        <div className="col-md-7">
           <Card sx={{ maxWidth: 1000 }}>
             <CardActionArea>
               <CardMedia

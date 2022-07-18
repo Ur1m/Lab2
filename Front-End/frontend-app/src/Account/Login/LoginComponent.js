@@ -1,24 +1,17 @@
 import React, {useState, useEffect} from "react";
 import { Header } from "semantic-ui-react";
 import { observer } from "mobx-react-lite";
+import axios from "axios";
 
-export default observer(function LoginComponent(){
+function LoginComponent(){
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
     useEffect(() =>{
     }, [])
 
     async function login(){
-        console.warn(email,password);
         let item = {email,password};
-        let result = await fetch("http://localhost:5000/api/Account/login",{
-            method:'POST',
-            headers: { 'Content-Type': 'application/json',
-                    "Accept":'application/json'},
-            body:JSON.stringify(item)
-        });
-        result = await result.json();
-        localStorage.setItem(JSON.stringify(result));
+        let result = await axios.post("http://localhost:5000/api/Account/login",item);
     }
     
 
@@ -36,4 +29,5 @@ export default observer(function LoginComponent(){
         </div>
     )
 }
-)
+
+export default LoginComponent;

@@ -42,6 +42,7 @@ namespace IdentityAuthenticationService
 
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
             services.AddTransient<IMailService, Services.MailService>();
+            //services.AddTransient<IAccountService, Services.AccountService>();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",

@@ -13,6 +13,7 @@ function App() {
       <header className="App-header">
         <Navbar />
         <Home />
+        <LoginComponent/>
       </header>
     </div>
   );
