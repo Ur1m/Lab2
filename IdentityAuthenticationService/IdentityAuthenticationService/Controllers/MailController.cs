@@ -1,14 +1,13 @@
 ﻿using IdentityAuthenticationService.Models;
 using IdentityAuthenticationService.Services;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
 namespace IdentityAuthenticationService.Controllers
 {
-    [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class MailController : ControllerBase
     {
         private readonly IMailService mailService;
@@ -16,6 +15,7 @@ namespace IdentityAuthenticationService.Controllers
         {
             this.mailService = mailService;
         }
+
         [HttpPost("send")]
         public async Task<IActionResult> SendMail([FromForm] MailRequest request)
         {
@@ -30,6 +30,7 @@ namespace IdentityAuthenticationService.Controllers
             }
 
         }
+
         [HttpPost("welcome")]
         public async Task<IActionResult> SendWelcomeMail([FromForm] WelcomeRequest request)
         {
