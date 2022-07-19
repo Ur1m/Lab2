@@ -20,11 +20,8 @@ import { Home } from "./Components/Home/Home";
 import ProductList from "./Products/ProductList";
 import "./Components/Home/home.css";
 import { Footer } from "./Components/Footer/Footer";
-<<<<<<< Updated upstream
 import ForgotPassword from "./Account/Login/ForgotPassword";
-=======
 import { Courses } from "./Components/Courses/Courses";
->>>>>>> Stashed changes
 
 function App() {
   return (
