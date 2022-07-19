@@ -16,18 +16,32 @@ import {Button} from 'semantic-ui-react';
 
 export const Courses = () => {
   const[prod,setProd]=useState();
-  
+  const [user,setUser]=useState(null);
+
 
   useEffect(()=> {
     axios.get("https://localhost:44303/api/Product").then((response) => {
         setProd(response.data)
+
+     
         
     });
+    axios.get("https://localhost:5000/api/account").then((response)=>{
+      setUser(response.data);
+      console.log(response.data);
+    })
     //console.log("data");
     
 },[]);
 
-function addToCart(id){
+function addToCart(id){  
+  if(user !=null){
+    axios.post("https://localhost:44352/api/ShoppingCart",{userId:user.id,productId:id});
+
+  }
+else{
+   alert("login first")
+  }
 
 }
   return (
@@ -69,6 +83,8 @@ function addToCart(id){
                  <Typography variant="body2" color="text.primary">
                    Price : {p.price}$
                    <Button floated="right" onClick={()=> addToCart(p.id)} content={"AddTOCart"} color="green"/>
+                   <Button floated="right" onClick={()=> addToCart(p.id)} content={"AddWishList"} color="green"/>
+                   <Button floated="right" onClick={()=> addToCart(p.id)} content={"AddToCompare"} color="green"/>
                  </Typography>
                </CardContent>
              </CardActionArea>

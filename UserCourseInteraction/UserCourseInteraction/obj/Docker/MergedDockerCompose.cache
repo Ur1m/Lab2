@@ -1,35 +1,16 @@
-name: dockercompose16618987572481075474
 services:
   usercourseinteraction:
     build:
-      context: C:\Users\Dell\Desktop\Lab2\UserCourseInteraction\UserCourseInteraction
+      context: C:\Users\hp\Desktop\Udemy\Lab2\UserCourseInteraction\UserCourseInteraction
       dockerfile: UserCourseInteraction/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: usercourseinteraction
-    networks:
-      default: null
     ports:
-    - mode: ingress
-      target: 80
-      protocol: tcp
-    - mode: ingress
-      target: 443
-      protocol: tcp
+    - target: 80
+    - target: 443
     volumes:
-    - type: bind
-      source: C:\Users\Dell\AppData\Roaming/Microsoft/UserSecrets
-      target: /root/.microsoft/usersecrets
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\Dell\AppData\Roaming/ASP.NET/Https
-      target: /root/.aspnet/https
-      read_only: true
-      bind:
-        create_host_path: true
-networks:
-  default:
-    name: dockercompose16618987572481075474_default
+    - C:\Users\hp\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\hp\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

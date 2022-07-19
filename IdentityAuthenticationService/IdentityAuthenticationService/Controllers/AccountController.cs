@@ -48,6 +48,18 @@ namespace IdentityAuthenticationService.Controllers
             }
             return BadRequest();
         }
+        [HttpGet]
+        public async Task<ActionResult<IdentityUser>> getCurrentUser()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = HttpContext.User.Identity.Name;
+                var returnuser = await userManager.FindByNameAsync(user);
+                return Ok(returnuser);
+                    }
+            return BadRequest();
+
+        }
 
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()

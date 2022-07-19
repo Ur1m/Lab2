@@ -438,4 +438,3 @@ C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Run
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Text.Json.dll
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Threading.Channels.dll
-C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\UdemyClone.csproj.CopyComplete

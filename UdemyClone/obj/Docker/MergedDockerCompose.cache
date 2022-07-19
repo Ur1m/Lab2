@@ -1,35 +1,26 @@
-name: dockercompose1768772803499375231
 services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    volumes:
+    - C:\Users\hp\.docker-conf\rabbitmq\data:/var/lib/rabbitmq/:rw
   udemyclone:
     build:
-      context: C:\Users\Dell\Desktop\Lab2\UdemyClone
+      context: C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone
       dockerfile: UdemyClone/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: udemyclone
-    networks:
-      default: null
     ports:
-    - mode: ingress
-      target: 80
-      protocol: tcp
-    - mode: ingress
-      target: 443
-      protocol: tcp
+    - target: 80
+    - target: 443
     volumes:
-    - type: bind
-      source: C:\Users\Dell\AppData\Roaming/Microsoft/UserSecrets
-      target: /root/.microsoft/usersecrets
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\Dell\AppData\Roaming/ASP.NET/Https
-      target: /root/.aspnet/https
-      read_only: true
-      bind:
-        create_host_path: true
-networks:
-  default:
-    name: dockercompose1768772803499375231_default
+    - C:\Users\hp\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\hp\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
