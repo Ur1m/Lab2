@@ -31,3 +31,36 @@ C:\Users\Dell\Desktop\Lab2\UdemyClone\bin\Debug\System.Threading.Channels.dll
 C:\Users\Dell\Desktop\Lab2\UdemyClone\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\Dell\Desktop\Lab2\UdemyClone\bin\Debug\RabbitMQ.Client.dll
 C:\Users\Dell\Desktop\Lab2\UdemyClone\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\UdemyClone.StaticWebAssets.xml
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\appsettings.Development.json
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\appsettings.json
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\libman.json
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\UdemyClone.deps.json
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\UdemyClone.runtimeconfig.json
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\UdemyClone.runtimeconfig.dev.json
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\UdemyClone.exe
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\UdemyClone.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\MassTransit.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\MassTransit.RabbitMqTransport.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\AutoMapper.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\MassTransit.Abstractions.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Microsoft.OpenApi.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\System.Text.Json.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\System.Threading.Channels.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\System.Text.Encodings.Web.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\RabbitMQ.Client.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\Microsoft.Data.SqlClient.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\bin\Debug\UdemyClone.pdb
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\obj\Debug\docker-compose.dcproj.CopyComplete

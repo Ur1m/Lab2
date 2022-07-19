@@ -8,6 +8,8 @@ export const RegisterComponent = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [data, setData] = useState();
+  const [isError, setIsError] = useState();
   useEffect(() => {}, []);
 
   async function register() {
@@ -15,7 +17,14 @@ export const RegisterComponent = () => {
     let result = await axios.post(
       "http://localhost:5000/api/Operations/createUser",
       item
-    );
+    ).then(res => {
+        setIsError(false);
+        setData("Registered successfully!")
+      })
+        .catch(err => {
+          setIsError(true);
+          setData(err.response.statusText);
+        });
   }
 
   return (
@@ -51,8 +60,21 @@ export const RegisterComponent = () => {
         <button onClick={register} className="btn btn-primary">
           Register
         </button>
+        <br />
+          <br />
+          {data && (
+            <div className='form-group'>
+              <div
+                className={isError ? 'alert alert-danger' : 'alert alert-success'}
+                role='alert'
+              >
+                {data}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
     </div>
   );
 };
