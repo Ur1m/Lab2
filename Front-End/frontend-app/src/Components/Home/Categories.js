@@ -18,7 +18,7 @@ export const Categories = () => {
         </div>
         <div className="row">
           <div className="col titull"><h4>Bussines</h4></div>
-          <div className="col titull"><h4>Coding</h4></div>
+          <div className="col titulli1"><h4>Coding</h4></div>
           <div className="col titull"><h4>Software Engineer</h4></div>
         </div>
       </div>
