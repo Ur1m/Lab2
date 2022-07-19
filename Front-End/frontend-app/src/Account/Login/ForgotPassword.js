@@ -7,6 +7,8 @@ import styless from "../Login/styless.css"
 export const ForgotPassword = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [data, setData] = useState();
+
     useEffect(() => {}, []);
   
     async function login() {
@@ -17,9 +19,10 @@ export const ForgotPassword = () => {
       );
 
       if(result.status == 200){
-       //do code here
+        setData("A reset link has been sent!")
+        setEmail('');
       }else{
-      //do code here
+        setData(result.statusText);
       }
     }
   
@@ -42,6 +45,18 @@ export const ForgotPassword = () => {
         <button onClick={login} className="btn btn-primary">
           Reset
         </button>
+        <br/>
+        <br/>
+        {data && (
+        <div className='form-group'>
+          <div
+            className={data ? 'alert alert-success' : 'alert alert-danger'}
+            role='alert'
+          >
+            {data}
+          </div>
+        </div>
+      )}
       </div>
       <div>{setMessage}</div>
     </div>

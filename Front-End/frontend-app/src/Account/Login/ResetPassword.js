@@ -3,11 +3,13 @@ import { Header } from "semantic-ui-react";
 import { observer } from "mobx-react-lite";
 import axios from "axios";
 import styless from "../Login/styless.css"
+import { set } from "mobx";
 
 export const ResetPassword = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
+  const [data, setData] = useState();
   useEffect(() => {}, []);
 
   async function reset() {
@@ -16,6 +18,14 @@ export const ResetPassword = () => {
       "http://localhost:5000/api/Account/reset-password",
       item
     );
+
+    if(result.status == 200){
+      setData("Password changed succesfully!")
+      setEmail('');
+      setPassword('');
+    }else{
+      setData(result.data);
+    }
   }
 
   return (
@@ -44,8 +54,21 @@ export const ResetPassword = () => {
         <button onClick={reset} className="btn btn-primary">
           Reset
         </button>
+        <br/>
+        <br/>
+        {data && (
+  <div className='form-group'>
+    <div
+      className={data ? 'alert alert-success' : 'alert alert-danger'}
+      role='alert'
+    >
+      {data}
+    </div>
+  </div>
+)}
       </div>
     </div>
+    
     </div>
   );
 };

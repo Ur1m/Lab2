@@ -60,16 +60,17 @@ namespace IdentityAuthenticationService.Controllers
         public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel forgotPasswordViewModel)
         {
             var user = await accountService.ForgotPassword(forgotPasswordViewModel);
-            var userVM = new UserViewModel()
-            {
-                Id = user.Id,
-                UserName = user.UserName,
-                FirstName = user.FirstName,
-                LastName = user.LastName
-            };
-
+           
             if (user != null)
             {
+                var userVM = new UserViewModel()
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName
+                };
+
                 var tokenString = await accountService.GenerateJWToken(user);
                 if (tokenString != "")
                 {
@@ -84,15 +85,16 @@ namespace IdentityAuthenticationService.Controllers
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordViewModel resetPasswordViewModel)
         {
             var user = await accountService.ResetPassword(resetPasswordViewModel);
-            var userVM = new UserViewModel()
-            {
-                Id = user.Id,
-                UserName = user.UserName,
-                FirstName = user.FirstName,
-                LastName = user.LastName
-            };
+            
             if (user != null)
             {
+                var userVM = new UserViewModel()
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName
+                };
                 var tokenString = await accountService.GenerateJWToken(user);
                 if (tokenString != "")
                 {
