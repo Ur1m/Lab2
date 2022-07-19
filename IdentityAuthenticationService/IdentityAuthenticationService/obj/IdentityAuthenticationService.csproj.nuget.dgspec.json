@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {}
+    "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {
+    "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
         "projectName": "IdentityAuthenticationService",
-        "projectPath": "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
-        "packagesPath": "C:\\Users\\Mynev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mynev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

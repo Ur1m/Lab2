@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
+    "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {
+    "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
         "projectName": "UdemyClone",
-        "projectPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UdemyClone\\UdemyClone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
