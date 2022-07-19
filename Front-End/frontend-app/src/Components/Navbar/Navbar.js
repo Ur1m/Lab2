@@ -1,5 +1,6 @@
 import "./../../Css/bootstrap.css";
 import "../Home/home.css";
+import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <>
@@ -23,37 +24,24 @@ export const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <Link className="nav-link active" to="/">
                   Home
-                  <span className="visually-hidden">(current)</span>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link active" to="/products">
                   Courses
-                </a>
+                </Link>
               </li>
             </ul>
             <button type="button" className="btn btn-secondary  float-right">
               Log in
             </button>
-            <button type="button" className="btn btn-primary float-right">
-              Sign up
+            <button
+              type="button"
+              className="btn btn-primary float-right buton1"
+            >
+              <Link to="/products">Courses</Link>
             </button>
           </div>
         </div>
