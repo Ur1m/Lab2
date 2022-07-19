@@ -11,8 +11,8 @@ export const Footer = () => {
     <div>
      <div className="footer">
          <div className="text-center p-3 fff">
-                  © 2020 Copyright:
-              <a className="text-darkk" href="https://google.com/">MDBootstrap.com</a>
+                  © 2022 Copyright: 
+              <a className="text-darkk" href="https://google.com/">LearNow</a>
          </div>
      </div>
     </div>

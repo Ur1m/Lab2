@@ -20,6 +20,7 @@ import { Home } from "./Components/Home/Home";
 import ProductList from "./Products/ProductList";
 import "./Components/Home/home.css";
 import { Footer } from "./Components/Footer/Footer";
+import ForgotPassword from "./Account/Login/ForgotPassword";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/products" element={<ProductList />}></Route>
           <Route path="/login" element={<LoginComponent />}></Route>
+          <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
         </Routes>
       </header>
       <Footer/>
