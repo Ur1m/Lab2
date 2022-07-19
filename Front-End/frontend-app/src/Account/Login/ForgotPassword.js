@@ -6,6 +6,7 @@ import styless from "../Login/styless.css"
 
 export const ForgotPassword = () => {
     const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
     useEffect(() => {}, []);
   
     async function login() {
@@ -14,6 +15,12 @@ export const ForgotPassword = () => {
         "http://localhost:5000/api/Account/forgot-password",
         item
       );
+
+      if(result.status == 200){
+       //do code here
+      }else{
+      //do code here
+      }
     }
   
     return (
@@ -36,6 +43,7 @@ export const ForgotPassword = () => {
           Reset
         </button>
       </div>
+      <div>{setMessage}</div>
     </div>
     </div>
   );
