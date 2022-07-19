@@ -282,3 +282,4 @@ C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthe
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\ref\IdentityAuthenticationService.dll
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.pdb
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.genruntimeconfig.cache
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.csproj.AssemblyReference.cache

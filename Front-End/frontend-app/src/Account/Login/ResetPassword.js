@@ -5,14 +5,15 @@ import axios from "axios";
 import styless from "../Login/styless.css"
 
 export const ResetPassword = () => {
-  const [Password, setPassword] = useState("");
-  const [CPassword, setCPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [token, setToken] = useState("");
   useEffect(() => {}, []);
 
   async function reset() {
-    let item = { Password };
+    let item = { email, password, token };
     let result = await axios.post(
-      "http://localhost:5000/api/reset-password",
+      "http://localhost:5000/api/Account/reset-password",
       item
     );
   }
@@ -27,16 +28,16 @@ export const ResetPassword = () => {
       </div>
       <div className="col-sm-4 ">
         <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
+          type="text"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
           className="form-control"
         />
         <br />
         <input
           type="password"
-          placeholder="Confirm Password"
-          onChange={(e) => setCPassword(e.target.value)}
+          placeholder="New Password"
+          onChange={(e) => setPassword(e.target.value)}
           className="form-control"
         />
         <br />

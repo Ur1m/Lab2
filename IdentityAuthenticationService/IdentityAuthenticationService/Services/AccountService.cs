@@ -34,7 +34,7 @@ namespace IdentityAuthenticationService.Services
 
             if (user != null)
             {
-                var token = await GenerateJWToken(user);
+                var token = await userManager.GeneratePasswordResetTokenAsync(user);
                 token = HttpUtility.UrlEncode(token);
 
                 await SendResetPasswordEmail(forgetPasswordViewModel.Email, token);
@@ -97,6 +97,26 @@ namespace IdentityAuthenticationService.Services
             }
 
             return tokenString;
+        }
+
+        public async Task<ApplicationUser> ResetPassword(ResetPasswordViewModel resetPasswordViewModel)
+        {
+            var user = await userManager.FindByEmailAsync(resetPasswordViewModel.Email);
+            if (user != null)
+            {
+                resetPasswordViewModel.Token = await userManager.GeneratePasswordResetTokenAsync(user);
+                var result = await userManager.ResetPasswordAsync(user, resetPasswordViewModel.Token, resetPasswordViewModel.Password);
+                if (result.Succeeded)
+                {
+                    return user;
+                }
+                foreach (var error in result.Errors)
+                {
+                    return null;
+                }
+            }
+
+            return user;
         }
 
         private async Task<bool> SendResetPasswordEmail(string email, string token)

@@ -12,6 +12,8 @@ using IdentityAuthenticationService.Models;
 using Microsoft.OpenApi.Models;
 using IdentityAuthenticationService.Services;
 using IdentityAuthenticationService.Services.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace IdentityAuthenticationService
 {
@@ -30,7 +32,9 @@ namespace IdentityAuthenticationService
             var mongoDbSettings = Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
             services.AddControllersWithViews();
 
-            services.AddIdentity<ApplicationUser, ApplicationRole>()
+            services.AddIdentity<ApplicationUser, ApplicationRole>(options => {
+                options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultEmailProvider;
+            }).AddDefaultTokenProviders()
             .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
             (
             mongoDbSettings.ConnectionString, mongoDbSettings.Name
@@ -51,6 +55,9 @@ namespace IdentityAuthenticationService
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
+
+            // Services identity depends on
+            services.AddOptions().AddLogging();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

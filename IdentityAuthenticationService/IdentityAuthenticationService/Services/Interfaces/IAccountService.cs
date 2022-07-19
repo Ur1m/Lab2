@@ -11,5 +11,7 @@ namespace IdentityAuthenticationService.Services.Interfaces
         Task<string> GenerateJWToken(ApplicationUser user);
 
         Task<ApplicationUser> ForgotPassword(ForgotPasswordViewModel forgetPasswordViewModel);
+
+        Task<ApplicationUser> ResetPassword(ResetPasswordViewModel resetPasswordViewModel);
     }
 }
