@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Header } from "semantic-ui-react";
 import { observer } from "mobx-react-lite";
 import axios from "axios";
+import styless from "../Login/styless.css"
 
 export const LoginComponent = () => {
   const [email, setEmail] = useState("");
@@ -17,10 +18,14 @@ export const LoginComponent = () => {
   }
 
   return (
-    <div>
-      <Header></Header>
-      <h1>Login</h1>
-      <div className="col-sm-6 offset-sm-3">
+    <div className="wraper">
+      
+    <div className="containerr">
+      <div className="textbox">
+        <h3>Welcome To Lernow</h3>
+        <p className="paragrafff">Please enter your credentials</p>
+      </div>
+      <div className="col-sm-4 ">
         <input
           type="text"
           placeholder="email"
@@ -39,6 +44,7 @@ export const LoginComponent = () => {
           Login
         </button>
       </div>
+    </div>
     </div>
   );
 };
