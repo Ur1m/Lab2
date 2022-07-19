@@ -6,13 +6,12 @@ import styless from "../Login/styless.css"
 
 export const ForgotPassword = () => {
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     useEffect(() => {}, []);
   
     async function login() {
-      let item = { email, password };
+      let item = { email };
       let result = await axios.post(
-        "http://localhost:5000/api/Account/login",
+        "http://localhost:5000/api/Account/forgot-password",
         item
       );
     }

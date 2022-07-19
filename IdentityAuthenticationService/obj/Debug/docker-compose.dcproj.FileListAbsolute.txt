@@ -61,3 +61,7 @@ C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\bin\Debug\Ide
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll

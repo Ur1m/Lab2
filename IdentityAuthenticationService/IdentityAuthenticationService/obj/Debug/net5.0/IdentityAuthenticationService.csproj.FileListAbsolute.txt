@@ -203,7 +203,6 @@ D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\L
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.pdb
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.genruntimeconfig.cache
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\ref\IdentityAuthenticationService.dll
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.csproj.AssemblyReference.cache
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.AssemblyInfoInputs.cache
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.AssemblyInfo.cs
