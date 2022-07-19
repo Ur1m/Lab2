@@ -1,12 +1,8 @@
 services:
   identityauthenticationservice:
     build:
-<<<<<<< Updated upstream
       context: D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow
         - Projekti\Lab2\IdentityAuthenticationService
-=======
-      context: C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService
->>>>>>> Stashed changes
       dockerfile: IdentityAuthenticationService/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
