@@ -19,7 +19,7 @@ namespace UserCourseInteraction.Controllers
         {
             _orderRepository = orderRepository;
         }
-        [HttpGet]
+       [HttpGet]
         public async Task<ActionResult<List<OrderViewModel>>> getAllOrders()
         {
             var all = _orderRepository.GetAll();
@@ -29,7 +29,7 @@ namespace UserCourseInteraction.Controllers
             }
             return Ok(all);
         }
-        [HttpGet("all/{id}")]
+        [HttpGet("/all/{id}")]
         public async Task<ActionResult<List<OrderViewModel>>> getAllbyId(string Id)
         {
             var all = _orderRepository.getbyUserId(Id);
@@ -71,7 +71,7 @@ namespace UserCourseInteraction.Controllers
             }
             return NotFound();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> delete(int Id)
 
         {

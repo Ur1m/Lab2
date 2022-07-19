@@ -76,7 +76,7 @@ namespace UserCourseInteraction.Controllers
             }
             return NotFound(); 
         }
-        [HttpPut("{Id}")]
+        [HttpDelete("{Id}")]
         public ActionResult Remove(int Id)
         {
             if (ModelState.IsValid)
