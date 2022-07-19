@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IdentityAuthService\\bin"
+    "\\IdentityAuthenticationService",
+    "\\UdemyClone"
   ],
-  "SelectedNode": "\\IdentityAuthService",
+  "SelectedNode": "\\UdemyClone\\UdemyClone.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,30 @@
+.walletCard {
+  text-align: center;
+  margin: 1rem;
+  border: 4px solid rgba(240, 240, 240, 0.644);
+  border-radius: 5px;
+  padding: 30px;
+}
+p {
+  margin-top: 50px;
+  padding: 10px;
+}
+h4 {
+  padding: 20px;
+}
+.css-1qaznj3-MuiCardContent-root:last-child {
+  padding-bottom: 24px;
+  margin-top: 40px;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child {
+  margin-bottom: 0;
+  color: grey;
+}
+.btn-outline-primary {
+  color: #685c5c;
+  border-color: #a79a9a;
+}

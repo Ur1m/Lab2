@@ -7,8 +7,10 @@ using System;
 
 namespace IdentityAuthenticationService.Controllers
 {
-    [RequireHttps]
-    public class OperationsController : Controller
+
+    [ApiController]
+    [Route("api/[controller]")]
+    public class OperationsController : ControllerBase
     {
         private UserManager<ApplicationUser> userManager;
         private RoleManager<ApplicationRole> roleManager;
@@ -19,51 +21,35 @@ namespace IdentityAuthenticationService.Controllers
             this.roleManager = roleManager;
         }
 
-        public ViewResult Create() => View();
 
-
-        [HttpPost("Account/CreateUser")]
-        public async Task<IActionResult> Create(User user)
+        [HttpPost("createUser")]
+        public async Task<IActionResult> Create([FromForm] User user)
         {
-            if (ModelState.IsValid)
+            ApplicationUser appUser = new ApplicationUser
             {
-                ApplicationUser appUser = new ApplicationUser
-                {
-                    UserName = user.Name,
-                    Email = user.Email
-                };
+                UserName = user.Name,
+                Email = user.Email
+            };
 
-                IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
+            IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
 
-                //Adding User to Admin Role
-                await userManager.AddToRoleAsync(appUser, "Admin");
+            //Adding User to User Role
+            await userManager.AddToRoleAsync(appUser, "User");
 
-                if (result.Succeeded)
-                    return Ok(appUser);
-                else
-                {
-                    foreach (IdentityError error in result.Errors)
-                        return Ok(new ErrorViewModel { RequestId = error.Code });
-                }
-            }
-            return null;
+            if (result.Succeeded)
+                return Ok(appUser);
+            else
+                return BadRequest(result.Errors);
         }
 
-        [HttpPost("Account/CreateRole")]
+        [HttpPost("createRole")]
         public async Task<IActionResult> CreateRole([Required] string name)
         {
-            if (ModelState.IsValid)
-            {
-                IdentityResult result = await roleManager.CreateAsync(new ApplicationRole() { Name = name });
-                if (result.Succeeded)
-                    return Ok(name);
-                else
-                {
-                    foreach (IdentityError error in result.Errors)
-                        return Ok(new ErrorViewModel { RequestId  = error.Code});
-                }
-            }
-            return null;
+            IdentityResult result = await roleManager.CreateAsync(new ApplicationRole() { Name = name });
+            if (result.Succeeded)
+               return Ok(name);
+            else
+               return BadRequest(result.Errors);
         }
     }
 }

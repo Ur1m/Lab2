@@ -1,0 +1,35 @@
+.col-sm-6 {
+  flex: 0 0 auto;
+  width: 320px;
+}
+.wraper{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 191px;
+  
+  width: 841px;
+  height: 357px;
+  /* min-height: 2000px; */
+  /* border: 2px solid; */
+  border-radius: 2% 2% 2% 2%;
+  background-color: rgb(52 58 64 / 37%);
+  margin-bottom: 200px;
+}
+.textbox{
+  text-align: center;  
+  margin-right: 50px;
+}
+h3{
+  width: 390px;
+}
+.paragrafff{
+  color: white;
+}

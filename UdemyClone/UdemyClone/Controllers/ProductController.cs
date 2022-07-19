@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MassTransit;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,11 @@ namespace UdemyClone.Controllers
     {
 
         private IProductService _productService;
-        public ProductController(IProductService productService)
+        private IPublishEndpoint _publishEndpoint;
+        public ProductController(IProductService productService,IPublishEndpoint publishEndpoint)
         {
             _productService = productService;
+            _publishEndpoint = publishEndpoint;
         }
 
         [HttpGet]

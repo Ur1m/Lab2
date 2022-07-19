@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  identityauthenticationservice:
+    image: ${DOCKER_REGISTRY-}identityauthenticationservice
+    build:
+      context: .
+      dockerfile: IdentityAuthenticationService/Dockerfile

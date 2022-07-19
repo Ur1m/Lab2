@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {
+    "C:\\Users\\Dell\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
         "projectName": "UserCourseInteraction",
-        "projectPath": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\Udemy\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
@@ -91,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
