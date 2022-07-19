@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\rinor\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\rinor\\.nuget\\packages"
+=======
+      "C:\\Users\\Dell\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Dell\\.nuget\\packages"
+>>>>>>> parent of 3eadcb1 (merge after pull-push)
     ]
   }
 }

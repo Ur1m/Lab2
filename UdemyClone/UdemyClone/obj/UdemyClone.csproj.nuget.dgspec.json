@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "projectName": "UdemyClone",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\Lab2\\UdemyClone\\UdemyClone\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> parent of 3eadcb1 (merge after pull-push)
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,7 +124,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+>>>>>>> parent of 3eadcb1 (merge after pull-push)
         }
       }
     }

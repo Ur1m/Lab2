@@ -427,6 +427,7 @@ C:\Users\Dell\Desktop\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Runtime
 C:\Users\Dell\Desktop\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 C:\Users\Dell\Desktop\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Text.Json.dll
 C:\Users\Dell\Desktop\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\System.Threading.Channels.dll
+<<<<<<< HEAD
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\libman.json
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\MassTransit.dll
 C:\Users\hp\Desktop\Udemy\Lab2\UdemyClone\UdemyClone\bin\Debug\net5.0\MassTransit.Abstractions.dll
@@ -585,3 +586,5 @@ D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\L
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\UdemyClone.pdb
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\UdemyClone.genruntimeconfig.cache
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\UdemyClone\UdemyClone\obj\Debug\net5.0\ref\UdemyClone.dll
+=======
+>>>>>>> parent of 3eadcb1 (merge after pull-push)

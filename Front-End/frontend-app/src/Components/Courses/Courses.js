@@ -6,30 +6,11 @@ import { CardActionArea } from "@mui/material";
 import "../Courses/courses.css";
 import WalletCard from '../Metamask/WalletCard';
 import "./../../Css/bootstrap.css";
-import { useState,useEffect } from "react";
-import axios from 'axios';
-import {Button} from 'semantic-ui-react';
-
 
 
 
 
 export const Courses = () => {
-  const[prod,setProd]=useState();
-  
-
-  useEffect(()=> {
-    axios.get("https://localhost:44303/api/Product").then((response) => {
-        setProd(response.data)
-        
-    });
-    //console.log("data");
-    
-},[]);
-
-function addToCart(id){
-
-}
   return (
     <div className="back">
       <div className="row back">
@@ -49,34 +30,54 @@ function addToCart(id){
         </div>
 
         <div className="col-md-7">
-          {prod!=null && prod.map(p=>(
-             <Card sx={{ maxWidth: 800 }}>
-             <CardActionArea>
-               <CardMedia
-                 className="classes.media"
-                 component="img"
-                 height="120"
-                 image="/img/code.jpg"
-                 alt="green iguana"
-               />
-               <CardContent>
-                 <Typography gutterBottom variant="h5" component="div">
-                   {p.name}
-                 </Typography>
-                 <Typography variant="body2" color="text.secondary">
-                  {p.description}
-                 </Typography>
-                 <Typography variant="body2" color="text.primary">
-                   Price : {p.price}$
-                   <Button floated="right" onClick={()=> addToCart(p.id)} content={"AddTOCart"} color="green"/>
-                 </Typography>
-               </CardContent>
-             </CardActionArea>
-           </Card>
+          <Card sx={{ maxWidth: 800 }}>
+            <CardActionArea>
+              <CardMedia
+                className="classes.media"
+                component="img"
+                height="120"
+                image="/img/code.jpg"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Programing Full-stack course
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  This course provides one of the best section of web
+                  development with intereactive examples
+                </Typography>
+                <Typography variant="body2" color="text.primary">
+                  Price : 23$
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
 
-          ))}
-        
-         
+          <Card sx={{ maxWidth: 800 }}>
+            <CardActionArea>
+              <CardMedia
+                className="classes.media"
+                component="img"
+                height="120"
+                image="/img/backend.jpg"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Programing Back-End Course
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                ou have a basic working knowledge of the Python programming language, which will be used in this course.
+
+If you're looking to learn or refresh your knowledge of Python and programming, take a look at our courses Introduction to Computer Science and Programming Foundations with Python.
+                </Typography>
+                <Typography variant="body2" color="text.primary">
+                  Price : 23$
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </div>
       </div>
       </div>
