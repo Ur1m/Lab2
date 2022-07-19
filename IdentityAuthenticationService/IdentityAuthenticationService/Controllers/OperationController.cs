@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System;
+using IdentityAuthenticationService.Services.Interfaces;
 
 namespace IdentityAuthenticationService.Controllers
 {
@@ -14,11 +15,13 @@ namespace IdentityAuthenticationService.Controllers
     {
         private UserManager<ApplicationUser> userManager;
         private RoleManager<ApplicationRole> roleManager;
+        private readonly IAccountService accountService;
 
-        public OperationsController(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
+        public OperationsController(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager, IAccountService accountService)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
+            this.accountService = accountService;
         }
 
 
@@ -32,7 +35,6 @@ namespace IdentityAuthenticationService.Controllers
             };
 
             IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
-
             //Adding User to User Role
             await userManager.AddToRoleAsync(appUser, "User");
 

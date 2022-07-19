@@ -16,7 +16,7 @@ namespace IdentityAuthenticationService.Services
         {
             _mailSettings = mailSettings.Value;
         }
-        public async Task SendEmailAsync(MailRequest mailRequest)
+        public async Task<bool> SendEmailAsync(MailRequest mailRequest)
         {
             var email = new MimeMessage();
             email.Sender = MailboxAddress.Parse(_mailSettings.Mail);
@@ -46,6 +46,7 @@ namespace IdentityAuthenticationService.Services
             smtp.Authenticate(_mailSettings.Mail, _mailSettings.Password);
             await smtp.SendAsync(email);
             smtp.Disconnect(true);
+            return true;
         }
         public async Task SendWelcomeEmailAsync(WelcomeRequest request)
         {

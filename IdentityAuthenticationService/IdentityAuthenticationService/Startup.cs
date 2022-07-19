@@ -11,6 +11,7 @@ using IdentityAuthenticationService.Settings;
 using IdentityAuthenticationService.Models;
 using Microsoft.OpenApi.Models;
 using IdentityAuthenticationService.Services;
+using IdentityAuthenticationService.Services.Interfaces;
 
 namespace IdentityAuthenticationService
 {
@@ -41,8 +42,8 @@ namespace IdentityAuthenticationService
             });
 
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
-            services.AddTransient<IMailService, Services.MailService>();
-            //services.AddTransient<IAccountService, Services.AccountService>();
+            services.AddTransient<IMailService, MailService>();
+            services.AddTransient<IAccountService, AccountService>();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",

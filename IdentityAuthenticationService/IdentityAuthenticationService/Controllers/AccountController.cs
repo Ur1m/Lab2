@@ -1,6 +1,7 @@
 ﻿using crypto;
 using Google.Apis.Auth;
 using IdentityAuthenticationService.Models;
+using IdentityAuthenticationService.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
@@ -24,11 +25,13 @@ namespace IdentityAuthenticationService.Controllers
     {
         private UserManager<ApplicationUser> userManager;
         private SignInManager<ApplicationUser> signInManager;
+        private readonly IAccountService accountService;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IAccountService accountService)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.accountService = accountService;
         }
 
         [HttpPost("login")]
@@ -51,6 +54,30 @@ namespace IdentityAuthenticationService.Controllers
         {
             var result = signInManager.SignOutAsync().IsCompleted.ToString();
             return Ok(result);
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel forgotPasswordViewModel)
+        {
+            var user = await accountService.ForgotPassword(forgotPasswordViewModel);
+            var userVM = new UserViewModel()
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName
+            };
+
+            if (user != null)
+            {
+                var tokenString = await accountService.GenerateJWToken(user);
+                if (tokenString != "")
+                {
+                    userVM.TokenString = tokenString;
+                    return Ok(userVM);
+                }
+            }
+            return Unauthorized();
         }
     }
 }

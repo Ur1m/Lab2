@@ -1,8 +1,10 @@
-﻿namespace IdentityAuthenticationService.Models
+﻿using System;
+
+namespace IdentityAuthenticationService.Models
 {
     public class UserViewModel
     {
-        public string Id { get; set; }
+        public Guid? Id { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

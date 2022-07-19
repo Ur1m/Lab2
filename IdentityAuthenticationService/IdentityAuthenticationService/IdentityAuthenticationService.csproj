@@ -7,16 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Repositories\Interfaces\**" />
-    <Content Remove="Repositories\Interfaces\**" />
-    <EmbeddedResource Remove="Repositories\Interfaces\**" />
-    <None Remove="Repositories\Interfaces\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Repositories\AccountRepository.cs" />
-    <Compile Remove="Services\AccountService.cs" />
-    <Compile Remove="Services\Interfaces\IAccountService.cs" />
+    <Page Include="Templates\SendResetPasswordEmailTemplate.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,10 +21,6 @@
     <PackageReference Include="MimeKit" Version="3.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>

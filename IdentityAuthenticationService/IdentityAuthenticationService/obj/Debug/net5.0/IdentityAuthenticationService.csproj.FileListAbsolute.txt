@@ -203,6 +203,15 @@ D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\L
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.pdb
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.genruntimeconfig.cache
 D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow - Projekti\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\ref\IdentityAuthenticationService.dll
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.csproj.AssemblyReference.cache
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.AssemblyInfoInputs.cache
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.AssemblyInfo.cs
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.csproj.CoreCompileInputs.cache
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.RazorAssemblyInfo.cache
+C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.RazorAssemblyInfo.cs
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\appsettings.json
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\IdentityAuthenticationService.StaticWebAssets.xml
@@ -253,15 +262,6 @@ C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthe
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.csproj.AssemblyReference.cache
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.AssemblyInfoInputs.cache
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.AssemblyInfo.cs
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.csproj.CoreCompileInputs.cache
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.RazorAssemblyInfo.cache
-C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\IdentityAuthenticationService.RazorAssemblyInfo.cs
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\staticwebassets\IdentityAuthenticationService.StaticWebAssets.Manifest.cache
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\staticwebassets\IdentityAuthenticationService.StaticWebAssets.xml
 C:\Users\Mynev\Documents\GitHub\Lab2\IdentityAuthenticationService\IdentityAuthenticationService\obj\Debug\net5.0\scopedcss\bundle\IdentityAuthenticationService.styles.css
