@@ -2,6 +2,7 @@ import LoginComponent from "./Account/Login/LoginComponent";
 import AttributeList from "./Atributes/AttributeList";
 import CategoryList from "./Category/CategoryList";
 import { Navbar } from "./Components/Navbar/Navbar";
+
 import React, { Fragment, useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/products" element={<ProductList />}></Route>
+          <Route path="/products" element={<LoginComponent />}></Route>
         </Routes>
       </header>
     </div>

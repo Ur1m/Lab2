@@ -34,15 +34,14 @@ export const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            <button type="button" className="btn btn-secondary  float-right">
+
+            <Link className="btn btn-secondary float-right " to="/login">
               Log in
-            </button>
-            <button
-              type="button"
-              className="btn btn-primary float-right buton1"
-            >
-              <Link to="/products">Courses</Link>
-            </button>
+            </Link>
+
+            <Link className="btn btn-primary float-right " to="/login">
+              Sign up
+            </Link>
           </div>
         </div>
       </nav>
