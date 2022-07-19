@@ -21,6 +21,7 @@ import ProductList from "./Products/ProductList";
 import "./Components/Home/home.css";
 import { Footer } from "./Components/Footer/Footer";
 import ForgotPassword from "./Account/Login/ForgotPassword";
+import RegisterComponent from "./Account/Login/RegisterComponent";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/products" element={<ProductList />}></Route>
           <Route path="/login" element={<LoginComponent />}></Route>
           <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
+          <Route path="/register" element={<RegisterComponent />}></Route>
         </Routes>
       </header>
       <Footer/>

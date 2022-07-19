@@ -23,7 +23,7 @@ namespace IdentityAuthenticationService.Controllers
 
 
         [HttpPost("createUser")]
-        public async Task<IActionResult> Create([FromForm] User user)
+        public async Task<IActionResult> Create([FromBody] User user)
         {
             ApplicationUser appUser = new ApplicationUser
             {
