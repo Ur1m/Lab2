@@ -2802,11 +2802,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\rinor\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Mynev\\.nuget\\packages\\": {}
+>>>>>>> parent of 3eadcb1 (merge after pull-push)
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
       "projectName": "IdentityAuthenticationService",
       "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
@@ -2815,6 +2820,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
+      "projectName": "IdentityAuthenticationService",
+      "projectPath": "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
+      "packagesPath": "C:\\Users\\Mynev\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mynev\\Documents\\GitHub\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Mynev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> parent of 3eadcb1 (merge after pull-push)
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2899,7 +2914,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
+>>>>>>> parent of 3eadcb1 (merge after pull-push)
       }
     }
   }

@@ -19,7 +19,7 @@ export const RegisterComponent = () => {
       item
     ).then(res => {
         setIsError(false);
-        setData("Registered successfully!")
+        setData("Registered successfully!");
       })
         .catch(err => {
           setIsError(true);
