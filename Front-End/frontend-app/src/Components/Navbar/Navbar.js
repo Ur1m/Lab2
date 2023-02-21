@@ -38,6 +38,11 @@ export const Navbar = () => {
                   Add Products
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/about">
+                  About
+                </Link>
+              </li>
             </ul>
 
             <Link className="btn btn-secondary float-right " to="/login">

@@ -17,7 +17,7 @@ export const LoginComponent = () => {
   async function login() {
     let item = { email, password };
     let result = await axios.post(
-      "http://localhost:5000/api/Account/login",
+      "http://localhost:5002/api/Account/login",
       item
     ).then(res => {
       setIsError(false);
