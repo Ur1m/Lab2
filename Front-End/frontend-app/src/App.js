@@ -23,6 +23,7 @@ import { Footer } from "./Components/Footer/Footer";
 import ForgotPassword from "./Account/Login/ForgotPassword";
 import RegisterComponent from "./Account/Login/RegisterComponent";
 import { Courses } from "./Components/Courses/Courses";
+import { About } from "./Components/About/About";
 import ResetPassword from "./Account/Login/ResetPassword";
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
           <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
           <Route path="/register" element={<RegisterComponent />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
+          <Route path="/about" element={<About />}></Route>
+
         </Routes>
       </header>
       <Footer/>
