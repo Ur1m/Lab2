@@ -15,7 +15,7 @@ export const RegisterComponent = () => {
   async function register() {
     let item = { Name, Email, Password };
     let result = await axios.post(
-      "http://localhost:5000/api/Operations/createUser",
+      "http://localhost:5003/api/Operations/createUser",
       item
     ).then(res => {
         setIsError(false);

@@ -1,13 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\rinor\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\rinor\\.nuget\\packages"
-=======
-      "C:\\Users\\Mynev\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Mynev\\.nuget\\packages"
->>>>>>> parent of 3eadcb1 (merge after pull-push)
+      "C:\\Users\\urimb\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\urimb\\.nuget\\packages"
     ]
   }
 }

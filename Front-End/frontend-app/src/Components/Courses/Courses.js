@@ -20,13 +20,13 @@ export const Courses = () => {
 
 
   useEffect(()=> {
-    axios.get("https://localhost:44303/api/Product").then((response) => {
+    axios.get("https://localhost:5002/api/Product").then((response) => {
         setProd(response.data)
 
      
         
     });
-    axios.get("https://localhost:5000/api/account").then((response)=>{
+    axios.get("https://localhost:5003/api/account").then((response)=>{
       setUser(response.data);
       console.log(response.data);
     })
@@ -36,7 +36,7 @@ export const Courses = () => {
 
 function addToCart(id){  
   if(user !=null){
-    axios.post("https://localhost:44352/api/ShoppingCart",{userId:user.id,productId:id});
+    axios.post("https://localhost:5001/api/ShoppingCart",{userId:user.id,productId:id});
 
   }
 else{
