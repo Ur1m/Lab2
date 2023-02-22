@@ -24,9 +24,10 @@ import { Footer } from "./Components/Footer/Footer";
 import ForgotPassword from "./Account/Login/ForgotPassword";
 import RegisterComponent from "./Account/Login/RegisterComponent";
 import { Courses } from "./Components/Courses/Courses";
-import { About } from "./Components/About/About";
 import ResetPassword from "./Account/Login/ResetPassword";
 import UserContext from "./UserContext";
+import AddToCart from "./Components/AddToCart/AddToCart";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -44,6 +45,7 @@ function App() {
           <Route path="/register" element={<RegisterComponent />}></Route>
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/addToCart" element={<AddToCart />}></Route>
         </Routes>
         </UserContext.Provider>
       </header>
