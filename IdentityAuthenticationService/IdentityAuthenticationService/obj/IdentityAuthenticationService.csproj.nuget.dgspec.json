@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\source\\repos\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {}
+    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\source\\repos\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {
+    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
+        "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
         "projectName": "IdentityAuthenticationService",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\obj\\",
+        "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\IdentityAuthenticationService.csproj",
+        "packagesPath": "C:\\Users\\rinor\\.nuget\\packages\\",
+        "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\IdentityAuthenticationService\\IdentityAuthenticationService\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,6 +92,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -105,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

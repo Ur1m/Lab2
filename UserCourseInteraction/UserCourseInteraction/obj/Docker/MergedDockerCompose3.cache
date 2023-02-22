@@ -1,0 +1,17 @@
+services:
+  usercourseinteraction:
+    build:
+      context: D:\RINOR - UBT\Semestri VI\Lende Laboratorike 2 (Programim)\Learnow
+        - Projekti\Lab2\UserCourseInteraction\UserCourseInteraction
+      dockerfile: UserCourseInteraction/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: usercourseinteraction
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\rinor\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\rinor\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
