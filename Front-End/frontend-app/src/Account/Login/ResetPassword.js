@@ -16,7 +16,7 @@ export const ResetPassword = () => {
   async function reset() {
     let item = { email, password, token };
     let result = await axios.post(
-      "http://localhost:5000/api/Account/reset-password",
+      "http://localhost:5003/api/Account/reset-password",
       item
     ).then(res => {
       setIsError(false);

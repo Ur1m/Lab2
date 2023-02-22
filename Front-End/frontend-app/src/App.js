@@ -24,6 +24,7 @@ import { Footer } from "./Components/Footer/Footer";
 import ForgotPassword from "./Account/Login/ForgotPassword";
 import RegisterComponent from "./Account/Login/RegisterComponent";
 import { Courses } from "./Components/Courses/Courses";
+import { About } from "./Components/About/About";
 import ResetPassword from "./Account/Login/ResetPassword";
 import UserContext from "./UserContext";
 

@@ -58,8 +58,8 @@ Teach what you know and help learners explore their interests.</h1>
         <div className="row">
         <ul className="navbar-nav me-auto">
         <li className="nav-item">
-        <Link className="btn btn-primary float-right bttn " to="/register">
-              Sign up
+        <Link className="btn btn-primary float-right bttn " to="/courses">
+              Look for Courses
             </Link>
         </li>
         </ul>

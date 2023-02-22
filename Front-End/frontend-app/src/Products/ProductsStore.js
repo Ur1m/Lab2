@@ -14,7 +14,7 @@ export default class ProductStore{
     }
     loadProducts= async ()=>{
        try{
-        const  products=await (await axios.get("https://localhost:44388/api/product")).data;
+        const  products=await (await axios.get("https://localhost:5002/api/product")).data;
         runInAction(()=>{
             
             products.forEach((prod) =>{
@@ -55,7 +55,7 @@ export default class ProductStore{
     createProduct=async(prod)=>{
         
         try{
-            await axios.post("https://localhost:44388/api/product",prod);
+            await axios.post("https://localhost:5002/api/product",prod);
             runInAction(()=>{
                 this.productsRegistry.set(prod.id,prod);
                 this.selectedProduct=prod;
@@ -69,7 +69,7 @@ export default class ProductStore{
     }
     updateProduct=async(product)=>{
         try{
-           await  axios.put("https://localhost:44388/api/product",product);
+           await  axios.put("https://localhost:5002/api/product",product);
            runInAction(()=>{
             
             this.productsRegistry.set(product.id,product)
@@ -85,7 +85,7 @@ export default class ProductStore{
     deleteProduct=async(id)=>{
         try{
            
-           await axios.delete(`https://localhost:44388/api/product/${id}`);
+           await axios.delete(`https://localhost:5002/api/product/${id}`);
            runInAction(()=>{
             //this.pacientat=[...this.pacientat.filter(a => a.pacient_Id !== id)]
             this.productsRegistry.delete(id);
