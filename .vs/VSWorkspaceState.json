@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IdentityAuthenticationService",
-    "\\IdentityAuthenticationService\\IdentityAuthenticationService",
-    "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Controllers"
+    "\\UserCourseInteraction",
+    "\\UserCourseInteraction\\UserCourseInteraction",
+    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction"
   ],
-  "SelectedNode": "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Controllers\\AccountController.cs",
+  "SelectedNode": "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
   "PreviewInSolutionExplorer": false
 }

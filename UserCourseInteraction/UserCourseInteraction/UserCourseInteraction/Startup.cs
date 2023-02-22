@@ -1,3 +1,5 @@
+using Event.ProductsContract;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UserCourseInteraction.Consumer;
 using UserCourseInteraction.Database;
 using UserCourseInteraction.Models;
 using UserCourseInteraction.Repositories;
@@ -41,6 +44,24 @@ namespace UserCourseInteraction
             services.AddTransient<IRepository<ShoppingCart>, Repository<ShoppingCart>>();
             services.AddTransient<IRepository<WishList>, Repository<WishList>>();
             services.AddTransient<IOrderRepository, OrderRepository>();
+
+            services.AddMassTransit(config =>
+            {
+                config.AddConsumer<ProductConsumer>();
+
+                config.UsingRabbitMq((ctx, cfg) =>
+                {
+                    cfg.Host("amqp://guest:guest@localhost:5672");
+
+                    cfg.ReceiveEndpoint("ProductQueue", c =>
+                    {
+                        c.ConfigureConsumer<ProductConsumer>(ctx);
+                    });
+                });
+            });
+            services.AddMassTransitHostedService();
+            services.AddScoped<ProductConsumer>();
+
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",

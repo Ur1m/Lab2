@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserCourseInteraction", "Us
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AE1AC6A9-C657-4390-9815-B86661AB40A0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Event.ProductsContract", "..\..\Event.ProductsContract\Event.ProductsContract\Event.ProductsContract.csproj", "{D39709CE-2A30-46F0-9D13-B70B8935D55C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AE1AC6A9-C657-4390-9815-B86661AB40A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE1AC6A9-C657-4390-9815-B86661AB40A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE1AC6A9-C657-4390-9815-B86661AB40A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D39709CE-2A30-46F0-9D13-B70B8935D55C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D39709CE-2A30-46F0-9D13-B70B8935D55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D39709CE-2A30-46F0-9D13-B70B8935D55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D39709CE-2A30-46F0-9D13-B70B8935D55C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

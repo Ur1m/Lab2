@@ -407,3 +407,14 @@ C:\Users\Dell\Source\Repos\Lab2\UserCourseInteraction\UserCourseInteraction\User
 C:\Users\Dell\Source\Repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\obj\Debug\net5.0\UserCourseInteraction.pdb
 C:\Users\Dell\Source\Repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\obj\Debug\net5.0\UserCourseInteraction.genruntimeconfig.cache
 C:\Users\Dell\Source\Repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\obj\Debug\net5.0\ref\UserCourseInteraction.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\Automatonymous.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\GreenPipes.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\MassTransit.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\MassTransit.AspNetCoreIntegration.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\MassTransit.RabbitMqTransport.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\NewId.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\Event.ProductsContract.dll
+C:\Users\Dell\source\repos\Lab2\UserCourseInteraction\UserCourseInteraction\UserCourseInteraction\bin\Debug\net5.0\Event.ProductsContract.pdb
