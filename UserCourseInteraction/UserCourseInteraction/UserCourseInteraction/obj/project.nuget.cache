@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bAH7AbGiwQiUxPjyOzvcrHs33qlFTeacq3Z+KJC0D4hCEiEfS9V25yzNvp+6V3KyuFwfZ9bPmJgdr11duiFq3Q==",
+  "dgSpecHash": "e4kXmXCem9D3CRMDgQafo+5uadiXCafvG7WTc/mtSour6yCzq5fNoH8noVyeXsDxlCohWGCZG8Q6WzBBvnD+yQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Source\\Repos\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\5.0.1\\automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512",

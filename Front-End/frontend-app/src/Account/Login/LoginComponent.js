@@ -1,34 +1,33 @@
-import React, { useState, useEffect } from "react";
-import { Header } from "semantic-ui-react";
-import { observer } from "mobx-react-lite";
-import axios from "axios";
-import styless from "../Login/styless.css";
-import { Route } from "react";
-import Courses from "../../Components/Courses/Courses";
+import { useState, useContext } from 'react';
+import axios from 'axios';
+import UserContext from '../../UserContext';
 
 
 export const LoginComponent = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [data, setData] = useState();
-  const [isError, setIsError] = useState();
-  useEffect(() => { }, []);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { setUser } = useContext(UserContext);
 
   async function login() {
-    let item = { email, password };
-    let result = await axios.post(
-      "http://localhost:5002/api/Account/login",
-      item
-    ).then(res => {
-      setIsError(false);
-      window.location.href = '/courses'
-    })
-      .catch(err => {
-        setIsError(true);
-        console.log(err);
-        setData(err.message)
+
+    const body = JSON.stringify({
+      email: email,
+      password: password,
+    });
+
+    try {
+      const response = await axios.post("https://localhost:5003/api/Account/login", body, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
-  }
+      const user = response.data;
+      console.error(user.userName);
+      setUser(user);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="wraper">
@@ -59,17 +58,6 @@ export const LoginComponent = () => {
           <button onClick={login} className="btn btn-primary">
             Login
           </button><br />
-          <br />
-          {data && (
-            <div className='form-group'>
-              <div
-                className={isError ? 'alert alert-danger' : 'alert alert-success'}
-                role='alert'
-              >
-                {data}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

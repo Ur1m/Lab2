@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\IdentityAuthenticationService",
-    "\\UdemyClone"
+    "\\IdentityAuthenticationService\\IdentityAuthenticationService",
+    "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Controllers"
   ],
-  "SelectedNode": "\\UdemyClone\\UdemyClone.sln",
+  "SelectedNode": "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Controllers\\AccountController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -9,7 +9,7 @@ import "./../../Css/bootstrap.css";
 
 export const Home = () => {
   return (
-    <div className="container">
+    <div >
       <Welcome />
       <Categories />
     </div>

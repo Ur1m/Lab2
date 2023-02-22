@@ -25,12 +25,15 @@ import ForgotPassword from "./Account/Login/ForgotPassword";
 import RegisterComponent from "./Account/Login/RegisterComponent";
 import { Courses } from "./Components/Courses/Courses";
 import ResetPassword from "./Account/Login/ResetPassword";
+import UserContext from "./UserContext";
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
+        <UserContext.Provider value={{ user, setUser }}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/courses" element={<Courses />}></Route>
@@ -41,6 +44,7 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />}></Route>
           <Route path="/about" element={<About />}></Route>
         </Routes>
+        </UserContext.Provider>
       </header>
       <Footer/>
 

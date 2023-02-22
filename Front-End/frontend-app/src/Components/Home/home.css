@@ -16,17 +16,22 @@ body {
 .Back-1 {
   margin-top: 100px;
   background-image: url("../../../public/img/business.gif");
+  background-repeat: no-repeat;
   width: 300px;
   height: 300px;
 }
 .Back-2 {
   margin-top: 100px;
   background-image: url("../../../public/img/coding.gif");
+  background-repeat: no-repeat;
+
   width: 300px;
   height: 300px;
 }
 .Back-3 {
   background-image: url("../../../public/img/marketing.png");
+  background-repeat: no-repeat;
+
   width: 300px;
   height: 500px;
   background-position: center;

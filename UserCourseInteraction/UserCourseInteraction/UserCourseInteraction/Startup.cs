@@ -41,6 +41,13 @@ namespace UserCourseInteraction
             services.AddTransient<IRepository<ShoppingCart>, Repository<ShoppingCart>>();
             services.AddTransient<IRepository<WishList>, Repository<WishList>>();
             services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
 
         }
 
@@ -57,7 +64,10 @@ namespace UserCourseInteraction
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors(builder => builder
+                 .AllowAnyOrigin()
+                 .AllowAnyMethod()
+                 .AllowAnyHeader());
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,6 +9,7 @@ import WalletCard from '../Metamask/WalletCard';
 import "./../../Css/bootstrap.css";
 import { useState,useEffect } from "react";
 import axios from 'axios';
+import UserContext from '../../UserContext';
 import {Button} from 'semantic-ui-react';
 
 
@@ -16,27 +18,28 @@ import {Button} from 'semantic-ui-react';
 
 export const Courses = () => {
   const[prod,setProd]=useState();
-  const [user,setUser]=useState(null);
+  const { user, setUser } = useContext(UserContext);
 
 
   useEffect(()=> {
-    axios.get("https://localhost:44303/api/Product").then((response) => {
+    axios.get("https://localhost:5001/api/Product").then((response) => {
         setProd(response.data)
 
      
         
     });
-    axios.get("https://localhost:5000/api/account").then((response)=>{
-      setUser(response.data);
-      console.log(response.data);
-    })
+ 
     //console.log("data");
     
 },[]);
 
 function addToCart(id){  
+console.log(user.userName)
+console.log(user.id)
+console.log(id)
+
   if(user !=null){
-    axios.post("https://localhost:44352/api/ShoppingCart",{userId:user.id,productId:id});
+    axios.post("https://localhost:5002/api/ShoppingCart",{userId:user.id,productId:id});
 
   }
 else{

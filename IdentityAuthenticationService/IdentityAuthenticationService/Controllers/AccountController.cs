@@ -43,7 +43,7 @@ namespace IdentityAuthenticationService.Controllers
                 var result = await signInManager.PasswordSignInAsync(appUser, user.Password, false, false);
                 if (result.Succeeded)
                 {
-                    return Ok(result);
+                    return Ok(appUser);
                 }
             }
             return BadRequest();
