@@ -17,6 +17,8 @@ using UdemyClone.Hubs;
 using UdemyClone.Services.Interfaces;
 using UdemyClone.Services.Repositories;
 using UdemyClone.Settings;
+using Hangfire;
+using UdemyClone.Extensions;
 
 namespace UdemyClone
 {
@@ -56,6 +58,10 @@ namespace UdemyClone
             services.AddMassTransitHostedService();
 
             services.AddTransient<IAttributeRepository, AttributeRepository>();
+
+            services.AddHangfire(config =>
+                config.UseSqlServerStorage(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UdemyClone", Version = "v1" });
@@ -84,7 +90,10 @@ namespace UdemyClone
             app.UseCors("CorsPolicy");
 
             app.UseRouting();
-            
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
+
+            HangfireJobs.RecurringJobs();
 
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

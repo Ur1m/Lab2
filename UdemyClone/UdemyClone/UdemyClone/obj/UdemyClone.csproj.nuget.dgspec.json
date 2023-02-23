@@ -113,6 +113,14 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.18, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.18, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[7.0.4, )"

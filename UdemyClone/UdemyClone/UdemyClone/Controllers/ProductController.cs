@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Event.ProductsContract;
+using Hangfire;
 using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,12 +31,17 @@ namespace UdemyClone.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ProductDTO>>> GetProducts()
         {
-            var prod = _productService.GetProducts();
-            if (prod == null)
-            {
-                return BadRequest();
+            try {
+                var result = new List<ProductDTO>();
+                var prod = _productService.GetProducts();
+                BackgroundJob.Enqueue(() => _productService.GetProducts());
+                return Ok(prod);
             }
-            return Ok(prod);
+            catch (Exception ex)
+                {
+                return BadRequest();
+
+            }
         }
         [HttpGet("{id}")]
         public  ProductDTO GetProductByid(int id)

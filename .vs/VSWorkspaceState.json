@@ -1,12 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Event.ProductsContract\\Event.ProductsContract",
-    "\\UdemyClone",
-    "\\UdemyClone\\UdemyClone",
-    "\\UserCourseInteraction\\UserCourseInteraction",
-    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction"
+    "\\IdentityAuthenticationService",
+    "\\UdemyClone\\UdemyClone"
   ],
-  "SelectedNode": "\\UdemyClone\\UdemyClone\\UdemyClone.sln",
+  "SelectedNode": "\\IdentityAuthenticationService\\IdentityAuthenticationService.sln",
   "PreviewInSolutionExplorer": false
 }

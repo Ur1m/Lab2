@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TIkXYidYRnFUUcqezfLQIDrd7ItS+t0SgpmzWQT0h+BDYwjQ4XQn445W2Gb07ClZ9S2NWLGQFhbIlshINNLmpw==",
+  "dgSpecHash": "hgV/1fmYpN4+XQWfukFUSGzBCKDmrGorSELfpZzGTztPaOa5fyzOvkWCjstt/z+ifOC/3EWoCvx7Ztj0P2Sd3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Source\\Repos\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
