@@ -59,8 +59,6 @@ export const ProductsForm = () => {
         createProduct(product);
         
       }
-      
-    
     else{
         updateProduct(product);
     }
@@ -101,7 +99,7 @@ export const ProductsForm = () => {
 
                 
                 <Button 
-                disabled={isSubmitting || !dirty || !isValid}
+                disabled={ !isValid}
                 floated="right" positive type='subimit' content='submit'/>
                 <Button onClick={closeForm}floated="right"  type='subimit' content='cancel'/>
             </Form>

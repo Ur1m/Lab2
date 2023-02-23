@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\UserCourseInteraction",
+    "\\Event.ProductsContract\\Event.ProductsContract",
+    "\\UdemyClone",
+    "\\UdemyClone\\UdemyClone",
     "\\UserCourseInteraction\\UserCourseInteraction",
     "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction"
   ],
-  "SelectedNode": "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+  "SelectedNode": "\\UdemyClone\\UdemyClone\\UdemyClone.sln",
   "PreviewInSolutionExplorer": false
 }

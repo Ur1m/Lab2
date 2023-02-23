@@ -9,6 +9,7 @@ namespace UdemyClone.Mapping
         public MappingProfiles() 
         {
             CreateMap<CartEventDto,ShoppingCartViewModel>().ReverseMap();
+            CreateMap<ProductEventDTO, ProductDTO>().ReverseMap();
         }
     }
 }

@@ -47,6 +47,7 @@ namespace UdemyClone.Controllers
             }
             return Ok(categ);
         }
+
         [HttpPost]
         public async Task<ActionResult> AddProduct(ProductDTO prodDTO)
         {
@@ -68,9 +69,16 @@ namespace UdemyClone.Controllers
                 ProductId = prodDTO.ProductId
             };
 
+            var obj1 = GetProductByid(prodDTO.ProductId);
+
             var mappedObj = _mapper.Map<CartEventDto>(obj);
+            var mappedObj1 = _mapper.Map<ProductEventDTO>(obj1);
+
             var endpoint = await _sendEndpointProvider.GetSendEndpoint(new Uri("queue:ProductQueue"));
             await endpoint.Send(mappedObj);
+
+            var endpoint1 = await _sendEndpointProvider.GetSendEndpoint(new Uri("queue:gg"));
+            await endpoint1.Send(mappedObj1);
 
             return Ok(mappedObj);
         }
