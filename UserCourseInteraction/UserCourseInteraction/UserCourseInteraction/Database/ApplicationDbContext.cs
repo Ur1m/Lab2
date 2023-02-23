@@ -16,7 +16,6 @@ namespace UserCourseInteraction.Database
         public DbSet<ShoppingCart> shopingCart { get; set; }
         public DbSet<WishList> wishLists { get; set; }
         public DbSet<Product> products { get; set; }
-        public DbSet<ProductDto> productDtos { get; set; }
         public DbSet<Order> orders {get;set;}
         public DbSet<OrderItem> oredrItem { get; set; }
 

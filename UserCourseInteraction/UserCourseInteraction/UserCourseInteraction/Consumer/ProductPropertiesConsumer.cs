@@ -28,6 +28,7 @@ namespace UserCourseInteraction.Consumer
                    Desctription= context.Message.Desctription,
                    Image= context.Message.Image,
                    Price = context.Message.Price,
+                   CreateDate= context.Message.CreateDate,
                    CategoryId = context.Message.CategoryId,
                 };
                 _repository.Add(obj);

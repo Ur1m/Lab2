@@ -18,11 +18,10 @@ namespace UserCourseInteraction.Controllers
     public class ShoppingCartController : ControllerBase
     {
         private IRepository<ShoppingCart> _reposiory;
-        private IRepository<ProductDto> _reposioryProducts;
-        public ShoppingCartController(IRepository<ShoppingCart> repository, IRepository<ProductDto> reposioryProducts)
+        public ShoppingCartController(IRepository<ShoppingCart> repository)
         {
             _reposiory = repository;
-            _reposioryProducts = reposioryProducts;
+
         }
         [HttpGet]
         public ActionResult<List<ShoppingCartViewModel>> getAll()
@@ -42,29 +41,22 @@ namespace UserCourseInteraction.Controllers
 
         }
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<ProductDto>>> getbyIdAsync(string id)
+        public async Task<ActionResult<List<ShoppingCartViewModel>>> getbyIdAsync(string id)
         {
-            var all = _reposiory.GetAll().Where(x => x.userId == id).ToList();
-            var listProducts = _reposioryProducts.GetAll().Where(x => true).ToList();
-            var resultList = new List<ProductDto>();
+            var all = _reposiory.GetAll().Where(x => x.userId == id);
 
-            foreach (var item in all)
-            {
-                var obj = listProducts.Where(x => x.Id == item.ProductId).FirstOrDefault();
-                  if (obj != null)
-                    {
-                    resultList.Add(obj);
-                    }
-            }
-
-
-            if (!resultList.Any())
+            if (all == null)
             {
                 return NotFound();
             }
             var model = new ShoppingCartViewModel();
-
-            return resultList;
+          
+            return all.Select(x => new ShoppingCartViewModel()
+            {
+                Id = x.Id,
+                userId = x.userId,
+                ProductId = x.ProductId
+            }).ToList();
         }
         [HttpPost]
         public ActionResult Add(ShoppingCartViewModel model)
