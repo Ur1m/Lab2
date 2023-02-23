@@ -15,7 +15,7 @@ export const ForgotPassword = () => {
   async function login() {
     let item = { email };
     let result = await axios.post(
-      "http://localhost:5000/api/Account/forgot-password",
+      "http://localhost:5003/api/Account/forgot-password",
       item
     ).then(res => {
       setIsError(false);

@@ -18,7 +18,7 @@ import {Button} from 'semantic-ui-react';
 
 export const Courses = () => {
   const[prod,setProd]=useState();
-  const { user, setUser } = useContext(UserContext);
+  // const { user, setUser } = useContext(UserContext);
 
 
   useEffect(()=> {
@@ -31,12 +31,13 @@ export const Courses = () => {
 },[]);
 
 function addToCart(id){  
-console.log(user.userName)
-console.log(user.id)
-console.log(id)
+  
+const user = JSON.parse(localStorage.getItem("user"));
+console.log(user)
 
   if(user !=null){
-    axios.post("https://localhost:5002/api/ShoppingCart",{userId:user.id,productId:id});
+    debugger
+    axios.post("https://localhost:5002/api/Product/SendProductToCart",{userId:user.id,productId:id});
 
   }
 else{

@@ -22,7 +22,10 @@ export const LoginComponent = () => {
         },
       });
       const user = response.data;
-      console.error(user.userName);
+      localStorage.setItem("user", JSON.stringify(response.data));
+      if(response.status = 200){
+        window.location = "/courses"
+      }
       setUser(user);
     } catch (error) {
       console.error(error);
