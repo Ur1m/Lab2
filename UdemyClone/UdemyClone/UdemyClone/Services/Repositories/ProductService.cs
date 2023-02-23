@@ -30,6 +30,7 @@ namespace UdemyClone.Services.Repositories
                 product = _mapper.Map<Product>(prodDTO);
 
                 product.CreateDate = DateTime.Now;
+                product.CategoryId = 5;
                 _db.products.Add(product);
                 _db.SaveChanges();
                 
@@ -56,12 +57,13 @@ namespace UdemyClone.Services.Repositories
 
         public List<ProductDTO> GetProducts()
         {
-            var products = _db.products.Include(x=> x.Category).ToList().Select(x=> new ProductDTO
+            var products = _db.products.Include(x=> x.Category).Select(x=> new ProductDTO
             { 
                 Id=x.Id,
                 Name=x.Name,
                 Desctription=x.Desctription,
                 Image=x.Image,
+                Price = x.Price,
                 CategoryId=x.CategoryId,
                 CreateDate=x.CreateDate,
                 Category=x.Category

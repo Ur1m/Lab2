@@ -47,6 +47,7 @@ namespace UdemyClone.Controllers
             }
             return Ok(categ);
         }
+
         [HttpPost]
         public async Task<ActionResult> AddProduct(ProductDTO prodDTO)
         {

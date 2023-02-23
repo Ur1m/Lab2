@@ -22,14 +22,11 @@ export const Courses = () => {
 
 
   useEffect(()=> {
-    axios.get("https://localhost:5001/api/Product").then((response) => {
-        setProd(response.data)
-
-     
-        
-    });
- 
-    //console.log("data");
+    axios.get("https://localhost:5002/api/Product").then((response) => {
+      setProd(response.data)
+      });
+      
+      //console.log("data");
     
 },[]);
 
@@ -67,24 +64,36 @@ else{
 
         <div className="col-md-7">
           {prod!=null && prod.map(p=>(
-             <Card sx={{ maxWidth: 800 }}>
+            <Card sx={{ maxWidth: 800 }}>
              <CardActionArea>
+              {p.image ?(
+               <CardMedia
+                 className="classes.media"
+                 component="img"
+                 height="120"
+                 image={p.image} 
+                 alt="green iguana"
+                 />
+                  ) : (
                <CardMedia
                  className="classes.media"
                  component="img"
                  height="120"
                  image="/img/code.jpg"
-                 alt="green iguana"
-               />
+                 alt="green ss"
+                />
+                )}
                <CardContent>
-                 <Typography gutterBottom variant="h5" component="div">
+                 <Typography gutterBottom variant="h4" component="div">
                    {p.name}
                  </Typography>
                  <Typography variant="body2" color="text.secondary">
                   {p.description}
                  </Typography>
-                 <Typography variant="body2" color="text.primary">
+                 <Typography variant="h7" color="text.secondary">
                    Price : {p.price}$
+                 </Typography>
+                 <Typography variant="body2" color="text.primary">
                    <Button floated="right" onClick={()=> addToCart(p.id)} content={"AddTOCart"} color="green"/>
                    <Button floated="right" onClick={()=> addToCart(p.id)} content={"AddWishList"} color="green"/>
                    <Button floated="right" onClick={()=> addToCart(p.id)} content={"AddToCompare"} color="green"/>
