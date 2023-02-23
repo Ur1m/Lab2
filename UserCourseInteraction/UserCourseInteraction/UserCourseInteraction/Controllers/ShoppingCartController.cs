@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MassTransit;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using UserCourseInteraction.Models;
 using UserCourseInteraction.Repositories;
 using UserCourseInteraction.ViewModels;
+using static System.Net.WebRequestMethods;
 
 namespace UserCourseInteraction.Controllers
 {
@@ -38,9 +41,10 @@ namespace UserCourseInteraction.Controllers
 
         }
         [HttpGet("{id}")]
-        public ActionResult<List<ShoppingCartViewModel>> getbyId(string id)
+        public async Task<ActionResult<List<ShoppingCartViewModel>>> getbyIdAsync(string id)
         {
             var all = _reposiory.GetAll().Where(x => x.userId == id);
+
             if (all == null)
             {
                 return NotFound();
