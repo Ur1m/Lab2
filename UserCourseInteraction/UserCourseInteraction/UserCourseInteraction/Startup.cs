@@ -42,12 +42,14 @@ namespace UserCourseInteraction
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UserCourseInteraction", Version = "v1" });
             });
             services.AddTransient<IRepository<ShoppingCart>, Repository<ShoppingCart>>();
+            services.AddTransient<IRepository<ProductDto>, Repository<ProductDto>>();
             services.AddTransient<IRepository<WishList>, Repository<WishList>>();
             services.AddTransient<IOrderRepository, OrderRepository>();
 
             services.AddMassTransit(config =>
             {
                 config.AddConsumer<ProductConsumer>();
+                config.AddConsumer<ProductPropertiesConsumer>();
 
                 config.UsingRabbitMq((ctx, cfg) =>
                 {
@@ -57,10 +59,15 @@ namespace UserCourseInteraction
                     {
                         c.ConfigureConsumer<ProductConsumer>(ctx);
                     });
+                    cfg.ReceiveEndpoint("gg", c =>
+                    {
+                        c.ConfigureConsumer<ProductPropertiesConsumer>(ctx);
+                    });
                 });
             });
             services.AddMassTransitHostedService();
             services.AddScoped<ProductConsumer>();
+            services.AddScoped<ProductPropertiesConsumer>();
 
             services.AddCors(options =>
             {
