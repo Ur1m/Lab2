@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\IdentityAuthenticationService",
-    "\\UdemyClone\\UdemyClone"
+    "\\IdentityAuthenticationService\\IdentityAuthenticationService"
   ],
-  "SelectedNode": "\\IdentityAuthenticationService\\IdentityAuthenticationService.sln",
+  "SelectedNode": "\\IdentityAuthenticationService\\IdentityAuthenticationService\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

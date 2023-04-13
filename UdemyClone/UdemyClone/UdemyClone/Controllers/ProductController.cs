@@ -44,14 +44,11 @@ namespace UdemyClone.Controllers
             }
         }
         [HttpGet("{id}")]
-        public async Task<ActionResult<ProductDTO>> GetProductByid(int id)
+        public ProductDTO GetProductByid(int id)
         {
             var categ = _productService.GetProductById(id);
-            if (categ == null)
-            {
-                return BadRequest();
-            }
-            return Ok(categ);
+          
+            return categ;
         }
 
         [HttpPost]
