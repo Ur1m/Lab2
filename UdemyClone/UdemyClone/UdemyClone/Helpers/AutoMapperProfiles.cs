@@ -19,9 +19,6 @@ namespace UdemyClone.AutoMapper
             CreateMap<AttributeDTO, Attribute>();
             CreateMap<AttributeValueDTO, AttributeValue>();
             CreateMap<ProductAttributeDTO, ProductAttribute>();
-
-
         }
-
     }
 }

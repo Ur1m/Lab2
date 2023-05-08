@@ -1,4 +1,3 @@
-using AutoMapper;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +18,7 @@ using UdemyClone.Services.Repositories;
 using UdemyClone.Settings;
 using Hangfire;
 using UdemyClone.Extensions;
+using AutoMapper;
 
 namespace UdemyClone
 {
@@ -40,7 +40,6 @@ namespace UdemyClone
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             
-
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IReview, ReviewService>();

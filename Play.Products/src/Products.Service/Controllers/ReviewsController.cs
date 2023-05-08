@@ -18,6 +18,7 @@ namespace Products.Service.Controllers
     {
 
         private readonly IRepository<Reviews> reviewsRepository;
+
         public ReviewsController(IRepository<Reviews> reviewsRepository)
         {
 
@@ -28,7 +29,7 @@ namespace Products.Service.Controllers
         public async Task<IEnumerable<ReviewsDto>> GetAsync()
         {
             var items = (await reviewsRepository.GetAllAsync())
-                        .Select(items => items.AsReviewsDto());
+                                                .Select(items => items.AsReviewsDto());
             return items;
         }
 
@@ -58,7 +59,6 @@ namespace Products.Service.Controllers
             await reviewsRepository.CreateAsync(item);
 
             return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id }, item);
-
         }
 
         [HttpPut("{id}")]

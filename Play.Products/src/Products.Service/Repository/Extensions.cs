@@ -12,9 +12,9 @@ namespace Play.Products.Service.Repository
         public static IServiceCollection AddMongo(this IServiceCollection services)
         {
             BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+
             BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
         
-
             services.AddSingleton(serviceProvider =>
             {
                 var configuration = serviceProvider.GetService<IConfiguration>();
@@ -25,6 +25,5 @@ namespace Play.Products.Service.Repository
             });
             return services;
         }
-
     }
 }

@@ -18,44 +18,51 @@ namespace UserCourseInteraction.Repositories
         public void Add(OrderViewModel model)
         {
             var order = new Order() { userId=model.userId,CreatedOn=DateTime.Now,
+
             totalPrice=model.totalPrice};
+
             _db.orders.Add(order);
+
             _db.SaveChanges();
-            var id = _db.orders.LastOrDefault().OrderId ;
+
+            var id = _db.orders.LastOrDefault().OrderId;
+
             var listofprod = new List<Product>();
+
             listofprod = _db.products.ToList();
+
             var prod = model.products.Where(x => !listofprod.Contains(x)).ToList();
 
             _db.products.AddRange(prod);
 
             foreach(var item in model.products)
             {
-                var orderitem = new OrderItem(
-                    )
-                { OrderId=id,
-                ProductId=item.productId};
+                var orderitem = new OrderItem()
+                {
+                    OrderId=id,
+                    ProductId=item.productId
+                };
 
                 _db.oredrItem.Add(orderitem);
                 _db.SaveChanges();
             }
-
-
         }
 
         public List<OrderViewModel> GetAll()
         {
             var model = new List<OrderViewModel>();
+         
             var orders = _db.orders.ToList();
-            
 
             foreach (var order in orders)
             {
                 var productIds = _db.oredrItem.Where(x => x.OrderId == order.OrderId).Select(x => x.ProductId).ToList();
+            
                 var products = new List<Product>();
+                
                 foreach(var item in productIds)
                 {
                    products.Add(_db.products.Where(x => x.productId == item).FirstOrDefault());
-
                 }
 
                 var neworder = new OrderViewModel()
@@ -78,22 +85,21 @@ namespace UserCourseInteraction.Repositories
             var productsId = _db.oredrItem.Where(x => x.OrderId == id).ToList();
             var products = new List<Product>();
 
-       foreach(var item in productsId)
+            foreach(var item in productsId)
             {
                 products.Add(_db.products.Where(x => x.productId == item.ProductId).FirstOrDefault());
-
             }
           
-                var productId = _db.oredrItem.Where(x => x.OrderId == orders.OrderId).Select(x => x.ProductId).ToList();
-                var neworder = new OrderViewModel()
-                {
-                    OrderId = orders.OrderId,
-                    userId = orders.userId,
-                    CreatedOn = orders.CreatedOn,
-                    totalPrice = orders.totalPrice,
-                    products = products
-                };
-                
+            var productId = _db.oredrItem.Where(x => x.OrderId == orders.OrderId).Select(x => x.ProductId).ToList();
+            
+            var neworder = new OrderViewModel()
+            {
+                OrderId = orders.OrderId,
+                userId = orders.userId,
+                CreatedOn = orders.CreatedOn,
+                totalPrice = orders.totalPrice,
+                products = products
+            };
             
             return neworder;
         }
@@ -101,6 +107,7 @@ namespace UserCourseInteraction.Repositories
         public List<OrderViewModel> getbyUserId(string Id)
         {
             var model = new List<OrderViewModel>();
+            
             var orders = _db.orders.Where(x=> x.userId==Id).ToList();
 
             foreach (var order in orders)
@@ -108,11 +115,12 @@ namespace UserCourseInteraction.Repositories
                 var productId = _db.oredrItem.Where(x => x.OrderId == order.OrderId).Select(x => x.ProductId).ToList();
 
                 var products = new List<Product>();
+            
                 foreach (var item in productId)
                 {
                     products.Add(_db.products.Where(x => x.productId == item).FirstOrDefault());
-
                 }
+                
                 var neworder = new OrderViewModel()
                 {
                     OrderId = order.OrderId,
@@ -121,6 +129,7 @@ namespace UserCourseInteraction.Repositories
                     totalPrice = order.totalPrice,
                     products = products
                 };
+                
                 model.Add(neworder);
             }
             return model;
@@ -129,9 +138,12 @@ namespace UserCourseInteraction.Repositories
         public void Remuve(int Id)
         {
             var order = _db.orders.Where(x => x.OrderId == Id);
+           
             _db.orders.RemoveRange(order);
             _db.SaveChanges();
+            
             var orderitem = _db.oredrItem.Where(x => x.OrderId == Id).ToList();
+            
             _db.oredrItem.RemoveRange(orderitem);
             _db.SaveChanges();
         }

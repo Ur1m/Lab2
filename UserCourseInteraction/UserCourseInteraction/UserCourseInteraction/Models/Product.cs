@@ -12,6 +12,5 @@ namespace UserCourseInteraction.Models
         public int productId { get; set; }
         public string name { get; set; }
         public double price { get; set; }
-
     }
 }

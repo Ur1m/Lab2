@@ -46,7 +46,9 @@ namespace IdentityAuthenticationService.Services
         public async Task<string> GenerateJWToken(ApplicationUser user)
         {
             var Claims = new List<Claim>();
+
             string roles = null;
+
             try
             {
                 var getRole = await userManager.GetRolesAsync(user);
@@ -73,7 +75,6 @@ namespace IdentityAuthenticationService.Services
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-
                         new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                         new Claim(ClaimTypes.Name, user.FirstName + ' ' + user.LastName),
                         new Claim(ClaimTypes.Role, roles == null ? "" : roles)
@@ -105,7 +106,9 @@ namespace IdentityAuthenticationService.Services
             if (user != null)
             {
                 resetPasswordViewModel.Token = await userManager.GeneratePasswordResetTokenAsync(user);
+            
                 var result = await userManager.ResetPasswordAsync(user, resetPasswordViewModel.Token, resetPasswordViewModel.Password);
+               
                 if (result.Succeeded)
                 {
                     return user;
@@ -123,9 +126,13 @@ namespace IdentityAuthenticationService.Services
         {
 
             var emailTemplateFile = Directory.GetCurrentDirectory() + "\\Templates\\SendResetPasswordEmailTemplate.html";
+
             StreamReader str = new StreamReader(emailTemplateFile);
+
             string emailTemplate = str.ReadToEnd();
+
             var builder = new BodyBuilder();
+            
             builder.HtmlBody = emailTemplate;
 
             string clientBaseUrl = "http://localhost:3000";
@@ -135,6 +142,7 @@ namespace IdentityAuthenticationService.Services
                 string resetLink = $"{clientBaseUrl}/reset-password?&token=" + token;
 
                 builder.HtmlBody = emailTemplate.Replace("{{LINK}}", resetLink);
+
                 var mailRequest = new MailRequest()
                 {
                     Subject = "Forgot Password Reset Link",

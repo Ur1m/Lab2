@@ -20,7 +20,6 @@ namespace Products.Service.Controllers
         private readonly IRepository<Category> categoryRepository;
         public CategoryController(IRepository<Category> categoryRepository)
         {
-
             this.categoryRepository = categoryRepository;
         }
 
@@ -48,7 +47,6 @@ namespace Products.Service.Controllers
         [HttpPost]
         public async Task<ActionResult<CategoryDto>> PostAsync(CreateItemDto createItemDto)
         {
-
             var item = new Category
             {
                 Name = createItemDto.Name,

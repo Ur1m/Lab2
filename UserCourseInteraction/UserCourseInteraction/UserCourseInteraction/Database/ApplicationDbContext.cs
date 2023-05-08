@@ -19,9 +19,6 @@ namespace UserCourseInteraction.Database
         public DbSet<ProductDto> productDtos { get; set; }
         public DbSet<Order> orders {get;set;}
         public DbSet<OrderItem> oredrItem { get; set; }
-
-
     }
-    
 }
 

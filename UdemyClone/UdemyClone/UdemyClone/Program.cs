@@ -16,7 +16,6 @@ namespace UdemyClone
             await CreateHostBuilder(args).Build().RunAsync();
         }
 
-
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

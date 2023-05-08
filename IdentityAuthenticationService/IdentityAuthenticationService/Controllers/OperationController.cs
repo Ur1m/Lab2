@@ -35,6 +35,7 @@ namespace IdentityAuthenticationService.Controllers
             };
 
             IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
+
             //Adding User to User Role
             await userManager.AddToRoleAsync(appUser, "User");
 

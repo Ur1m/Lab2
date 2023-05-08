@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {}
+    "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {}
   },
   "projects": {
-    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+    "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
         "projectName": "Event.ProductsContract",
-        "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
-        "packagesPath": "C:\\Users\\rinor\\.nuget\\packages\\",
-        "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
+        "projectPath": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,17 +62,20 @@
         }
       }
     },
-    "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {
+    "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
         "projectName": "UserCourseInteraction",
-        "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
-        "packagesPath": "C:\\Users\\rinor\\.nuget\\packages\\",
-        "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\obj\\",
+        "projectPath": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +89,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
-                "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
+              "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+                "projectPath": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
               }
             }
           }
@@ -163,12 +169,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

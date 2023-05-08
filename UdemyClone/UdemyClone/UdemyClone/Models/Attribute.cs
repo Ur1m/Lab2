@@ -11,6 +11,5 @@ namespace UdemyClone.Models
         [Key]
         public int AttributeId { get; set; }
         public string Name { get; set; }
-
     }
 }

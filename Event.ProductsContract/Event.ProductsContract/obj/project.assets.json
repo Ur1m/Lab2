@@ -8,19 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rinor\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
       "projectName": "Event.ProductsContract",
-      "projectPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
-      "packagesPath": "C:\\Users\\rinor\\.nuget\\packages\\",
-      "outputPath": "D:\\RINOR - UBT\\Semestri VI\\Lende Laboratorike 2 (Programim)\\Learnow - Projekti\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
+      "projectPath": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

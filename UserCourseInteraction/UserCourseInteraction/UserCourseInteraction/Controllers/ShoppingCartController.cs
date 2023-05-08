@@ -21,25 +21,26 @@ namespace UserCourseInteraction.Controllers
         public ShoppingCartController(IRepository<ShoppingCart> repository)
         {
             _reposiory = repository;
-
         }
+        
         [HttpGet]
         public ActionResult<List<ShoppingCartViewModel>> getAll()
         {
             var all = _reposiory.GetAll();
+
             if (all == null)
             {
                 return NotFound();
             }
+
             return all.Select(x => new ShoppingCartViewModel()
             {
                 Id = x.Id,
                 userId = x.userId,
                 ProductId = x.ProductId
             }).ToList();
-
-
         }
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<List<ShoppingCartViewModel>>> getbyIdAsync(string id)
         {
@@ -49,6 +50,7 @@ namespace UserCourseInteraction.Controllers
             {
                 return NotFound();
             }
+
             var model = new ShoppingCartViewModel();
           
             return all.Select(x => new ShoppingCartViewModel()
@@ -58,28 +60,38 @@ namespace UserCourseInteraction.Controllers
                 ProductId = x.ProductId
             }).ToList();
         }
+        
         [HttpPost]
         public ActionResult Add(ShoppingCartViewModel model)
         {
             var shop = new ShoppingCart();
+
             shop.userId = model.userId;
             shop.ProductId = model.ProductId;
+
             _reposiory.Add(shop);
+
             return Ok();
         }
+        
         [HttpPut("{Id}")]
         public ActionResult Update(int Id,ShoppingCartViewModel model)
         {
             if(ModelState.IsValid)
             {
                 var temp = _reposiory.GetAll().Where(x => x.Id == Id).FirstOrDefault();
+
                 temp.ProductId = model.ProductId;
                 temp.userId = model.userId;
+
                 _reposiory.Update(temp);
+                
                 return Ok();
             }
+
             return NotFound(); 
         }
+      
         [HttpDelete("{Id}")]
         public ActionResult Remove(int Id)
         {
@@ -88,6 +100,7 @@ namespace UserCourseInteraction.Controllers
                 var temp = _reposiory.GetAll().Where(x => x.Id == Id).FirstOrDefault();
                
                 _reposiory.Remove(temp);
+
                 return Ok();
             }
             return NotFound();

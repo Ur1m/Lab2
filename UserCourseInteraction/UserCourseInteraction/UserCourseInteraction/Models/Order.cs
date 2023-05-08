@@ -8,12 +8,10 @@ namespace UserCourseInteraction.Models
 {
     public class Order
     {
-
         [Key]
         public int OrderId { get; set; }
         public string userId { get; set; }
         public double totalPrice { get; set; }
         public DateTime CreatedOn { get; set; }
-
     }
 }

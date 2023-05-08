@@ -28,8 +28,10 @@ namespace UdemyClone.Controllers
             {
                 return BadRequest();
             }
+        
             return Ok(rev);
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<ReviewDTO>> GetReviewbyProdId(int id)
         {
@@ -38,8 +40,10 @@ namespace UdemyClone.Controllers
             {
                 return BadRequest();
             }
+        
             return Ok(rev);
         }
+
         [HttpPost]
         public async Task<ActionResult> AddReview(ReviewDTO revDTO)
         {
@@ -47,11 +51,11 @@ namespace UdemyClone.Controllers
             {
                 _reviewRepository.AddReview(revDTO);
                 return Ok();
-
             }
+            
             return BadRequest();
-
         }
+        
         [HttpPut]
         public async Task<ActionResult> UpdateProduct(ReviewDTO revDTO)
         {
@@ -59,10 +63,11 @@ namespace UdemyClone.Controllers
             {
                _reviewRepository.UpdateReview(revDTO);
                 return Ok();
-
             }
+            
             return BadRequest();
         }
+
         [HttpDelete]
         public async Task<ActionResult> deleteProduct(int id)
         {
@@ -72,7 +77,6 @@ namespace UdemyClone.Controllers
             }
             _reviewRepository.DeleteReview(id);
             return Ok();
-
         }
     }
 }

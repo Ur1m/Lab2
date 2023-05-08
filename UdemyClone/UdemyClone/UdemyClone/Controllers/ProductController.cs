@@ -31,18 +31,20 @@ namespace UdemyClone.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ProductDTO>>> GetProducts()
         {
-            try {
+            try 
+            {
                 var result = new List<ProductDTO>();
                 var prod = _productService.GetProducts();
                 BackgroundJob.Enqueue(() => _productService.GetProducts());
                 return Ok(prod);
             }
             catch (Exception ex)
-                {
+            {
+            
                 return BadRequest();
-
             }
         }
+
         [HttpGet("{id}")]
         public ProductDTO GetProductByid(int id)
         {
@@ -58,11 +60,11 @@ namespace UdemyClone.Controllers
             {
                 _productService.AddProduct(prodDTO);
                 return Ok();
-
             }
+         
             return BadRequest();
-
         }
+        
         [HttpPost("SendProductToCart")]
         public async Task<ActionResult> SendProductToCart(ShoppingCartViewModel prodDTO)
         {
@@ -85,6 +87,7 @@ namespace UdemyClone.Controllers
 
             return Ok(mappedObj);
         }
+        
         [HttpPut]
         public async Task<ActionResult> UpdateProduct(ProductDTO prodDTO)
         {
@@ -92,10 +95,10 @@ namespace UdemyClone.Controllers
             {
                 _productService.UpdateProduct(prodDTO);
                 return Ok();
-
             }
             return BadRequest();
         }
+        
         [HttpDelete]
         public async Task<ActionResult> deleteProduct(int id)
         {
@@ -105,7 +108,6 @@ namespace UdemyClone.Controllers
             }
             _productService.DeleteProduct(id);
             return Ok();
-
         }
     }
 }

@@ -8,6 +8,5 @@ namespace Play.Products.Service.Enteties
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Desctription { get; set; }
-
     }
 }

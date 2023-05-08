@@ -11,8 +11,6 @@ namespace UdemyClone.Models
     {
         [Key]
         public int ProductAttributeId { get; set; }
-       
-        
         public int Id { get; set; }
         public int AttributeValueId { get; set; }
        

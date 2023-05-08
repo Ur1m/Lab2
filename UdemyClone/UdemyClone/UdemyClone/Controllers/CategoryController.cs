@@ -29,6 +29,7 @@ namespace UdemyClone.Controllers
             }
             return Ok(categ);
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<CategoryDTO>> GetCategory(int id)
         {
@@ -39,6 +40,7 @@ namespace UdemyClone.Controllers
             }
             return Ok(categ);
         }
+        
         [HttpPost]
         public async Task<ActionResult> AddCategory(CategoryDTO categoryDTO)
         {
@@ -46,11 +48,11 @@ namespace UdemyClone.Controllers
             {
                 _categoryService.AddCategory(categoryDTO);
                 return Ok();
-
             }
-            return BadRequest();
             
+            return BadRequest();
         }
+        
         [HttpPut]
         public async Task<ActionResult>UpdateCategory(CategoryDTO categoryDTO)
         {
@@ -58,10 +60,11 @@ namespace UdemyClone.Controllers
             {
                 _categoryService.UpdateCategory(categoryDTO);
                 return Ok();
-
             }
+            
             return BadRequest();
         }
+
         [HttpDelete("{id}")]
         public async Task<ActionResult> deleteCategory(int id)
         {
@@ -71,7 +74,6 @@ namespace UdemyClone.Controllers
             }
             _categoryService.DeleteCategory(id);
             return Ok();
-
         }
     }
 }

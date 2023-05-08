@@ -25,7 +25,6 @@ namespace UdemyClone.Services.Repositories
 
             _db.reviews.Add(rev);
             _db.SaveChanges();
-
         }
 
         public void DeleteReview(int id)
@@ -60,7 +59,5 @@ namespace UdemyClone.Services.Repositories
             _db.reviews.Update(rev);
             _db.SaveChanges();
         }
-
-       
     }
 }

@@ -40,11 +40,10 @@ namespace UdemyClone.Services.Repositories
                 { 
                 CategoryId=x.CategoryId,
                 Name=x.Name,
-                Desctription=x.Desctription}).ToList();
-               
+                Desctription=x.Desctription
+                }).ToList();
 
                 return categories;
-                
             }
             catch(Exception ex)
             {
@@ -75,6 +74,7 @@ namespace UdemyClone.Services.Repositories
         public void UpdateCategory(CategoryDTO categoryDTO)
         {
             var categ = new Category();
+
             categ.CategoryId=categoryDTO.CategoryId;
             categ.Name = categoryDTO.Name;
             categ.Desctription = categoryDTO.Desctription;

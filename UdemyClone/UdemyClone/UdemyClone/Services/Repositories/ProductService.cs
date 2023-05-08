@@ -24,7 +24,6 @@ namespace UdemyClone.Services.Repositories
         {
             try
             {
-               
                 var product = new Product();
                 
                 product = _mapper.Map<Product>(prodDTO);
@@ -33,7 +32,6 @@ namespace UdemyClone.Services.Repositories
                 product.CategoryId = 5;
                 _db.products.Add(product);
                 _db.SaveChanges();
-                
             }
             catch(Exception ex)
             {
@@ -67,11 +65,10 @@ namespace UdemyClone.Services.Repositories
                 CategoryId=x.CategoryId,
                 CreateDate=x.CreateDate,
                 Category=x.Category
-
             });
           
             return products.ToList();
-    }
+        }
 
         public void UpdateProduct(ProductDTO prodDTO)
         {

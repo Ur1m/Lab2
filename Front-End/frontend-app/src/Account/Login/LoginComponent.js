@@ -37,7 +37,7 @@ export const LoginComponent = () => {
 
       <div className="containerr">
         <div className="textbox">
-          <h3>Welcome To Lernow</h3>
+          <h3>Welcome To Learnow</h3>
           <p className="paragrafff">Please enter your credentials</p>
         </div>
         <div className="col-sm-4 ">

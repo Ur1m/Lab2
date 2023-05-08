@@ -4,7 +4,6 @@ namespace UdemyClone.Extensions
 {
     public static class HangfireJobs
     {
-
         public static void RecurringJobs()
         {
             //RecurringJob.AddOrUpdate<IAgendaMarkerService>("2",x => x.Create(new AgendaMarkerCreateDto { Color = "Kuqe" }), Cron.Minutely); 

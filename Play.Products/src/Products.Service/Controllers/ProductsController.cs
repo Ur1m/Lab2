@@ -18,9 +18,9 @@ namespace Products.Service.Controllers
     {
 
         private readonly IRepository<Items> itemsRepository;
+
         public ProductsController(IRepository<Items> itemsRepository)
         {
-
             this.itemsRepository = itemsRepository;
         }
 
@@ -28,7 +28,7 @@ namespace Products.Service.Controllers
         public async Task<IEnumerable<ItemDto>> GetAsync()
         {
             var items = (await itemsRepository.GetAllAsync())
-                        .Select(items => items.AsDto());
+                                              .Select(items => items.AsDto());
             return items;
         }
 

@@ -42,7 +42,6 @@ namespace Products.Service
 
             services.AddSingleton(ServiceProvider =>
             {
-
                 var mongoDbSettings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
                 var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
                 return mongoClient.GetDatabase(serviceSettings.ServiceName);
@@ -53,16 +52,18 @@ namespace Products.Service
                 var database = serviceProvider.GetService<IMongoDatabase>();
                 return new MongoRepository<Items>(database, "items");
             });
+            
             services.AddSingleton<IRepository<Category>>(serviceProvider =>
             {
                 var database = serviceProvider.GetService<IMongoDatabase>();
                 return new MongoRepository<Category>(database, "category");
             });
+            
             services.AddSingleton<IRepository<Reviews>>(serviceProvider =>
-          {
-              var database = serviceProvider.GetService<IMongoDatabase>();
-              return new MongoRepository<Reviews>(database, "reviews");
-          });
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new MongoRepository<Reviews>(database, "reviews");
+            });
 
 
             services.AddControllers(options =>

@@ -29,6 +29,7 @@ namespace UdemyClone.Controllers
             }
             return Ok(atrs);
         }
+
         [HttpGet("attributevalues")]
         public async Task<ActionResult<List<AttributeDTO>>> getAllAtributeVAlues()
          {
@@ -41,7 +42,6 @@ namespace UdemyClone.Controllers
          }
 
         [HttpGet("atributevalues/{id}")]
-       
         public async Task<ActionResult<List<AttributeValueDTO>>> getvalues(int id)
         {
             var val = _attrbuteRepository.getAttributeVAluesByAttributeId(id);
@@ -51,8 +51,8 @@ namespace UdemyClone.Controllers
             }
             return Ok(val);
         }
+
         [HttpGet("productvalues/{id}")]
-      
         public async Task<ActionResult<List<AttributeValueDTO>>> getprodvalues(int id)
         {
             var val = _attrbuteRepository.getAttributeValuesByProductId(id);
@@ -69,13 +69,12 @@ namespace UdemyClone.Controllers
             _attrbuteRepository.AddAtribute(atr);
             return Ok();
         }
+        
         [HttpPost("addvalue")]
-
         public async Task<ActionResult> addatrvalue(AttributeValueDTO atrval)
         {
             _attrbuteRepository.AddAttributeValue(atrval);
             return Ok();
-
         }
 
         [HttpPost("addprodatr/{prodId}/{valId}")]
@@ -85,18 +84,15 @@ namespace UdemyClone.Controllers
             product.Id = prodId;
             product.AttributeValueId = valId;
 
-
             _attrbuteRepository.AddProductAttr(product);
             return Ok();
-
-
         }
+        
         [HttpDelete("{id}")]
         public async Task<ActionResult> deleteattr(int id)
         {
             _attrbuteRepository.DeleteAttribute(id);
             return Ok();
-
         }
 
         [HttpDelete("atrvalue/{id}")]
@@ -104,7 +100,6 @@ namespace UdemyClone.Controllers
         {
             _attrbuteRepository.DeleteAttributeValue(id);
             return Ok();
-
         }
 
         [HttpDelete("prodatr/{prodId}/{atrId}")]
@@ -112,18 +107,13 @@ namespace UdemyClone.Controllers
         {
             _attrbuteRepository.DeleteAttributeValueForProduct(prodId, atrId);
             return Ok();
-
         }
-        [HttpGet("productbyatribute/{id}")]
         
+        [HttpGet("productbyatribute/{id}")]
         public async Task<ActionResult> getprods(int id)
         {
             var prods = _attrbuteRepository.getProductbyAttributeValue(id);
             return Ok(prods);
         }
-
-
-
-
     }
 }

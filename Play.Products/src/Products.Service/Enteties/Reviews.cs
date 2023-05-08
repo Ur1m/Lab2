@@ -10,6 +10,5 @@ namespace Play.Products.Service.Enteties
         public Guid UserId { get; set; }
         public Items Items { get; set; }
         public Items ItemsId { get; set; }
-
     }
 }

@@ -13,5 +13,6 @@ namespace IdentityAuthenticationService.Models
 
         [Required]
         public string Password { get; set; }
+
     }
 }

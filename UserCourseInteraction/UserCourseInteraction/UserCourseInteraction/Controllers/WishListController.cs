@@ -20,6 +20,7 @@ namespace UserCourseInteraction.Controllers
             _reposiory = repository;
 
         }
+
         [HttpGet]
         public ActionResult<List<WishListViewModel>> getAll()
         {
@@ -34,9 +35,8 @@ namespace UserCourseInteraction.Controllers
                 userId = x.userId,
                 productId=x.productId
             }).ToList();
-
-
         }
+        
         [HttpGet("{id}")]
         public ActionResult<List<WishListViewModel>> getbyId(string id)
         {
@@ -45,7 +45,6 @@ namespace UserCourseInteraction.Controllers
             {
                 return NotFound();
             }
-           
 
             return all.Select(x => new WishListViewModel()
             {
@@ -54,6 +53,7 @@ namespace UserCourseInteraction.Controllers
                 productId = x.productId
             }).ToList();
         }
+
         [HttpPost]
         public ActionResult Add(WishListViewModel model)
         {
@@ -63,6 +63,7 @@ namespace UserCourseInteraction.Controllers
             _reposiory.Add(shop);
             return Ok();
         }
+
         [HttpPut("{Id}")]
         public ActionResult Update(int Id, WishListViewModel model)
         {
@@ -76,6 +77,7 @@ namespace UserCourseInteraction.Controllers
             }
             return NotFound();
         }
+
         [HttpDelete("{Id}")]
         public ActionResult Remove(int Id)
         {

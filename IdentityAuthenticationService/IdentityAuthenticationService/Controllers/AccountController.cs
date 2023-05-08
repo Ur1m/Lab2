@@ -48,6 +48,7 @@ namespace IdentityAuthenticationService.Controllers
             }
             return BadRequest();
         }
+
         [HttpGet]
         public async Task<ActionResult<IdentityUser>> getCurrentUser()
         {
@@ -58,7 +59,6 @@ namespace IdentityAuthenticationService.Controllers
                 return Ok(returnuser);
                     }
             return BadRequest();
-
         }
 
         [HttpPost("logout")]
@@ -107,7 +107,9 @@ namespace IdentityAuthenticationService.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName
                 };
+
                 var tokenString = await accountService.GenerateJWToken(user);
+               
                 if (tokenString != "")
                 {
                     userVM.TokenString = tokenString;

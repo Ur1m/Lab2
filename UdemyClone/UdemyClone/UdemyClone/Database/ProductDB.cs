@@ -10,7 +10,6 @@ namespace UdemyClone.Database
 {
     public class ProductDB:DbContext
     {
-        
             public ProductDB(DbContextOptions<ProductDB> options) : base(options)
             {
 
@@ -19,11 +18,8 @@ namespace UdemyClone.Database
             public DbSet<Product> products { get; set; }
             public DbSet<Review> reviews { get; set; }
             public DbSet<Attribute> atribues { get; set; }
-        public DbSet<AttributeValue> atrvalues { get; set; }
-        public DbSet<ProductAttribute> productattributes { get; set; }
-
-
-         
+            public DbSet<AttributeValue> atrvalues { get; set; }
+            public DbSet<ProductAttribute> productattributes { get; set; }
         }
     }
 

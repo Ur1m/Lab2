@@ -28,7 +28,6 @@ namespace IdentityAuthenticationService.Controllers
             {
                 throw;
             }
-
         }
 
         [HttpPost("welcome")]
@@ -37,6 +36,7 @@ namespace IdentityAuthenticationService.Controllers
             try
             {
                 await mailService.SendWelcomeEmailAsync(request);
+
                 return Ok();
             }
             catch (Exception ex)
