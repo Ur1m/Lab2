@@ -9,10 +9,10 @@ namespace UserCourseInteraction.Database
 {
     public class ApplicationDbContext : DbContext
     {
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+        
         public DbSet<ShoppingCart> shopingCart { get; set; }
         public DbSet<WishList> wishLists { get; set; }
         public DbSet<Product> products { get; set; }

@@ -17,17 +17,22 @@ namespace UdemyClone.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-
+        #region Properties
         private IProductService _productService;
         private readonly IMapper _mapper;
         private readonly ISendEndpointProvider _sendEndpointProvider;
+        #endregion
+
+        #region Constructor
         public ProductController(IProductService productService, IPublishEndpoint publishEndpoint, IMapper mapper, ISendEndpointProvider sendEndpointProvider)
         {
             _productService = productService;
             _mapper = mapper;
             _sendEndpointProvider = sendEndpointProvider;
         }
+        #endregion
 
+        #region Actions
         [HttpGet]
         public async Task<ActionResult<List<ProductDTO>>> GetProducts()
         {
@@ -59,6 +64,7 @@ namespace UdemyClone.Controllers
             if (ModelState.IsValid)
             {
                 _productService.AddProduct(prodDTO);
+
                 return Ok();
             }
          
@@ -94,6 +100,7 @@ namespace UdemyClone.Controllers
             if (ModelState.IsValid)
             {
                 _productService.UpdateProduct(prodDTO);
+
                 return Ok();
             }
             return BadRequest();
@@ -107,7 +114,9 @@ namespace UdemyClone.Controllers
                 return BadRequest();
             }
             _productService.DeleteProduct(id);
+
             return Ok();
         }
+        #endregion
     }
 }

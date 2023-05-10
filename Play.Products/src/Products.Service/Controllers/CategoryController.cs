@@ -11,13 +11,12 @@ using Products.Service.Dtos;
 
 namespace Products.Service.Controllers
 {
-
     [ApiController]
     [Route("category")]
     public class CategoryController : ControllerBase
     {
-
         private readonly IRepository<Category> categoryRepository;
+        
         public CategoryController(IRepository<Category> categoryRepository)
         {
             this.categoryRepository = categoryRepository;
@@ -28,6 +27,7 @@ namespace Products.Service.Controllers
         {
             var items = (await categoryRepository.GetAllAsync())
                         .Select(items => items.AsCategoryDto());
+            
             return items;
         }
 
@@ -56,7 +56,6 @@ namespace Products.Service.Controllers
             await categoryRepository.CreateAsync(item);
 
             return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id }, item);
-
         }
 
         [HttpPut("{id}")]
@@ -70,11 +69,12 @@ namespace Products.Service.Controllers
             }
 
             existingItem.Name = updateCategoryDto.Name;
+            
             existingItem.Desctription = updateCategoryDto.Description;
 
             await categoryRepository.UpdateAsync(existingItem);
 
-            return NoContent();
+            return Ok(existingItem);
         }
 
         [HttpDelete("{id}")]

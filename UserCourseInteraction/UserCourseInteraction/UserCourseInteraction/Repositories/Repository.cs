@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using UserCourseInteraction.Database;
 
 namespace UserCourseInteraction.Repositories
@@ -11,15 +10,15 @@ namespace UserCourseInteraction.Repositories
     {
         public ApplicationDbContext _dbContext;
         DbSet<T> entities;
+
         public Repository(ApplicationDbContext context)
         {
             _dbContext = context;
             entities = _dbContext.Set<T>();
-
         }
+
         public void Add(T entity)
         {
-
             try
             {
                 entities.Add(entity);
@@ -29,7 +28,6 @@ namespace UserCourseInteraction.Repositories
             {
                 throw ex;
             }
-            
         }
 
         public void AddRange(List<T> enteties)
@@ -49,8 +47,6 @@ namespace UserCourseInteraction.Repositories
         {
            return entities.ToList();
         }
-
-      
 
         public void Remove(T entiry)
         {

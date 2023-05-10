@@ -1,43 +1,44 @@
-import { useState, useContext } from 'react';
-import axios from 'axios';
-import UserContext from '../../UserContext';
-
+import { useState, useContext } from "react";
+import axios from "axios";
+import UserContext from "../../UserContext";
 
 export const LoginComponent = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { setUser } = useContext(UserContext);
 
   async function login() {
-
     const body = JSON.stringify({
       email: email,
       password: password,
     });
 
     try {
-      const response = await axios.post("https://localhost:5003/api/Account/login", body, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios.post(
+        "https://localhost:5003/api/Account/login",
+        body,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const user = response.data;
       localStorage.setItem("user", JSON.stringify(response.data));
-      if(response.status = 200){
-        window.location = "/courses"
+      if ((response.status = 200)) {
+        window.location = "/courses";
       }
       setUser(user);
     } catch (error) {
       console.error(error);
     }
-  };
+  }
 
   return (
     <div className="wraper">
-
       <div className="containerr">
         <div className="textbox">
-          <h3>Welcome To Learnow</h3>
+          <h3>Welcome To LearnNow</h3>
           <p className="paragrafff">Please enter your credentials</p>
         </div>
         <div className="col-sm-4 ">
@@ -60,7 +61,8 @@ export const LoginComponent = () => {
           <br />
           <button onClick={login} className="btn btn-primary">
             Login
-          </button><br />
+          </button>
+          <br />
         </div>
       </div>
     </div>

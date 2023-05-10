@@ -14,6 +14,7 @@ namespace UdemyClone.Controllers
     public class AttributeController : ControllerBase
     {
         private IAttributeRepository _attrbuteRepository;
+
         public AttributeController(IAttributeRepository attributeRepository)
         {
             _attrbuteRepository = attributeRepository;
@@ -34,10 +35,12 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult<List<AttributeDTO>>> getAllAtributeVAlues()
          {
             var atrvalues = _attrbuteRepository.getAllAtrvalues();
+
             if(atrvalues==null)
             {
                 return NotFound();
             }
+
             return Ok(atrvalues);
          }
 
@@ -45,10 +48,12 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult<List<AttributeValueDTO>>> getvalues(int id)
         {
             var val = _attrbuteRepository.getAttributeVAluesByAttributeId(id);
+
             if (val == null)
             {
                 return NotFound();
             }
+
             return Ok(val);
         }
 
@@ -56,10 +61,12 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult<List<AttributeValueDTO>>> getprodvalues(int id)
         {
             var val = _attrbuteRepository.getAttributeValuesByProductId(id);
+
             if (val == null)
             {
                 return NotFound();
             }
+
             return Ok(val);
         }
 
@@ -67,6 +74,7 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult> addAtribute(AttributeDTO atr)
         {
             _attrbuteRepository.AddAtribute(atr);
+
             return Ok();
         }
         
@@ -74,6 +82,7 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult> addatrvalue(AttributeValueDTO atrval)
         {
             _attrbuteRepository.AddAttributeValue(atrval);
+
             return Ok();
         }
 
@@ -81,10 +90,12 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult> addprodatr(int prodId, int valId)
         {
             var product = new ProductAttributeDTO();
+
             product.Id = prodId;
             product.AttributeValueId = valId;
 
             _attrbuteRepository.AddProductAttr(product);
+
             return Ok();
         }
         
@@ -92,6 +103,7 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult> deleteattr(int id)
         {
             _attrbuteRepository.DeleteAttribute(id);
+
             return Ok();
         }
 
@@ -99,6 +111,7 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult> deleteattrvalue(int id)
         {
             _attrbuteRepository.DeleteAttributeValue(id);
+
             return Ok();
         }
 
@@ -106,6 +119,7 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult> deleteattr(int prodId, int atrId)
         {
             _attrbuteRepository.DeleteAttributeValueForProduct(prodId, atrId);
+
             return Ok();
         }
         
@@ -113,6 +127,7 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult> getprods(int id)
         {
             var prods = _attrbuteRepository.getProductbyAttributeValue(id);
+
             return Ok(prods);
         }
     }

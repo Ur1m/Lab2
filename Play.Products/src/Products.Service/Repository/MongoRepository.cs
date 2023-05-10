@@ -51,7 +51,6 @@ namespace Play.Products.Service.Repository
 
         public async Task RemoveAsyc(Guid id)
         {
-
             FilterDefinition<T> filter = filterBuilder.Eq(entity => entity.Id, id);
             await DbCollection.DeleteOneAsync(filter);
             {

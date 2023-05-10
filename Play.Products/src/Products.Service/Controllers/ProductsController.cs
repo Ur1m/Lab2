@@ -8,26 +8,23 @@ using Play.Products.Service.Enteties;
 using Play.Products.Service.Repository;
 using Products.Service.Dtos;
 
-
 namespace Products.Service.Controllers
 {
-
     [ApiController]
     [Route("products")]
     public class ProductsController : ControllerBase
     {
-
-        private readonly IRepository<Items> itemsRepository;
+        private readonly IRepository<Items> _itemsRepository;
 
         public ProductsController(IRepository<Items> itemsRepository)
         {
-            this.itemsRepository = itemsRepository;
+            _itemsRepository= itemsRepository;
         }
 
         [HttpGet]
         public async Task<IEnumerable<ItemDto>> GetAsync()
         {
-            var items = (await itemsRepository.GetAllAsync())
+            var items = (await _itemsRepository.GetAllAsync())
                                               .Select(items => items.AsDto());
             return items;
         }
@@ -35,7 +32,7 @@ namespace Products.Service.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ItemDto>> GetByIdAsync(Guid id)
         {
-            var item = await itemsRepository.GetAsync(id);
+            var item = await _itemsRepository.GetAsync(id);
 
             if (item == null)
             {
@@ -58,16 +55,15 @@ namespace Products.Service.Controllers
                 CategoryId = createItemDto.CategoryId
             };
 
-            await itemsRepository.CreateAsync(item);
+            await _itemsRepository.CreateAsync(item);
 
             return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id }, item);
-
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(Guid id, UpdateItemDto updateItemDto)
         {
-            var existingItem = await itemsRepository.GetAsync(id);
+            var existingItem = await _itemsRepository.GetAsync(id);
 
             if (existingItem == null)
             {
@@ -87,7 +83,7 @@ namespace Products.Service.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletAsync(Guid id)
         {
-            var existingItem = await itemsRepository.GetAsync(id);
+            var existingItem = await _itemsRepository.GetAsync(id);
 
             await itemsRepository.RemoveAsyc(existingItem.Id);
 

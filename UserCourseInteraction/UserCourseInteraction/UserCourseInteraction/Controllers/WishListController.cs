@@ -15,21 +15,23 @@ namespace UserCourseInteraction.Controllers
     public class WishListController : ControllerBase
     {
         private IRepository<WishList> _reposiory;
+
         public WishListController(IRepository<WishList> repository)
         {
             _reposiory = repository;
-
         }
 
         [HttpGet]
         public ActionResult<List<WishListViewModel>> getAll()
         {
-            var all = _reposiory.GetAll();
-            if (all == null)
+            var wishLists = _reposiory.GetAll();
+         
+            if (wishLists == null)
             {
                 return NotFound();
             }
-            return all.Select(x => new WishListViewModel()
+            
+            return wishLists.Select(x => new WishListViewModel()
             {
                 Id = x.Id,
                 userId = x.userId,
@@ -41,6 +43,7 @@ namespace UserCourseInteraction.Controllers
         public ActionResult<List<WishListViewModel>> getbyId(string id)
         {
             var all = _reposiory.GetAll().Where(x => x.userId == id);
+
             if (all == null)
             {
                 return NotFound();
@@ -58,9 +61,12 @@ namespace UserCourseInteraction.Controllers
         public ActionResult Add(WishListViewModel model)
         {
             var shop = new WishList();
+
             shop.userId = model.userId;
             shop.productId = model.productId;
+            
             _reposiory.Add(shop);
+            
             return Ok();
         }
 
@@ -70,11 +76,15 @@ namespace UserCourseInteraction.Controllers
             if (ModelState.IsValid)
             {
                 var temp = _reposiory.GetAll().Where(x => x.Id == Id).FirstOrDefault();
+
                 temp.productId= model.productId;
                 temp.userId = model.userId;
+
                 _reposiory.Update(temp);
+
                 return Ok();
             }
+
             return NotFound();
         }
 
@@ -86,8 +96,10 @@ namespace UserCourseInteraction.Controllers
                 var temp = _reposiory.GetAll().Where(x => x.Id == Id).FirstOrDefault();
 
                 _reposiory.Remove(temp);
+
                 return Ok();
             }
+
             return NotFound();
         }
     }

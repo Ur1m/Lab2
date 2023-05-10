@@ -18,6 +18,8 @@ namespace UserCourseInteraction.Controllers
     public class ShoppingCartController : ControllerBase
     {
         private IRepository<ShoppingCart> _reposiory;
+
+
         public ShoppingCartController(IRepository<ShoppingCart> repository)
         {
             _reposiory = repository;
@@ -38,7 +40,8 @@ namespace UserCourseInteraction.Controllers
                 Id = x.Id,
                 userId = x.userId,
                 ProductId = x.ProductId
-            }).ToList();
+            })
+                .ToList();
         }
         
         [HttpGet("{id}")]
@@ -103,6 +106,7 @@ namespace UserCourseInteraction.Controllers
 
                 return Ok();
             }
+
             return NotFound();
         }
     }

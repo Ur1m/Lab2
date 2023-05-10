@@ -23,30 +23,38 @@ namespace IdentityAuthenticationService.Controllers
     [Route("api/[controller]")]
     public class AccountController : ControllerBase
     {
-        private UserManager<ApplicationUser> userManager;
-        private SignInManager<ApplicationUser> signInManager;
-        private readonly IAccountService accountService;
+        #region Properties
+        private UserManager<ApplicationUser> _userManager;
+        private SignInManager<ApplicationUser> _signInManager;
+        private readonly IAccountService _accountService;
+        #endregion 
 
+        #region Constructor
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IAccountService accountService)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
-            this.accountService = accountService;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _accountService = accountService;
         }
+        #endregion
 
+        #region Actions
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginUserModel user)
         {
-            ApplicationUser appUser = await userManager.FindByEmailAsync(user.Email);
+            var appUser = await _userManager.FindByEmailAsync(user.Email);
+          
             if (appUser != null)
             {
-                var result = await signInManager.PasswordSignInAsync(appUser, user.Password, false, false);
+                var result = await _signInManager.PasswordSignInAsync(appUser, user.Password, false, false);
+             
                 if (result.Succeeded)
                 {
                     return Ok(appUser);
                 }
             }
-            return BadRequest();
+
+            return Unauthorized();
         }
 
         [HttpGet]
@@ -55,23 +63,27 @@ namespace IdentityAuthenticationService.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 var user = HttpContext.User.Identity.Name;
-                var returnuser = await userManager.FindByNameAsync(user);
-                return Ok(returnuser);
-                    }
+
+                var returnuser = await _userManager.FindByNameAsync(user);
+                
+                if(returnuser != null)
+                    return Ok(returnuser);
+            }
             return BadRequest();
         }
 
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
-            var result = signInManager.SignOutAsync().IsCompleted.ToString();
+            var result = _signInManager.SignOutAsync();
+
             return Ok(result);
         }
 
         [HttpPost("forgot-password")]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel forgotPasswordViewModel)
         {
-            var user = await accountService.ForgotPassword(forgotPasswordViewModel);
+            var user = await _accountService.ForgotPassword(forgotPasswordViewModel);
            
             if (user != null)
             {
@@ -83,7 +95,8 @@ namespace IdentityAuthenticationService.Controllers
                     LastName = user.LastName
                 };
 
-                var tokenString = await accountService.GenerateJWToken(user);
+                var tokenString = await _accountService.GenerateJWToken(user);
+                
                 if (tokenString != "")
                 {
                     userVM.TokenString = tokenString;
@@ -96,7 +109,7 @@ namespace IdentityAuthenticationService.Controllers
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordViewModel resetPasswordViewModel)
         {
-            var user = await accountService.ResetPassword(resetPasswordViewModel);
+            var user = await _accountService.ResetPassword(resetPasswordViewModel);
             
             if (user != null)
             {
@@ -108,7 +121,7 @@ namespace IdentityAuthenticationService.Controllers
                     LastName = user.LastName
                 };
 
-                var tokenString = await accountService.GenerateJWToken(user);
+                var tokenString = await _accountService.GenerateJWToken(user);
                
                 if (tokenString != "")
                 {
@@ -119,5 +132,6 @@ namespace IdentityAuthenticationService.Controllers
 
             return Unauthorized();
         }
+        #endregion
     }
 }

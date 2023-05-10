@@ -46,9 +46,11 @@ namespace IdentityAuthenticationService.Services
                     }
                 }
             }
+
             builder.HtmlBody = mailRequest.Body;
             
             email.Body = builder.ToMessageBody();
+
             using var smtp = new SmtpClient();
             
             smtp.Connect(_mailSettings.Host, _mailSettings.Port, SecureSocketOptions.StartTls);
@@ -61,6 +63,7 @@ namespace IdentityAuthenticationService.Services
             
             return true;
         }
+
         public async Task SendWelcomeEmailAsync(WelcomeRequest request)
         {
             string FilePath = Directory.GetCurrentDirectory() + "\\Templates\\WelcomeTemplate.html";

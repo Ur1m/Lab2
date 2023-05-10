@@ -19,22 +19,22 @@ namespace IdentityAuthenticationService.Services
 {
     public class AccountService : IAccountService
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly IMailService mailService;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IMailService _mailService;
 
         public AccountService(UserManager<ApplicationUser> userManager, IMailService mailService)
         {
-            this.userManager = userManager;
-            this.mailService = mailService;
+            _userManager = userManager;
+            _mailService = mailService;
         }
 
         public async Task<ApplicationUser> ForgotPassword(ForgotPasswordViewModel forgetPasswordViewModel)
         {
-            var user = await userManager.FindByEmailAsync(forgetPasswordViewModel.Email);
+            var user = await _userManager.FindByEmailAsync(forgetPasswordViewModel.Email);
 
             if (user != null)
             {
-                var token = await userManager.GeneratePasswordResetTokenAsync(user);
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
                 token = HttpUtility.UrlEncode(token);
 
                 await SendResetPasswordEmail(forgetPasswordViewModel.Email, token);
@@ -51,9 +51,9 @@ namespace IdentityAuthenticationService.Services
 
             try
             {
-                var getRole = await userManager.GetRolesAsync(user);
+                var userRoles = await _userManager.GetRolesAsync(user);
 
-                foreach (var role in getRole)
+                foreach (var role in userRoles)
                 {
                     roles = role;
                 }
@@ -86,12 +86,10 @@ namespace IdentityAuthenticationService.Services
 
                 };
 
-
                 var token = tokenHandler.CreateToken(tokenDescriptor);
 
                 tokenString = tokenHandler.WriteToken(token);
             }
-
             catch
             {
                 throw new Exception("You need to login first!");
@@ -102,17 +100,19 @@ namespace IdentityAuthenticationService.Services
 
         public async Task<ApplicationUser> ResetPassword(ResetPasswordViewModel resetPasswordViewModel)
         {
-            var user = await userManager.FindByEmailAsync(resetPasswordViewModel.Email);
+            var user = await _userManager.FindByEmailAsync(resetPasswordViewModel.Email);
+         
             if (user != null)
             {
-                resetPasswordViewModel.Token = await userManager.GeneratePasswordResetTokenAsync(user);
+                resetPasswordViewModel.Token = await _userManager.GeneratePasswordResetTokenAsync(user);
             
-                var result = await userManager.ResetPasswordAsync(user, resetPasswordViewModel.Token, resetPasswordViewModel.Password);
+                var result = await _userManager.ResetPasswordAsync(user, resetPasswordViewModel.Token, resetPasswordViewModel.Password);
                
                 if (result.Succeeded)
                 {
                     return user;
                 }
+
                 foreach (var error in result.Errors)
                 {
                     return null;
@@ -124,7 +124,6 @@ namespace IdentityAuthenticationService.Services
 
         private async Task<bool> SendResetPasswordEmail(string email, string token)
         {
-
             var emailTemplateFile = Directory.GetCurrentDirectory() + "\\Templates\\SendResetPasswordEmailTemplate.html";
 
             StreamReader str = new StreamReader(emailTemplateFile);
@@ -150,7 +149,7 @@ namespace IdentityAuthenticationService.Services
                     Body = builder.HtmlBody
                 };
 
-                var result = await mailService.SendEmailAsync(mailRequest);
+                var result = await _mailService.SendEmailAsync(mailRequest);
 
                 return result;
             }

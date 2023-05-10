@@ -14,6 +14,7 @@ namespace UdemyClone.Controllers
     public class CategoryController : ControllerBase
     {
         private ICategoryService _categoryService;
+
         public CategoryController(ICategoryService categoryService)
         {
             _categoryService = categoryService;
@@ -23,10 +24,12 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult<List<CategoryDTO>>> GetCategories()
         {
             var categ = _categoryService.GetCategories();
+
             if(categ==null)
             {
                 return BadRequest();
             }
+
             return Ok(categ);
         }
 
@@ -34,10 +37,12 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult<CategoryDTO>> GetCategory(int id)
         {
             var categ = _categoryService.GetCategoryById(id);
+
             if (categ == null)
             {
                 return BadRequest();
             }
+
             return Ok(categ);
         }
         
@@ -47,6 +52,7 @@ namespace UdemyClone.Controllers
             if (ModelState.IsValid)
             {
                 _categoryService.AddCategory(categoryDTO);
+
                 return Ok();
             }
             
@@ -59,6 +65,7 @@ namespace UdemyClone.Controllers
             if (ModelState.IsValid)
             {
                 _categoryService.UpdateCategory(categoryDTO);
+
                 return Ok();
             }
             
@@ -73,6 +80,7 @@ namespace UdemyClone.Controllers
                 return BadRequest();
             }
             _categoryService.DeleteCategory(id);
+
             return Ok();
         }
     }

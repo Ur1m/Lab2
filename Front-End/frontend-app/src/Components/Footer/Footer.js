@@ -1,20 +1,16 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 import "./../../Css/bootstrap.css";
 import "../Footer/footer.css";
-
 export const Footer = () => {
   return (
     <div>
-     <div className="footer">
-         <div className="text-center p-3 fff">
-                  © 2022 Copyright: 
-              <a className="text-darkk" href="https://google.com/">LearNow</a>
-         </div>
-     </div>
+      <div className="footer">
+        <div className="text-center p-3 fff">
+          © 2022 Copyright:
+          <a className="text-darkk" href="https://google.com/">
+            LearnNow
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

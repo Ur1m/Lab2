@@ -12,17 +12,17 @@ namespace UdemyClone.Services.Repositories
 {
     public class CategoryService : ICategoryService
     {
-
         private ProductDB _context;
         private IMapper _mapper;
+
         public CategoryService(ProductDB context,IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
+
         public void DeleteCategory(int id)
         {
-          
             var categ = _context.categories.Where(x => x.CategoryId == id).FirstOrDefault();
 
             if(categ!=null)
@@ -38,10 +38,11 @@ namespace UdemyClone.Services.Repositories
             {
                 var categories = _context.categories.Select(x=> new CategoryDTO
                 { 
-                CategoryId=x.CategoryId,
-                Name=x.Name,
-                Desctription=x.Desctription
-                }).ToList();
+                    CategoryId=x.CategoryId,
+                    Name=x.Name,
+                    Desctription=x.Desctription
+                })
+                .ToList();
 
                 return categories;
             }
@@ -60,12 +61,12 @@ namespace UdemyClone.Services.Repositories
                     CategoryId=x.CategoryId,
                     Name=x.Name,
                    Desctription=x.Desctription
-                }
-                ).FirstOrDefault();
+                })
+                .FirstOrDefault();
                 
                 return categ;
             }
-           catch(Exception ex)
+            catch(Exception ex)
             {
                 throw ex;
             }

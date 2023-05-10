@@ -10,11 +10,13 @@ namespace UserCourseInteraction.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-      private  ApplicationDbContext _db;
+        private  ApplicationDbContext _db;
+        
         public OrderRepository(ApplicationDbContext db)
         {
             _db = db;
         }
+
         public void Add(OrderViewModel model)
         {
             var order = new Order() { userId=model.userId,CreatedOn=DateTime.Now,
@@ -75,6 +77,7 @@ namespace UserCourseInteraction.Repositories
                 };
                 model.Add(neworder);
             }
+
             return model;
         }
 
@@ -82,7 +85,9 @@ namespace UserCourseInteraction.Repositories
         {
            // var model = new List<OrderViewModel>();
             var orders = _db.orders.Where(x=> x.OrderId==id).FirstOrDefault();
+
             var productsId = _db.oredrItem.Where(x => x.OrderId == id).ToList();
+            
             var products = new List<Product>();
 
             foreach(var item in productsId)
@@ -157,6 +162,7 @@ namespace UserCourseInteraction.Repositories
                 CreatedOn = DateTime.Now,
                 totalPrice = model.totalPrice
             };
+
             _db.orders.Update(order);
             _db.SaveChanges();
            
@@ -165,6 +171,7 @@ namespace UserCourseInteraction.Repositories
             _db.SaveChanges();
 
             var listofprod = new List<Product>();
+
             listofprod = _db.products.ToList();
             var prod = model.products.Where(x => !listofprod.Contains(x)).ToList();
 

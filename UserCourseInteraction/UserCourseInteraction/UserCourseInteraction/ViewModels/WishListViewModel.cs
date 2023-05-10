@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace UserCourseInteraction.ViewModels
+﻿namespace UserCourseInteraction.ViewModels
 {
     public class WishListViewModel
     {

@@ -18,7 +18,6 @@ namespace UserCourseInteraction.Consumer
             _repository = repository;
         }
 
-
         public async Task Consume(ConsumeContext<CartEventDto> context)
         {
             try

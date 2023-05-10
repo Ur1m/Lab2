@@ -1,8 +1,7 @@
-
 export default function Home() {
- return (
-   <>
-     <h1>LearNosw</h1>
-   </>
- );
+  return (
+    <>
+      <h1>LearNow</h1>
+    </>
+  );
 }

@@ -12,8 +12,8 @@ namespace UdemyClone.Database
     {
             public ProductDB(DbContextOptions<ProductDB> options) : base(options)
             {
-
             }
+            
             public DbSet<Category> categories { get; set; }
             public DbSet<Product> products { get; set; }
             public DbSet<Review> reviews { get; set; }

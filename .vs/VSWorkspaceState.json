@@ -3,15 +3,16 @@
     "",
     "\\IdentityAuthenticationService",
     "\\IdentityAuthenticationService\\IdentityAuthenticationService",
-    "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Services",
+    "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Models",
     "\\Play.Products",
     "\\Play.Products\\src",
     "\\Play.Products\\src\\Products.Service",
     "\\UserCourseInteraction",
     "\\UserCourseInteraction\\UserCourseInteraction",
     "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction",
-    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\Consumer"
+    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\Repositories",
+    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\ViewModels"
   ],
-  "SelectedNode": "\\Play.Products\\src\\Products.Service\\Startup.cs",
+  "SelectedNode": "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Models\\ApplicationUser.cs",
   "PreviewInSolutionExplorer": false
 }

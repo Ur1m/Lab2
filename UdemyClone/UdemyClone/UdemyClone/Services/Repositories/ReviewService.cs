@@ -14,11 +14,13 @@ namespace UdemyClone.Services.Repositories
     {
         private ProductDB _db;
         private IMapper _mapper;
+
         public ReviewService(ProductDB db,IMapper maper)
         {
             _db = db;
             _mapper = maper;
         }
+
         public void AddReview(ReviewDTO prodDTO)
         {
             var rev = _mapper.Map<Review>(prodDTO);
@@ -44,18 +46,21 @@ namespace UdemyClone.Services.Repositories
         public List<ReviewDTO> GetReviews()
         {
             var rev = _db.reviews.Select(x => _mapper.Map<ReviewDTO>(x)).ToList();
+            
             return rev;
         }
 
         public List<ReviewDTO> GetReviewsbyProductId(int id)
         {
             var rev = _db.reviews.Where(x=> x.Id==id).Select(x => _mapper.Map<ReviewDTO>(x)).ToList();
+
             return rev;
         }
 
         public void UpdateReview(ReviewDTO prodDTO)
         {
             var rev = _mapper.Map<Review>(prodDTO);
+
             _db.reviews.Update(rev);
             _db.SaveChanges();
         }

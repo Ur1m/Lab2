@@ -2,7 +2,6 @@ using System;
 
 namespace Play.Products.Service.Enteties
 {
-
     public class Reviews : IEntity
     {
         public Guid Id { get; set; }

@@ -6,7 +6,7 @@ using UdemyClone.DTO;
 
 namespace UdemyClone.Services.Interfaces
 {
-  public   interface IAttributeRepository
+  public interface IAttributeRepository
     {
         public List<AttributeDTO> getAllAtributes();
         public List<AttributeValueDTO> getAttributeValuesByProductId(int id);

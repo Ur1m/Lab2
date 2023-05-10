@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header } from "semantic-ui-react";
-import { observer } from "mobx-react-lite";
 import axios from "axios";
-import styless from "../Login/styless.css"
-import { set } from "mobx";
 
 export const ResetPassword = () => {
   const [email, setEmail] = useState("");
@@ -11,29 +7,26 @@ export const ResetPassword = () => {
   const [token, setToken] = useState("");
   const [data, setData] = useState();
   const [isError, setIsError] = useState();
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
 
   async function reset() {
     let item = { email, password, token };
-    let result = await axios.post(
-      "http://localhost:5003/api/Account/reset-password",
-      item
-    ).then(res => {
-      setIsError(false);
-      setData("Password changed succesfully!")
-      setEmail('');
-      setPassword('');
-    })
-      .catch(err => {
+    let result = await axios
+      .post("http://localhost:5003/api/Account/reset-password", item)
+      .then((res) => {
+        setIsError(false);
+        setData("Password changed succesfully!");
+        setEmail("");
+        setPassword("");
+      })
+      .catch((err) => {
         setIsError(true);
         setData(err.response.statusText);
       });
-
   }
 
   return (
     <div className="wraper">
-
       <div className="containerr">
         <div className="textbox">
           <h3>Reset Your Password</h3>
@@ -60,10 +53,12 @@ export const ResetPassword = () => {
           <br />
           <br />
           {data && (
-            <div className='form-group'>
+            <div className="form-group">
               <div
-                className={isError ? 'alert alert-danger' : 'alert alert-success'}
-                role='alert'
+                className={
+                  isError ? "alert alert-danger" : "alert alert-success"
+                }
+                role="alert"
               >
                 {data}
               </div>
@@ -71,7 +66,6 @@ export const ResetPassword = () => {
           )}
         </div>
       </div>
-
     </div>
   );
 };

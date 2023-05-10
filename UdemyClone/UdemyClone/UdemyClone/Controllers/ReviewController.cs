@@ -15,6 +15,7 @@ namespace UdemyClone.Controllers
     public class ReviewController : ControllerBase
     {
         private IReview _reviewRepository;
+
         public ReviewController(IReview rev)
         {
             _reviewRepository = rev;
@@ -36,6 +37,7 @@ namespace UdemyClone.Controllers
         public async Task<ActionResult<ReviewDTO>> GetReviewbyProdId(int id)
         {
             var rev= _reviewRepository.GetReviewsbyProductId(id);
+
             if (rev == null)
             {
                 return BadRequest();
@@ -50,6 +52,7 @@ namespace UdemyClone.Controllers
             if (ModelState.IsValid)
             {
                 _reviewRepository.AddReview(revDTO);
+             
                 return Ok();
             }
             
@@ -62,6 +65,7 @@ namespace UdemyClone.Controllers
             if (ModelState.IsValid)
             {
                _reviewRepository.UpdateReview(revDTO);
+
                 return Ok();
             }
             
@@ -76,6 +80,7 @@ namespace UdemyClone.Controllers
                 return BadRequest();
             }
             _reviewRepository.DeleteReview(id);
+
             return Ok();
         }
     }

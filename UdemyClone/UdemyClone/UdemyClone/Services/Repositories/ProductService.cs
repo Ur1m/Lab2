@@ -15,11 +15,13 @@ namespace UdemyClone.Services.Repositories
     {
         private ProductDB _db;
         private IMapper _mapper;
+
         public ProductService(ProductDB db,IMapper mapper)
         {
             _db = db;
             _mapper = mapper;
         }
+
         public void AddProduct(ProductDTO prodDTO)
         {
             try
@@ -30,6 +32,7 @@ namespace UdemyClone.Services.Repositories
 
                 product.CreateDate = DateTime.Now;
                 product.CategoryId = 5;
+
                 _db.products.Add(product);
                 _db.SaveChanges();
             }
@@ -42,6 +45,7 @@ namespace UdemyClone.Services.Repositories
         public void DeleteProduct(int id)
         {
             var prod = _db.products.Where(x => x.Id == id).FirstOrDefault();
+
             _db.products.Remove(prod);
             _db.SaveChanges();
         }
@@ -49,7 +53,9 @@ namespace UdemyClone.Services.Repositories
         public ProductDTO GetProductById(int id)
         {
             var prod= _db.products.Where(x => x.Id == id).Include(x=> x.Category).FirstOrDefault();
+            
             var prodDTO = _mapper.Map<ProductDTO>(prod);
+
             return prodDTO;
         }
 
@@ -73,6 +79,7 @@ namespace UdemyClone.Services.Repositories
         public void UpdateProduct(ProductDTO prodDTO)
         {
             var prod = _mapper.Map<Product>(prodDTO);
+
             _db.products.Update(prod);
             _db.SaveChanges();
         }
