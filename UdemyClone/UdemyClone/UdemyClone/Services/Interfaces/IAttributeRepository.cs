@@ -12,7 +12,7 @@ namespace UdemyClone.Services.Interfaces
         public List<AttributeValueDTO> getAttributeValuesByProductId(int id);
         public List<AttributeValueDTO> getAttributeVAluesByAttributeId(int id);
         public List<ProductDTO> getProductbyAttributeValue(int id);
-        public void AddAtribute(AttributeDTO atr);
+        public void AddAttribute(AttributeDTO atr);
         public void AddAttributeValue(AttributeValueDTO atrval);
         public void AddProductAttr(ProductAttributeDTO prodatr);
         public void DeleteAttributeValue(int id);

@@ -97,7 +97,7 @@ namespace IdentityAuthenticationService.Controllers
 
                 var tokenString = await _accountService.GenerateJWToken(user);
                 
-                if (tokenString != "")
+                if (!string.IsNullOrEmpty(tokenString))
                 {
                     userVM.TokenString = tokenString;
                     return Ok(userVM);
@@ -123,7 +123,7 @@ namespace IdentityAuthenticationService.Controllers
 
                 var tokenString = await _accountService.GenerateJWToken(user);
                
-                if (tokenString != "")
+                if (!string.IsNullOrEmpty(tokenString))
                 {
                     userVM.TokenString = tokenString;
                     return Ok(userVM);

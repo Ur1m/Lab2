@@ -21,7 +21,7 @@ namespace UdemyClone.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<AttributeDTO>>> getAtrDto()
+        public async Task<ActionResult<List<AttributeDTO>>> GetAttributes()
         {
             var atrs = _attrbuteRepository.getAllAtributes();
             if (atrs == null)
@@ -32,7 +32,7 @@ namespace UdemyClone.Controllers
         }
 
         [HttpGet("attributevalues")]
-        public async Task<ActionResult<List<AttributeDTO>>> getAllAtributeVAlues()
+        public async Task<ActionResult<List<AttributeDTO>>> GetAllAttributeValues()
          {
             var atrvalues = _attrbuteRepository.getAllAtrvalues();
 
@@ -73,7 +73,7 @@ namespace UdemyClone.Controllers
         [HttpPost]
         public async Task<ActionResult> addAtribute(AttributeDTO atr)
         {
-            _attrbuteRepository.AddAtribute(atr);
+            _attrbuteRepository.AddAttribute(atr);
 
             return Ok();
         }

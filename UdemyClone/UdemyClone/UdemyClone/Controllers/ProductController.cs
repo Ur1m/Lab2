@@ -2,11 +2,9 @@
 using Event.ProductsContract;
 using Hangfire;
 using MassTransit;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using UdemyClone.DTO;
 using UdemyClone.Services.Interfaces;
@@ -38,14 +36,14 @@ namespace UdemyClone.Controllers
         {
             try 
             {
-                var result = new List<ProductDTO>();
-                var prod = _productService.GetProducts();
+                var result = _productService.GetProducts();
+
                 BackgroundJob.Enqueue(() => _productService.GetProducts());
-                return Ok(prod);
+
+                return Ok(result);
             }
             catch (Exception ex)
             {
-            
                 return BadRequest();
             }
         }
@@ -59,11 +57,11 @@ namespace UdemyClone.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddProduct(ProductDTO prodDTO)
+        public async Task<ActionResult> AddProduct(ProductDTO productDto)
         {
             if (ModelState.IsValid)
             {
-                _productService.AddProduct(prodDTO);
+                _productService.AddProduct(productDto);
 
                 return Ok();
             }
@@ -71,16 +69,16 @@ namespace UdemyClone.Controllers
             return BadRequest();
         }
         
-        [HttpPost("SendProductToCart")]
-        public async Task<ActionResult> SendProductToCart(ShoppingCartViewModel prodDTO)
+        [HttpPost("sendProductToCart")]
+        public async Task<ActionResult> SendProductToCart(ShoppingCartViewModel productDto)
         {
             var obj = new ShoppingCartViewModel()
             {
-                userId = prodDTO.userId,
-                ProductId = prodDTO.ProductId
+                userId = productDto.userId,
+                ProductId = productDto.ProductId
             };
 
-            var obj1 = GetProductByid(prodDTO.ProductId);
+            var obj1 = GetProductByid(productDto.ProductId);
 
             var mappedObj = _mapper.Map<CartEventDto>(obj);
             var mappedObj1 = _mapper.Map<ProductEventDTO>(obj1);
@@ -95,11 +93,11 @@ namespace UdemyClone.Controllers
         }
         
         [HttpPut]
-        public async Task<ActionResult> UpdateProduct(ProductDTO prodDTO)
+        public async Task<ActionResult> UpdateProduct(ProductDTO productDto)
         {
             if (ModelState.IsValid)
             {
-                _productService.UpdateProduct(prodDTO);
+                _productService.UpdateProduct(productDto);
 
                 return Ok();
             }
@@ -107,7 +105,7 @@ namespace UdemyClone.Controllers
         }
         
         [HttpDelete]
-        public async Task<ActionResult> deleteProduct(int id)
+        public async Task<ActionResult> DeleteProduct(int id)
         {
             if (id == 0)
             {

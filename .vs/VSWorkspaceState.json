@@ -1,18 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IdentityAuthenticationService",
     "\\IdentityAuthenticationService\\IdentityAuthenticationService",
-    "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Models",
+    "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Controllers",
+    "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Services",
     "\\Play.Products",
     "\\Play.Products\\src",
-    "\\Play.Products\\src\\Products.Service",
-    "\\UserCourseInteraction",
-    "\\UserCourseInteraction\\UserCourseInteraction",
-    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction",
-    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\Repositories",
-    "\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\ViewModels"
+    "\\Play.Products\\src\\Products.Service"
   ],
-  "SelectedNode": "\\IdentityAuthenticationService\\IdentityAuthenticationService\\Models\\ApplicationUser.cs",
+  "SelectedNode": "\\Play.Products",
   "PreviewInSolutionExplorer": false
 }

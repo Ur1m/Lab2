@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using UdemyClone.Database;
 using UdemyClone.DTO;
 using UdemyClone.Models;
@@ -23,11 +22,11 @@ namespace UdemyClone.Services.Repositories
 
         public void DeleteCategory(int id)
         {
-            var categ = _context.categories.Where(x => x.CategoryId == id).FirstOrDefault();
+            var category = _context.categories.Where(x => x.CategoryId == id).FirstOrDefault();
 
-            if(categ!=null)
+            if(category!=null)
             {
-                _context.categories.Remove(categ);
+                _context.categories.Remove(category);
                 _context.SaveChanges();
             }
         }

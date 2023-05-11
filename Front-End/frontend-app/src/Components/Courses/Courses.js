@@ -25,7 +25,7 @@ export const Courses = () => {
 
     if (user != null) {
       debugger;
-      axios.post("https://localhost:5002/api/Product/SendProductToCart", {
+      axios.post("https://localhost:5002/api/Product/sendProductToCart", {
         userId: user.id,
         productId: id,
       });

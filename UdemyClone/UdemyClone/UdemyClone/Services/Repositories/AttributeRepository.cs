@@ -23,7 +23,7 @@ namespace UdemyClone.Services.Repositories
             _mapper = mapper;
         }
 
-        public void AddAtribute(AttributeDTO atr)
+        public void AddAttribute(AttributeDTO atr)
         {
            var attr=_mapper.Map<Attribute>(atr);
            
@@ -44,6 +44,7 @@ namespace UdemyClone.Services.Repositories
             var prod = _mapper.Map<ProductAttribute>(prodatr);
 
             _db.productattributes.Add(prod);
+
             _db.SaveChanges();
         }
 
@@ -57,9 +58,9 @@ namespace UdemyClone.Services.Repositories
 
         public void DeleteAttributeValue(int id)
         {
-            var atr = _db.atrvalues.Where(x => x.AttributeValueId == id).FirstOrDefault();
+            var attribute = _db.atrvalues.Where(x => x.AttributeValueId == id).FirstOrDefault();
 
-            _db.atrvalues.Remove(atr);
+            _db.atrvalues.Remove(attribute);
             _db.SaveChanges();
         }
 
