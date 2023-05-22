@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Downloads\\Payment Module\\ProcessPayment\\ProcessPayment\\ProcessPayment\\ProcessPayment.csproj": {}
+    "C:\\Users\\HP\\Source\\Repos\\Lab2\\ProcessPayment\\ProcessPayment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Downloads\\Payment Module\\ProcessPayment\\ProcessPayment\\ProcessPayment\\ProcessPayment.csproj": {
+    "C:\\Users\\HP\\Source\\Repos\\Lab2\\ProcessPayment\\ProcessPayment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Downloads\\Payment Module\\ProcessPayment\\ProcessPayment\\ProcessPayment\\ProcessPayment.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Source\\Repos\\Lab2\\ProcessPayment\\ProcessPayment.csproj",
         "projectName": "ProcessPayment",
-        "projectPath": "C:\\Users\\HP\\Downloads\\Payment Module\\ProcessPayment\\ProcessPayment\\ProcessPayment\\ProcessPayment.csproj",
+        "projectPath": "C:\\Users\\HP\\Source\\Repos\\Lab2\\ProcessPayment\\ProcessPayment.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Downloads\\Payment Module\\ProcessPayment\\ProcessPayment\\ProcessPayment\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Source\\Repos\\Lab2\\ProcessPayment\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -62,7 +62,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -74,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.113\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
