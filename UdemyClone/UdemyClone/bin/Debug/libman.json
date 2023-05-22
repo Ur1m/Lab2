@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "svg.js@3.1.2",
+      "destination": "lib/svg.js/"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+.paragraf {
+    padding-top: 120px;
+    font-size: 24px;
+    width: 900px;
+  }
+  .xxx {
+    margin-left: 200px;
+  }
+  .ibox{
+    position: absolute;
+  }
+  body {
+    background-image: url("../../../public/img/back.jpg");
+  }
+  .textComeTeach{
+    font-size: xx-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #383838;
+  }
+  .textKnowMore h1{
+    margin-bottom: 20px;
+    font-size: xx-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #383838;
+    text-align: center;
+  }
+  .textKnowMore{
+    margin-top: 60px;
+  }
+  .categories {
+    margin-top: 300px;
+    padding: 300px;
+  }
+  .statistics{
+    background-color: rgba(230, 0, 255, 0.562);
+    padding-bottom: 35px;
+    padding-top: 35px;
+  }
+  .number h1{
+    color:rgb(255, 255, 255);
+    font-size: 60px;
+    text-align: center;
+
+  }
+  .paragraph h5{
+    margin-top: 10px;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+  }
+  .gifOne{
+    margin-left: 150px;
+    height: 400px;
+    width: 100%;
+    background-image: url("../../../public/img/gif1.gif");
+    background-repeat:no-repeat;
+  }
+  .gifyText{
+    text-align: center;
+
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .gifTwo{
+    margin-right: 150px;
+    height: 400px;
+    width: 100%;
+    background-image: url("../../../public/img/gif2.gif");
+    background-repeat:no-repeat;
+    margin-bottom: 60px;
+  }
+  .sektor{
+    margin-top: 120px;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  }
+  .compniesBox{
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .upCompanies{
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+  }
+  .companiesText h3{
+    line-height: 25px;
+    font-size:medium;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4b4b4b;
+  }
+  .downCompanies{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+  }
+  .company1{
+    margin-right: 50px;
+    height: 100px;
+    width: 130px;
+    background-image: url("../../../public/img/daf.png");
+    background-repeat:no-repeat;
+  }
+  .sponsorText {
+   width: 100%;
+   color: #383838;
+  }
+  .company2{
+  margin-right: 50px;
+    height: 100px;
+    width: 130px;
+    background-image: url("../../../public/img/bmw.png");
+    background-repeat:no-repeat;
+  }
+  .company3{
+    margin-right: 50px;
+    height: 100px;
+    width: 130px;
+    background-image: url("../../../public/img/samsung.png");
+    background-repeat:no-repeat;
+  }
+  .company4{
+    margin-right: 50px;
+    height: 100px;
+    width: 130px;
+    background-image: url("../../../public/img/netflix.png");
+    background-repeat:no-repeat;
+  }
+  .company5{
+    margin-right: 50px;
+    height: 100px;
+    width: 130px;
+    background-image: url("../../../public/img/tesla.png");
+    background-repeat:no-repeat;
+  }
+  .bttn{
+    margin-top: 20px;
+    width: 170px;
+    padding: 15px;
+  }
+  .Back-1 {
+    margin-top: 100px;
+    background-image: url("../../../public/img/business.gif");
+    width: 300px;
+    height: 300px;
+  }
+  .Back-2 {
+    margin-top: 100px;
+    background-image: url("../../../public/img/coding.gif");
+    width: 300px;
+    height: 300px;
+  }
+  .Back-3 {
+    background-image: url("../../../public/img/marketing.png");
+    width: 300px;
+    height: 500px;
+    background-position: center;
+  }
+  .Metamask {
+    margin-left: 600px;
+    margin-top: 332px;
+    background-image: url("../../../public/img/metamaskk.png");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 110px;
+  }
+  .paragraf1 {
+    font-weight: 10px;
+    color: black;
+    text-align: center;
+  }
+  .back {
+    margin: 0px;
+    background-color: #ebebeb;
+    padding: 80px;
+  }
+  .btn {
+    margin-left: 10px;
+  }
+  .titull{
+    margin-left: 95px;
+  }
+  .titulli1{
+    margin-left: 160px;
+  }
+  

@@ -1,0 +1,16 @@
+services:
+  usercourseinteraction:
+    build:
+      context: C:\Users\hp\Desktop\Udemy\Lab2\UserCourseInteraction\UserCourseInteraction
+      dockerfile: UserCourseInteraction/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: usercourseinteraction
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\hp\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\hp\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

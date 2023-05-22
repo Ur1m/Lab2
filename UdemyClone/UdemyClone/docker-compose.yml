@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  udemyclone:
+    image: ${DOCKER_REGISTRY-}udemyclone
+    build:
+      context: .
+      dockerfile: UdemyClone/Dockerfile
+
+    
+ 

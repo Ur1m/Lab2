@@ -1,0 +1,18 @@
+name: dockercompose13573521468369404043
+services:
+  identityauthenticationservice:
+    build:
+      context: C:\Users\Dell\source\repos\Lab2\IdentityAuthenticationService
+      dockerfile: IdentityAuthenticationService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: identityauthenticationservice
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose13573521468369404043_default
