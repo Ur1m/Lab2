@@ -1,13 +1,8 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Typography, Button, Grid } from "@mui/material";
 import "../Courses/courses.css";
 import "./../../Css/bootstrap.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Button } from "semantic-ui-react";
 export const Courses = () => {
   const [prod, setProd] = useState();
   // const { user, setUser } = useContext(UserContext);
@@ -35,77 +30,54 @@ export const Courses = () => {
   }
   return (
     <div className="back">
-      <div className="row back">
-        <div className="col-5 text-center">
-          <h1>Our Best selling Courses</h1>
-          <div className="row m-5">
-            <p className="p-4">
-              Get your self into business, start making your way up and get your
-              Course now! Discount only avaliable for Today!
-            </p>
-          </div>
-
-          <div className="row m-6 icona"></div>
-        </div>
-
-        <div className="col-md-7">
-          {prod != null &&
-            prod.map((p) => (
-              <Card sx={{ maxWidth: 800 }}>
+      <Grid container spacing={3}>
+        {prod != null &&
+          prod.map((p) => (
+            <Grid item xs={6} sm={4} md={3} key={p.id}>
+              <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                   {p.image ? (
                     <CardMedia
-                      className="classes.media"
                       component="img"
-                      height="120"
+                      height="140"
                       image={p.image}
-                      alt="green iguana"
+                      alt="Product Image"
                     />
                   ) : (
                     <CardMedia
-                      className="classes.media"
                       component="img"
-                      height="120"
+                      height="140"
                       image="/img/code.jpg"
-                      alt="green ss"
+                      alt="Placeholder Image"
                     />
                   )}
                   <CardContent>
-                    <Typography gutterBottom variant="h4" component="div">
+                    <Typography gutterBottom variant="h5" component="div">
                       {p.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       {p.description}
                     </Typography>
-                    <Typography variant="h7" color="text.secondary">
-                      Price : {p.price}$
+                    <Typography variant="h6" color="text.secondary">
+                      Price: {p.price}$
                     </Typography>
-                    <Typography variant="body2" color="text.primary">
-                      <Button
-                        floated="right"
-                        onClick={() => addToCart(p.id)}
-                        content={"AddTOCart"}
-                        color="green"
-                      />
-                      <Button
-                        floated="right"
-                        onClick={() => addToCart(p.id)}
-                        content={"AddWishList"}
-                        color="green"
-                      />
-                      <Button
-                        floated="right"
-                        onClick={() => addToCart(p.id)}
-                        content={"AddToCompare"}
-                        color="green"
-                      />
-                    </Typography>
+                    <div style={{ marginTop: "1rem", display: "flex", justifyContent: "flex-end" }}>
+                      <Button onClick={() => addToCart(p.id)} variant="contained" color="success" sx={{ mr: 1 }}>
+                        Add to Cart
+                      </Button>
+                      <Button onClick={() => addToCart(p.id)} variant="contained" color="success" sx={{ mr: 1 }}>
+                        Add to Wishlist
+                      </Button>
+                      <Button onClick={() => addToCart(p.id)} variant="contained" color="success">
+                        Add to Compare
+                      </Button>
+                    </div>
                   </CardContent>
                 </CardActionArea>
               </Card>
-            ))}
-        </div>
-      </div>
+            </Grid>
+          ))}
+      </Grid>
     </div>
   );
 };
