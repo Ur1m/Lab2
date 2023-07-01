@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar />
         <UserContext.Provider value={{ user, setUser }}>
+        <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/courses" element={<Courses />}></Route>

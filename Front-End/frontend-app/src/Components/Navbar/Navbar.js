@@ -1,7 +1,21 @@
 import "./../../Css/bootstrap.css";
 import "../Home/home.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+const user = JSON.parse(localStorage.getItem("user"));
+
 export const Navbar = () => {
+  const handleLogout = async () => {
+    try {
+      await axios.post("https://localhost:5003/api/Account/logout");
+      localStorage.removeItem("user");
+      window.location.reload(); // Refresh the page after logout
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -50,13 +64,20 @@ export const Navbar = () => {
               </li>
             </ul>
 
-            <Link className="btn btn-secondary float-right " to="/login">
-              Log in
-            </Link>
-
-            <Link className="btn btn-primary float-right " to="/register">
-              Sign up
-            </Link>
+            {user && user.userName ? (
+              <button className="btn btn-secondary float-right" onClick={handleLogout}>
+                Log Out from: {user.userName}
+              </button>
+            ) : (
+              <div>
+                <Link className="btn btn-secondary float-right" to="/login">
+                  Log in
+                </Link>
+                <Link className="btn btn-primary float-right" to="/register">
+                  Sign up
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </nav>

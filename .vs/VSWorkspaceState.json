@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ProcessPayment"
+    "\\UdemyClone",
+    "\\UdemyClone\\UdemyClone"
   ],
-  "SelectedNode": "\\ProcessPayment\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

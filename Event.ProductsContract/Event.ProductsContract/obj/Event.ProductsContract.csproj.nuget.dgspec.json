@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TECHCOM\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {}
+    "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TECHCOM\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+    "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TECHCOM\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "projectUniqueName": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
         "projectName": "Event.ProductsContract",
-        "projectPath": "C:\\Users\\TECHCOM\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
-        "packagesPath": "C:\\Users\\TECHCOM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TECHCOM\\source\\repos\\Ur1m\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
+        "projectPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "packagesPath": "C:\\Users\\urimb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\TECHCOM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\urimb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -57,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
