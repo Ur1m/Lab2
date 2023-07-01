@@ -69,7 +69,7 @@ export default observer(function ProductList() {
                   <Button
                     color="red"
                     content="delete"
-                    onClick={() => del(prod.id)}
+                    onClick={() => deleteProduct(prod.id)}
                   />
                 </td>
               </tr>
