@@ -1,4 +1,7 @@
-﻿using MassTransit;
+﻿using AutoMapper;
+using Event.ProductsContract;
+using MassTransit;
+using MassTransit.Transports;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -18,13 +21,14 @@ namespace UserCourseInteraction.Controllers
     public class ShoppingCartController : ControllerBase
     {
         private IRepository<ShoppingCart> _reposiory;
+        private readonly ISendEndpointProvider _sendEndpointProvider;
 
-
-        public ShoppingCartController(IRepository<ShoppingCart> repository)
+        public ShoppingCartController(IRepository<ShoppingCart> repository, ISendEndpointProvider sendEndpointProvider)
         {
             _reposiory = repository;
+            _sendEndpointProvider = sendEndpointProvider;
         }
-        
+
         [HttpGet]
         public ActionResult<List<ShoppingCartViewModel>> getAll()
         {
@@ -108,6 +112,17 @@ namespace UserCourseInteraction.Controllers
             }
 
             return NotFound();
+        }
+
+        [HttpPost("purchaseProduct")]
+        public async Task<ActionResult> PurchaseProduct(ProcessPaymentDto productDto)
+        {
+
+            var endpoint = await _sendEndpointProvider.GetSendEndpoint(new Uri("queue:ProcessPayment"));
+            await endpoint.Send(productDto);
+
+
+            return Ok(productDto);
         }
     }
 }

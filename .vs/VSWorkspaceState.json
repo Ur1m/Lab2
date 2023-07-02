@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\UdemyClone",
-    "\\UdemyClone\\UdemyClone"
+    "\\UdemyClone\\UdemyClone",
+    "\\UdemyClone\\UdemyClone\\UdemyClone"
   ],
+  "SelectedNode": "\\UdemyClone\\UdemyClone\\UdemyClone\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

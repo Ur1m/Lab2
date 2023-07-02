@@ -1,0 +1,10 @@
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\netcoreapp3.1\Event.ProductsContract.deps.json
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\netcoreapp3.1\Event.ProductsContract.dll
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\netcoreapp3.1\Event.ProductsContract.pdb
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\netcoreapp3.1\Event.ProductsContract.csproj.AssemblyReference.cache
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\netcoreapp3.1\Event.ProductsContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\netcoreapp3.1\Event.ProductsContract.AssemblyInfoInputs.cache
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\netcoreapp3.1\Event.ProductsContract.AssemblyInfo.cs
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\netcoreapp3.1\Event.ProductsContract.csproj.CoreCompileInputs.cache
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\netcoreapp3.1\Event.ProductsContract.dll
+C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\netcoreapp3.1\Event.ProductsContract.pdb

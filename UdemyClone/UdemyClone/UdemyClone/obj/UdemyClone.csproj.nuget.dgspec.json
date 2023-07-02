@@ -13,12 +13,14 @@
         "packagesPath": "C:\\Users\\urimb\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
         "projectStyle": "PackageReference",
+        "crossTargeting": true,
         "configFilePaths": [
           "C:\\Users\\urimb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net5.0",
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
