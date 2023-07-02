@@ -24,15 +24,16 @@ namespace UserCourseInteraction.Consumer
                    Id = context.Message.Id,
                    Name = context.Message.Name,
                    Desctription= context.Message.Desctription,
-                   Image= context.Message.Image,
+                   Image= "gg",
                    Price = context.Message.Price,
                    CreateDate= context.Message.CreateDate,
                    CategoryId = context.Message.CategoryId,
                 };
                 _repository.Add(obj);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                var message = ex.Message;
             }
         }
     }

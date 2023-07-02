@@ -4,6 +4,7 @@ using MassTransit;
 using MassTransit.Transports;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +22,14 @@ namespace UserCourseInteraction.Controllers
     public class ShoppingCartController : ControllerBase
     {
         private IRepository<ShoppingCart> _reposiory;
+        private IRepository<ProductDto> _reposioryProductDto;
         private readonly ISendEndpointProvider _sendEndpointProvider;
 
-        public ShoppingCartController(IRepository<ShoppingCart> repository, ISendEndpointProvider sendEndpointProvider)
+        public ShoppingCartController(IRepository<ShoppingCart> repository, ISendEndpointProvider sendEndpointProvider, IRepository<ProductDto> reposioryProductDto)
         {
             _reposiory = repository;
             _sendEndpointProvider = sendEndpointProvider;
+            _reposioryProductDto = reposioryProductDto;
         }
 
         [HttpGet]
@@ -49,7 +52,7 @@ namespace UserCourseInteraction.Controllers
         }
         
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<ShoppingCartViewModel>>> getbyIdAsync(string id)
+        public async Task<ActionResult<List<ProductDto>>> getbyIdAsync(string id)
         {
             var all = _reposiory.GetAll().Where(x => x.userId == id);
 
@@ -58,14 +61,23 @@ namespace UserCourseInteraction.Controllers
                 return NotFound();
             }
 
-            var model = new ShoppingCartViewModel();
-          
-            return all.Select(x => new ShoppingCartViewModel()
+            var model = new List<ProductDto>();
+            foreach(var item in all)
             {
-                Id = x.Id,
-                userId = x.userId,
-                ProductId = x.ProductId
-            }).ToList();
+                var prod = _reposioryProductDto.GetAll().Where(x => x.Id == item.ProductId).FirstOrDefault();
+
+                model.Add(new ProductDto()
+                {
+                    Id = prod.Id,
+                    Desctription = prod.Desctription,
+                    CategoryId = prod.CategoryId,
+                    CreateDate = prod.CreateDate,
+                    Image = prod.Image,
+                    Name = prod.Name,
+                    Price = prod.Price
+                });
+            }
+            return model;
         }
         
         [HttpPost]
