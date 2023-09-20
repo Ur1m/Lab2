@@ -58,3 +58,15 @@ C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContr
 C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\refint\Event.ProductsContract.dll
 C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.pdb
 C:\Users\urimb\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\ref\Event.ProductsContract.dll
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\net5.0\Event.ProductsContract.deps.json
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\net5.0\Event.ProductsContract.dll
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\net5.0\Event.ProductsContract.pdb
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.csproj.AssemblyReference.cache
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.AssemblyInfoInputs.cache
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.AssemblyInfo.cs
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.csproj.CoreCompileInputs.cache
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.dll
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\refint\Event.ProductsContract.dll
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.pdb
+C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\ref\Event.ProductsContract.dll

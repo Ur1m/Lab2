@@ -43,6 +43,8 @@ namespace UdemyClone
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IReview, ReviewService>();
+            services.AddTransient<ITeamRepository, TeamRepository>();
+            services.AddTransient<IPlayerRepository,PlayerRepository>();
             services.AddAutoMapper(typeof(Startup));
 
             services.AddSignalR();

@@ -10701,19 +10701,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\urimb\\.nuget\\packages\\": {}
+    "C:\\Users\\PULSE Electronics\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+      "projectUniqueName": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
       "projectName": "UdemyClone",
-      "projectPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
-      "packagesPath": "C:\\Users\\urimb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\obj\\",
+      "projectPath": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+      "packagesPath": "C:\\Users\\PULSE Electronics\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\urimb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PULSE Electronics\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10721,14 +10721,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
-              "projectPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
+            "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+              "projectPath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
             }
           }
         }
@@ -10823,6 +10824,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10831,7 +10838,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   },

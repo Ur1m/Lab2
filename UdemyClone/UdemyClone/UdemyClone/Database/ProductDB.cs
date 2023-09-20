@@ -19,6 +19,8 @@ namespace UdemyClone.Database
             public DbSet<Review> reviews { get; set; }
             public DbSet<Attribute> atribues { get; set; }
             public DbSet<AttributeValue> atrvalues { get; set; }
+            public DbSet<Team> teams{ get; set; }
+            public DbSet<Player> players{ get; set; }
             public DbSet<ProductAttribute> productattributes { get; set; }
         }
     }
