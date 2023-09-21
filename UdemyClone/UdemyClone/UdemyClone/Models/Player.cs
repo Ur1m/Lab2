@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace UdemyClone.Models
 {
@@ -8,6 +9,7 @@ namespace UdemyClone.Models
         public string Name { get; set; }
         public int TeamId { get; set; }
         public DateTime BirthDay { get; set; }
+        [JsonIgnore]
         public Team Team { get; set; }
     }
 }

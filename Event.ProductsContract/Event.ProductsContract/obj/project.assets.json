@@ -10,20 +10,20 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\PULSE Electronics\\.nuget\\packages\\": {}
+    "C:\\Users\\Spinp Agency\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+      "projectUniqueName": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
       "projectName": "Event.ProductsContract",
-      "projectPath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
-      "packagesPath": "C:\\Users\\PULSE Electronics\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
+      "projectPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+      "packagesPath": "C:\\Users\\Spinp Agency\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
-        "C:\\Users\\PULSE Electronics\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Spinp Agency\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -84,6 +84,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

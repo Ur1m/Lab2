@@ -12,6 +12,8 @@ namespace UdemyClone.Services.Interfaces
         List<PlayerDto> GetAllPLayers();
         List<PlayerDto> GetAllPLayersByBirthYear(int year);
         void Update(Player player);
+        List<PlayerDto> GetPlayersByTeam(string team);
+
 
     }
 }

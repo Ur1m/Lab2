@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Razor.Language.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,19 @@ namespace UdemyClone.Services.Repositories
 
             _db.Update(tt);
             _db.SaveChanges();
+        }
+
+        public List<PlayerDto> GetPlayersByTeam(string team)
+        {
+            var players = _db.players.Include(x=>x.Team).Where(x=>x.Team.Name == team).Select(x=> new PlayerDto
+            {
+                BirthDay=x.BirthDay,
+                Name = x.Name,
+                TeamId=x.TeamId,
+
+            }).ToList();
+
+            return players;
         }
     }
 }

@@ -10701,19 +10701,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PULSE Electronics\\.nuget\\packages\\": {}
+    "C:\\Users\\Spinp Agency\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+      "projectUniqueName": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
       "projectName": "UdemyClone",
-      "projectPath": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
-      "packagesPath": "C:\\Users\\PULSE Electronics\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\obj\\",
+      "projectPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+      "packagesPath": "C:\\Users\\Spinp Agency\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PULSE Electronics\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Spinp Agency\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10728,8 +10728,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
-              "projectPath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
+            "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+              "projectPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
             }
           }
         }
@@ -10824,12 +10824,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.17, 5.0.17]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

@@ -111,5 +111,12 @@ namespace UdemyClone.Controllers
 
             return Ok();
         }
+        [HttpGet("getPLayersByTeam")]
+        public ActionResult<List<PlayerDto>> GetPLayersByTeam(string team)
+        {
+          var tt=  _playerRepository.GetPlayersByTeam(team);
+
+            return tt;
+        }
     }
 }

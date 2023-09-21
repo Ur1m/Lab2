@@ -70,3 +70,15 @@ C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\ne
 C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\refint\Event.ProductsContract.dll
 C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.pdb
 C:\Projects\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\ref\Event.ProductsContract.dll
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\net5.0\Event.ProductsContract.deps.json
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\net5.0\Event.ProductsContract.dll
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\bin\Debug\net5.0\Event.ProductsContract.pdb
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.csproj.AssemblyReference.cache
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.AssemblyInfoInputs.cache
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.AssemblyInfo.cs
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.csproj.CoreCompileInputs.cache
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.dll
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\refint\Event.ProductsContract.dll
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\Event.ProductsContract.pdb
+C:\Users\Spinp Agency\source\repos\Lab2\Lab2\Event.ProductsContract\Event.ProductsContract\obj\Debug\net5.0\ref\Event.ProductsContract.dll
