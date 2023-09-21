@@ -15,7 +15,9 @@ namespace UdemyClone.Database
             }
             
             public DbSet<Category> categories { get; set; }
-            public DbSet<Product> products { get; set; }
+            public DbSet<Product> products { get; set; }  
+            public DbSet<Planet> planets{ get; set; }
+            public DbSet<Satelite> satelites { get; set; }
             public DbSet<Review> reviews { get; set; }
             public DbSet<Attribute> atribues { get; set; }
             public DbSet<AttributeValue> atrvalues { get; set; }

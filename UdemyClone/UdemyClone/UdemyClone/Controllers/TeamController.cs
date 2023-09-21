@@ -21,12 +21,12 @@ namespace UdemyClone.Controllers
             _playerRepository = playerRepository;
         }
 
-        [HttpPost("addTeam")]
-        public async Task<ActionResult> AddTeam(TeamDTO team)
+        [HttpPost("addSatelite")]
+        public async Task<ActionResult> AddSatekite(SateliteDto team)
         {
             try
             {
-                _teamRepository.AddTeam(team);
+                _teamRepository.AddSatelite(team);
 
 
                 return Ok();
@@ -36,12 +36,12 @@ namespace UdemyClone.Controllers
                 return BadRequest();
             }
         }
-        [HttpPost("addPlayer")]
-        public async Task<ActionResult> AddPlayer(PlayerDto team)
+        [HttpPost("addPlanet")]
+        public async Task<ActionResult> addPlanet(PlanetDto team)
         {
             try
             {
-                _playerRepository.AddPlayer(team);
+                _teamRepository.AddPlanet(team);
 
 
                 return Ok();
@@ -52,10 +52,10 @@ namespace UdemyClone.Controllers
             }
         }
 
-        [HttpGet("getTeams")]
-        public ActionResult<List<TeamDTO>> GetTeams()
+        [HttpGet("getAllPLanets")]
+        public ActionResult<List<PlanetDto>> GetAllPLanets()
         {
-            var categ = _teamRepository.GetAllTeams();
+            var categ = _teamRepository.GetAllPlantes();
 
             return categ;
 
@@ -67,10 +67,10 @@ namespace UdemyClone.Controllers
             return Ok(categ);
         }
 
-        [HttpGet("getPlayers")]
-        public ActionResult<List<PlayerDto>> GetPlayers()
+        [HttpGet("getAllSatelites")]
+        public ActionResult<List<SateliteDto>> GetAllSatelites(string name)
         {
-            var categ = _playerRepository.GetAllPLayers();
+            var categ = _teamRepository.Getallbyplanetname(name);
 
             return categ;
 

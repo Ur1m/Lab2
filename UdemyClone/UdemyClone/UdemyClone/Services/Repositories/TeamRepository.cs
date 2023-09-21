@@ -20,38 +20,68 @@ namespace UdemyClone.Services.Repositories
             _mapper = mapper;
         }
 
-        public void AddTeam(TeamDTO prodDTO)
+        public void AddPlanet(PlanetDto planetDto)
         {
             try
             {
-
-
-
-                _db.teams.Add(_mapper.Map<Team>(prodDTO));
-
+                _db.planets.Add(_mapper.Map<Planet>(planetDto));
                 _db.SaveChanges();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            }
-            public List<TeamDTO > GetAllTeams()
+        }
+
+        public void AddSatelite(SateliteDto planetDto)
+        {
+            try
             {
-                try
-                {
-                   var teams = _db.teams.Include(x=>x.Players).Select(x=> new TeamDTO
-                   {
-                       Name= x.Name,
-                       Players = _mapper.Map<List<PlayerDto>>(x.Players)
-                   }).ToList();
-                    return teams;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                _db.satelites.Add(_mapper.Map<Satelite>(planetDto));
+                _db.SaveChanges();
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<PlanetDto> GetAllPlantes()
+        {
+            return _mapper.Map<List<PlanetDto>>(_db.planets.ToList());
+
+        }
+
+        public void DeleteSatelite( int sateliteId)
+        {
+            var tt =_db.satelites.Where(x => x.Id == sateliteId).FirstOrDefault();
+            tt.IsDeleted = false;
+
+        }
+
+
+        public List<SateliteDto> Getallbyplanetname(string name)
+        {
+          var tt =  _mapper.Map<List<SateliteDto>>(_db.satelites.Include(x => x.Planet).Where(x => x.Planet.Name == name).ToList());
+
+            return tt;
+        }
+        public List<TeamDTO> GetAllTeams()
+        {
+            try
+            {
+                var teams = _db.teams.Include(x => x.Players).Select(x => new TeamDTO
+                {
+                    Name = x.Name,
+                    Players = _mapper.Map<List<PlayerDto>>(x.Players)
+                }).ToList();
+                return teams;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public void Update(Team team)
         {
@@ -63,5 +93,9 @@ namespace UdemyClone.Services.Repositories
             _db.SaveChanges();
         }
 
+        public void AddTeam(TeamDTO prodDTO)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zZJVBgTuGyy9uytvaLrrA7RsA7bvhwPciq5two1coZ/wctxpXmGYD8/ZwLabaJkHDaK40/giBJtmhjezx9XDsw==",
+  "dgSpecHash": "jnguEgLvHY8tAxdHJE9eddFYE2T0aH2WJkk3fAaQZvuhjFRqr9cEG4jubKVzS48ae96JhAMZnQ4BbivdC8vwSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Spinp Agency\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Spinp Agency\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Spinp Agency\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

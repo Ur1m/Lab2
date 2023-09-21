@@ -12,6 +12,8 @@ namespace UdemyClone.Mapping
             CreateMap<CartEventDto,ShoppingCartViewModel>().ReverseMap();
             CreateMap<TeamDTO,Team>().ReverseMap();
             CreateMap<PlayerDto,Player>().ReverseMap();
+            CreateMap<SateliteDto,Satelite>().ReverseMap();
+            CreateMap<PlanetDto, Planet>().ReverseMap();
             
             CreateMap<ProductEventDTO, ProductDTO>().ReverseMap();
 

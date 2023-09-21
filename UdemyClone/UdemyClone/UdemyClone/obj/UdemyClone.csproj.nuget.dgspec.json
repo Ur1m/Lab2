@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
+    "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+    "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "projectUniqueName": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
         "projectName": "Event.ProductsContract",
-        "projectPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
-        "packagesPath": "C:\\Users\\Spinp Agency\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
+        "projectPath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "packagesPath": "C:\\Users\\PULSE Electronics\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
-          "C:\\Users\\Spinp Agency\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PULSE Electronics\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,20 +76,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -99,17 +85,17 @@
         }
       }
     },
-    "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {
+    "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "projectUniqueName": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
         "projectName": "UdemyClone",
-        "projectPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
-        "packagesPath": "C:\\Users\\Spinp Agency\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\obj\\",
+        "projectPath": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\UdemyClone.csproj",
+        "packagesPath": "C:\\Users\\PULSE Electronics\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Lab2\\Lab2\\UdemyClone\\UdemyClone\\UdemyClone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Spinp Agency\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PULSE Electronics\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,8 +110,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
-                "projectPath": "C:\\Users\\Spinp Agency\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
+              "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+                "projectPath": "C:\\Projects\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
               }
             }
           }
@@ -220,6 +206,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
