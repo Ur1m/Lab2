@@ -14,6 +14,7 @@ import { Courses } from "./Components/Courses/Courses";
 import ResetPassword from "./Account/Login/ResetPassword";
 import UserContext from "./UserContext";
 import AddToCart from "./Components/AddToCart/AddToCart";
+import { Test } from "./Components/Test/Test";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -21,7 +22,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <UserContext.Provider value={{ user, setUser }}>
-        <Navbar />
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/courses" element={<Courses />}></Route>
@@ -32,6 +33,7 @@ function App() {
             <Route path="/reset-password" element={<ResetPassword />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/addToCart" element={<AddToCart />}></Route>
+            <Route path="/test" element={<Test />}></Route>
           </Routes>
         </UserContext.Provider>
       </header>

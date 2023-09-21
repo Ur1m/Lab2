@@ -62,10 +62,18 @@ export const Navbar = () => {
                   About
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/test">
+                  Test
+                </Link>
+              </li>
             </ul>
 
             {user && user.userName ? (
-              <button className="btn btn-secondary float-right" onClick={handleLogout}>
+              <button
+                className="btn btn-secondary float-right"
+                onClick={handleLogout}
+              >
                 Log Out from: {user.userName}
               </button>
             ) : (
