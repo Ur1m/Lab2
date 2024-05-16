@@ -24,13 +24,13 @@ export const RegisterComponent = () => {
   }
 
   return (
-    <div className="wraper">
-      <div className="containerr">
+    <div className="login-container">
+      <div className="login-form">
         <div className="textbox">
           <h3>Welcome To LearnNow</h3>
           <p className="paragrafff">Please enter your info</p>
         </div>
-        <div className="col-sm-4 ">
+        <div>
           <input
             type="text"
             placeholder="Name and Surname"

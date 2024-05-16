@@ -25,8 +25,8 @@ export const ForgotPassword = () => {
   }
 
   return (
-    <div className="wraper">
-      <div className="containerr">
+    <div className="login-container">
+      <div className="login-form">
         <div className="textbox">
           <h3>Reset Your Password</h3>
           <p className="paragrafff">
@@ -34,7 +34,7 @@ export const ForgotPassword = () => {
             You will receive a link to create a new password via email.
           </p>
         </div>
-        <div className="col-sm-4 ">
+        <div>
           <input
             type="text"
             placeholder="Email"

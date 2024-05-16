@@ -3,3 +3,7 @@
     width: 2000px;
     min-height: 2000px;
 }
+
+.custom-modal{
+    background-color: white;
+}

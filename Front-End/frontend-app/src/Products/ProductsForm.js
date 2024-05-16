@@ -36,7 +36,7 @@ export const ProductsForm = () => {
     desctription: "",
     categoryId: 0,
     image: "",
-    price: 0,
+    price: "",
   };
   const [Product, setProduct] = useState(initialState);
   const [image, setimage] = useState();
@@ -69,8 +69,8 @@ export const ProductsForm = () => {
     name: yup
       .string()
       .matches(
-        /^[a-zA-Z0-9]{3,}$/,
-        "Password should contain more than 3 characters."
+        /^[a-zA-Z0-9 -?]{5,}$/,
+        "Name should contain more than 3 characters."
       )
       .required("Please write a name."),
     desctription: yup
@@ -105,19 +105,6 @@ export const ProductsForm = () => {
               placeholder="Description"
               name="desctription"
             />
-            <MyTextInput
-              type="number"
-              placeholder="Category"
-              name="categoryId"
-            />
-
-            <input
-              type="file"
-              name="image"
-              placeholder="image"
-              onChange={changefile}
-            />
-
             <Button
               disabled={!isValid}
               floated="right"

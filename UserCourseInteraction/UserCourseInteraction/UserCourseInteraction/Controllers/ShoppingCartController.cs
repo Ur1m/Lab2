@@ -126,6 +126,21 @@ namespace UserCourseInteraction.Controllers
             return NotFound();
         }
 
+        [HttpDelete("clear")]
+        public ActionResult ClearCart()
+        {
+            var allItems = _reposiory.GetAll();
+
+            foreach (var item in allItems)
+            {
+                _reposiory.Remove(item);
+            }
+
+            return Ok();
+        }
+
+
+
         [HttpPost("purchaseProduct")]
         public async Task<ActionResult> PurchaseProduct(ProcessPaymentDto productDto)
         {

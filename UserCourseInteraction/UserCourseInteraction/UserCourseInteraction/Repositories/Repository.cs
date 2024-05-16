@@ -34,7 +34,7 @@ namespace UserCourseInteraction.Repositories
         {
             try
             {
-                enteties.AddRange(enteties);
+                _dbContext.AddRange(entities);
                 _dbContext.SaveChanges();
             }
             catch (Exception ex)

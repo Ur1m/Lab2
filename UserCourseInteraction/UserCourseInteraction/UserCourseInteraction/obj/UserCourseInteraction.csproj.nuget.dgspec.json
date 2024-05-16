@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {}
+    "C:\\Users\\Mynev\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {}
   },
   "projects": {
-    "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+    "C:\\Users\\Mynev\\Desktop\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "projectUniqueName": "C:\\Users\\Mynev\\Desktop\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
         "projectName": "Event.ProductsContract",
-        "projectPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
-        "packagesPath": "C:\\Users\\urimb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
+        "projectPath": "C:\\Users\\Mynev\\Desktop\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj",
+        "packagesPath": "C:\\Users\\Mynev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mynev\\Desktop\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
-          "C:\\Users\\urimb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mynev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         },
         "net5.0": {
           "targetAlias": "net5.0",
@@ -81,21 +81,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {
+    "C:\\Users\\Mynev\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+        "projectUniqueName": "C:\\Users\\Mynev\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
         "projectName": "UserCourseInteraction",
-        "projectPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
-        "packagesPath": "C:\\Users\\urimb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\obj\\",
+        "projectPath": "C:\\Users\\Mynev\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction.csproj",
+        "packagesPath": "C:\\Users\\Mynev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mynev\\Desktop\\Lab2\\UserCourseInteraction\\UserCourseInteraction\\UserCourseInteraction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\urimb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mynev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -109,8 +109,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
-                "projectPath": "C:\\Users\\urimb\\source\\repos\\Lab2\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
+              "C:\\Users\\Mynev\\Desktop\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj": {
+                "projectPath": "C:\\Users\\Mynev\\Desktop\\Lab2\\Event.ProductsContract\\Event.ProductsContract\\Event.ProductsContract.csproj"
               }
             }
           }
@@ -189,6 +189,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -197,7 +203,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -24,7 +24,7 @@ function App() {
         <UserContext.Provider value={{ user, setUser }}>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={<About />}></Route>
             <Route path="/courses" element={<Courses />}></Route>
             <Route path="/products" element={<ProductList />}></Route>
             <Route path="/login" element={<LoginComponent />}></Route>
@@ -33,7 +33,6 @@ function App() {
             <Route path="/reset-password" element={<ResetPassword />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/addToCart" element={<AddToCart />}></Route>
-            <Route path="/test" element={<Test />}></Route>
           </Routes>
         </UserContext.Provider>
       </header>

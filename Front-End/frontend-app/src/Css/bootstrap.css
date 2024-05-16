@@ -2100,6 +2100,7 @@ progress {
 
 .form-label {
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .col-form-label {
@@ -5801,6 +5802,7 @@ fieldset:disabled .btn {
   justify-content: space-between;
   padding: 1rem 1rem;
   border-bottom: 1px solid #eceeef;
+  color: white;
 }
 
 .modal-header .btn-close {

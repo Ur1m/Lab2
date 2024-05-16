@@ -1,7 +1,7 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, Fragment, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../Store/Store";
-import { Button, Modal, Header, Icon } from "semantic-ui-react";
+import { Button, Modal, Header, Icon, Table } from "semantic-ui-react";
 import { ProductsForm } from "./ProductsForm";
 
 export default observer(function ProductList() {
@@ -13,97 +13,94 @@ export default observer(function ProductList() {
     editmode,
     selectProduct,
     deleteProduct,
+    loadProducts,
   } = ProductStore;
-  const [open, setOpen] = React.useState(false);
 
   useEffect(() => {
-    ProductStore.loadProducts();
-  }, [ProductStore]);
+    loadProducts();
+  }, [loadProducts]);
 
-  //  const categs=[{categoryId:1,name:"Berat",desctription:"diqka"}]
-  // setCategories(categs);
-  //const[search,setsearch]=useState("");
+  const [deleteConfirmationOpen, setDeleteConfirmationOpen] = useState(false);
 
-  function del(id) {
+  const handleDelete = (id) => {
     selectProduct(id);
-    setOpen(true);
-  }
+    setDeleteConfirmationOpen(true);
+  };
 
   return (
     <Fragment>
       <Button
         floated="right"
-        content="add"
+        content="+"
         color="blue"
-        onClick={() => openForm()}
+        onClick={openForm}
       />
       <div className="container">
-        <table className="table table-hover">
-          <thead className="table-dark">
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Description</th>
-              <th scope="col">Price</th>
-              <th scope="col">CategoryId</th>
-              <th scope="col">edit</th>
-              <th scope="col">delete</th>
-            </tr>
-          </thead>
-          <tbody>
+        <Table celled>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell>Name</Table.HeaderCell>
+              <Table.HeaderCell>Description</Table.HeaderCell>
+              <Table.HeaderCell>Price</Table.HeaderCell>
+              <Table.HeaderCell>Edit</Table.HeaderCell>
+              <Table.HeaderCell>Delete</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
             {products.map((prod) => (
-              <tr key={prod.id} className="table-secondary">
-                <th scope="row">{prod.id}</th>
-                <td>{prod.name}</td>
-                <td>{prod.desctription}</td>
-                <td>{prod.price}</td>
-                <td>{prod.categoryId}</td>
-                <td>
+              <Table.Row key={prod.id}>
+                <Table.Cell>{prod.name}</Table.Cell>
+                <Table.Cell>{prod.desctription}</Table.Cell>
+                <Table.Cell>{prod.price}</Table.Cell>
+                <Table.Cell>
                   <Button
                     color="blue"
-                    content="edit"
+                    content="Edit"
                     onClick={() => openForm(prod.id)}
                   />
-                </td>
-                <td>
+                </Table.Cell>
+                <Table.Cell>
                   <Button
                     color="red"
-                    content="delete"
-                    onClick={() => deleteProduct(prod.id)}
+                    content="Delete"
+                    onClick={() => handleDelete(prod.id)}
                   />
-                </td>
-              </tr>
+                </Table.Cell>
+              </Table.Row>
             ))}
-          </tbody>
-          <Modal
-            closeIcon
-            open={open}
-            //trigger={<Button>Show Modal</Button>}
-            onClose={() => setOpen(false)}
-            onOpen={() => setOpen(true)}
-          >
-            <Header icon="archive" content="Archive Old Messages" />
-            <Modal.Content>
-              <p>Product</p>
-            </Modal.Content>
-            <Modal.Actions>
-              <Button color="red" onClick={() => setOpen(false)}>
-                <Icon name="remove" /> No
-              </Button>
-              <Button
-                color="green"
-                onClick={() => deleteProduct(selectedProduct.id)}
-              >
-                <Icon name="checkmark" /> Yes
-              </Button>
-            </Modal.Actions>
-          </Modal>
-        </table>
+          </Table.Body>
+        </Table>
+
         <Modal
-          onClose={() => openForm(false)}
-          onOpen={() => openForm(true)}
+          closeIcon
+          open={deleteConfirmationOpen}
+          onClose={() => setDeleteConfirmationOpen(false)}
+          size="mini"
+        >
+          <Header icon="archive" content="Confirm Delete" />
+          <Modal.Content>
+            <p>Are you sure you want to delete this product?</p>
+          </Modal.Content>
+          <Modal.Actions>
+            <Button color="red" onClick={() => setDeleteConfirmationOpen(false)}>
+              <Icon name="remove" /> No
+            </Button>
+            <Button
+              color="green"
+              onClick={() => {
+                deleteProduct(selectedProduct.id);
+                setDeleteConfirmationOpen(false);
+              }}
+            >
+              <Icon name="checkmark" /> Yes
+            </Button>
+          </Modal.Actions>
+        </Modal>
+
+        <Modal
           open={editmode}
-          // trigger={<Button>Show Modal</Button>}
+          onClose={() => openForm(false)}
+          size="small"
         >
           <Modal.Description>
             <ProductsForm />
